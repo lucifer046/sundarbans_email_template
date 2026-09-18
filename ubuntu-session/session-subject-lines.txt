@@ -1,0 +1,6 @@
+Day 01: root@workshop:~$ Session 01 is Live! (Basics & Install) 🔓
+Day 02: root@workshop:~$ Session 02: Customize Your Desktop 🎨
+Day 03: root@workshop:~$ Session 03: Installing Apps (The Right Way) 📦
+Day 04: root@workshop:~$ Session 04: Best Tools for Productivity ⚡
+Day 05: root@workshop:~$ Session 05: Advanced Power User Tips 🚀
+Day 06: root@workshop:~$ Session 06: How to Fix & Repair Ubuntu 🔧

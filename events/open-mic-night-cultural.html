@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Mic Night - Sundarbans Cultural Community</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c10;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #ffffff;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #13151a;
+            border: 1px solid #2a2d34;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        /* Gradient glowing effect on borders */
+        .glow-wrap {
+            position: relative;
+            background: linear-gradient(135deg, #13151a 0%, #1a162b 100%);
+        }
+
+        .header {
+            text-align: center;
+            padding: 45px 20px 25px;
+            position: relative;
+        }
+
+        .presents {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #66fcf1;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.1;
+            color: #ffffff;
+        }
+
+        /* WebKit specific gradient text for supported clients */
+        @supports (-webkit-background-clip: text) {
+            .title {
+                background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            color: #a78bfa;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        .poster-container {
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        .poster {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 16px;
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .hook {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+        }
+
+        .categories-box {
+            background-color: rgba(167, 139, 250, 0.05);
+            border: 1px dashed rgba(167, 139, 250, 0.4);
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin: 30px 0;
+        }
+
+        .categories {
+            color: #66fcf1;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        .details-wrapper {
+            background-color: rgba(0,0,0,0.2);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .detail-item {
+            vertical-align: middle;
+        }
+
+        .detail-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #8b5cf6;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .cta-container {
+            text-align: center;
+            padding: 45px 30px;
+        }
+
+        .cta-text {
+            font-size: 15px;
+            font-style: italic;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #66fcf1;
+            color: #0b0c10 !important;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid #66fcf1;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: transparent;
+            color: #66fcf1 !important;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #050608;
+            font-size: 12px;
+            color: #475569;
+            border-top: 1px solid #1a1d24;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                border-radius: 0;
+                border: none;
+            }
+            .title {
+                font-size: 40px;
+            }
+            .detail-item {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .detail-item:first-child {
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+                border-right: none !important;
+            }
+            .poster-container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0b0c10;">
+    <!-- Main wrapper table for background color -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0b0c10; padding: 20px 0;">
+        <tr>
+            <td align="center">
+                <!-- Constraining container -->
+                <table class="email-container" width="100%" max-width="600" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #13151a; border: 1px solid #2a2d34; border-radius: 20px;">
+                    <tr>
+                        <td class="glow-wrap" style="background-color: #13151a;">
+                            
+                            <!-- Header -->
+                            <div class="header" style="text-align: center; padding: 45px 20px 25px;">
+                                <div class="presents" style="color: #66fcf1; font-size: 13px; text-transform: uppercase; letter-spacing: 4px; font-weight: bold; margin-bottom: 15px;">
+                                    Sundarbans Cultural Community Presents ✨
+                                </div>
+                                <h1 class="title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 48px; color: #ffffff; font-style: italic;">
+                                    Open Mic Night
+                                </h1>
+                                <div class="subtitle" style="color: #a78bfa; font-size: 18px; margin-top: 15px;">
+                                    The Spotlight Awaits You! 🎤
+                                </div>
+                            </div>
+
+                            <!-- Poster -->
+                            <div class="poster-container" style="padding: 0 30px; text-align: center;">
+                                <img src="https://lh3.googleusercontent.com/d/1E0XLNFFL7s4xgOIWe2FsYvelgNc3HZLU" alt="Open Mic Night Poster" class="poster" style="display: block; width: 100%; max-width: 500px; margin: 0 auto; border-radius: 16px; border: 1px solid #3c1e68;">
+                            </div>
+
+                            <!-- Content Area -->
+                            <div class="content" style="padding: 40px 30px; text-align: center;">
+                                <div class="hook" style="color: #e2e8f0; font-size: 18px; line-height: 1.6; margin-bottom: 25px;">
+                                    Got a hidden talent? A poem in your notes? A song you sing in your room? 👀<br><br>
+                                    <strong>Now’s the time to bring it to the stage! 💃🏻</strong>
+                                </div>
+
+                                <div class="categories-box" style="background-color: #1a162b; border: 1px dashed #8b5cf6; padding: 25px 20px; border-radius: 12px; margin: 30px 0;">
+                                    <div class="categories" style="color: #66fcf1; font-size: 18px; font-weight: bold; line-height: 1.8;">
+                                        🥁 Shayari | Poetry | Singing<br>
+                                        Storytelling | Fun Performances
+                                    </div>
+                                    <p style="color: #cbd5e1; font-size: 14px; margin-top: 15px; font-style: italic;">
+                                        If it entertains, inspires, or makes people feel something — it belongs here !🔥
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Details Table (For bulletproof column layout) -->
+                            <table class="details-wrapper" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0d0e12; border-top: 1px solid #2a2d34; border-bottom: 1px solid #2a2d34;">
+                                <tr>
+                                    <td class="detail-item" align="center" width="50%" style="padding: 25px 10px; border-right: 1px solid #2a2d34;">
+                                        <div class="detail-label" style="color: #8b5cf6; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Date</div>
+                                        <div class="detail-value" style="color: #ffffff; font-size: 18px; font-weight: bold; margin-top: 5px;">26th March, Thursday</div>
+                                    </td>
+                                    <td class="detail-item" align="center" width="50%" style="padding: 25px 10px;">
+                                        <div class="detail-label" style="color: #8b5cf6; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Time</div>
+                                        <div class="detail-value" style="color: #ffffff; font-size: 18px; font-weight: bold; margin-top: 5px;">8:00 PM Onwards</div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- CTA Area -->
+                            <div class="cta-container" style="text-align: center; padding: 45px 30px;">
+                                <div class="cta-text" style="color: #cbd5e1; font-size: 15px; font-style: italic; margin-bottom: 30px;">
+                                    <span style="font-size: 20px; vertical-align: middle;">🔊</span> Step up....because your moment might just start here.
+                                </div>
+                                
+                                <a href="https://meet.google.com/oov-uhgz-odz" class="button" style="display: inline-block; background-color: #66fcf1; color: #0b0c10; padding: 16px 40px; border-radius: 50px; font-weight: bold; font-family: sans-serif; text-decoration: none; font-size: 16px; text-transform: uppercase; letter-spacing: 2px;">
+                                    Join the Stage
+                                </a>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="footer" style="background-color: #050608; padding: 25px; text-align: center; color: #475569; font-size: 12px; border-top: 1px solid #1a1d24;">
+                                Sundarbans Cultural Community<br>
+                                Let your voice be heard
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

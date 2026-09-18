@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01: Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE */
+        body { margin: 0; padding: 0; width: 100% !important; background-color: #1a1a1a; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; color: #ffffff; -webkit-font-smoothing: antialiased; }
+        table {width: 50%; border-spacing: 0; border-collapse: collapse; }
+        td { padding: 0; }
+        img { border: 0; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* TYPOGRAPHY */
+        .font-mono { font-family: 'Fira Code', 'Courier New', monospace; }
+        .text-orange { color: #E95420; }
+        .text-green { color: #27c93f; }
+        .text-gray { color: #666; }
+        
+        /* LAYOUT */
+        .wrapper { width: 100%; table-layout: fixed; background-color: #1a1a1a; padding-bottom: 60px; }
+        .main { max-width: 900px; margin: 0 auto; background-color: #0E0E0E; overflow: hidden; border: 1px solid #333; }
+        
+        /* TERMINAL BAR */
+        .terminal-bar { background-color: #2c2c2c; padding: 10px 15px; border-bottom: 1px solid #000; }
+        .dot { height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+
+        /* HEADER */
+        .header { padding: 40px 20px; text-align: center; border-bottom: 1px dashed #333; }
+        .logo-img { width: 60px; height: auto; margin: 0 auto 15px; }
+        .house-name { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #E95420; font-weight: 700; margin-bottom: 20px; }
+        .headline { font-size: 36px; font-weight: 700; line-height: 1.2; margin: 0 0 10px; color: #fff; }
+        .status-badge { background-color: #E95420; color: #fff; padding: 5px 10px; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 12px; font-weight: bold; letter-spacing: 1px; display: inline-block; margin-bottom: 15px; }
+
+        /* DAY 1 FOCUS */
+        .focus-section { padding: 30px; background-color: #111; border-bottom: 1px solid #222; }
+        .console-box { background-color: #000; padding: 25px; border-left: 4px solid #E95420; font-family: 'Fira Code', monospace; font-size: 14px; line-height: 1.6; color: #ccc; }
+        .cmd { color: #27c93f; margin-right: 10px; }
+        
+        /* TIMING ALERT */
+        .timing-box { margin-top: 25px; background-color: #1a1a1a; border: 1px solid #333; padding: 15px; border-radius: 4px; text-align: center; }
+
+        /* PROGRESS AGENDA */
+        .agenda-container { padding: 40px 30px; }
+        .code-row { margin-bottom: 12px; opacity: 0.5; transition: opacity 0.3s; }
+        .code-row.active { opacity: 1; transform: scale(1.01); }
+        .line-num { display: inline-block; width: 30px; color: #444; font-family: 'Fira Code', monospace; font-size: 12px; text-align: right; margin-right: 15px; }
+        .line-status { display: inline-block; width: 80px; font-family: 'Fira Code', monospace; font-size: 11px; font-weight: bold; }
+        .code-content { display: inline-block; vertical-align: top; max-width: 70%; font-family: 'Fira Code', monospace; font-size: 13px; }
+
+        /* BUTTONS */
+        .btn-block { padding: 30px; text-align: center; border-top: 1px solid #222; }
+        .btn-primary { background-color: #E95420; color: #fff; padding: 16px 40px; font-family: 'Fira Code', monospace; font-weight: bold; text-transform: uppercase; border-radius: 4px; display: inline-block; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+
+        /* FOOTER */
+        .footer { padding: 30px; background-color: #000; text-align: center; font-family: 'Fira Code', monospace; font-size: 10px; color: #444; border-top: 1px solid #222; }
+
+        /* MOBILE */
+        @media screen and (max-width: 600px) {
+            .wrapper { width: 100% !important; }
+            .main { width: 100% !important; border: none; }
+            .header, .focus-section, .agenda-container, .btn-block { padding-left: 15px !important; padding-right: 15px !important; }
+            .headline { font-size: 28px !important; }
+            .line-status { display: none; } /* Hide status text on mobile to save space */
+            .code-content { max-width: 90% !important; display: block; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table class="main" role="presentation" align="center">
+            
+            <!-- TERMINAL BAR -->
+            <tr>
+                <td class="terminal-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span style="font-family:'Fira Code', monospace; font-size: 10px; color: #666; margin-left: 10px;">./day_01_init.sh</span>
+                </td>
+            </tr>
+
+            <!-- HEADER -->
+            <tr>
+                <td class="header">
+                    <!-- LOGO -->
+                    <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" alt="Sundarbans Logo" class="logo-img">
+                    <div class="house-name">&lt; SUNDARBANS HOUSE /&gt;</div>
+                    
+                    <span class="status-badge">● LIVE TODAY</span>
+                    <h1 class="headline">System Initialization</h1>
+                    <div style="font-family: 'Fira Code', monospace; color: #888; font-size: 14px;">Day 01: The Foundation</div>
+                </td>
+            </tr>
+
+            <!-- CONSOLE FOCUS -->
+            <tr>
+                <td class="focus-section">
+                    <div class="console-box">
+                        <div><span class="cmd">root@workshop:~$</span> ./install_ubuntu.exe</div>
+                        <div style="color: #fff; margin-top: 5px;">>> Loading kernel... [OK]</div>
+                        <div style="color: #fff;">>> Shortcuts loaded... [OK]</div>
+                        <div style="color: #fff;">>> UI Preferences... [PENDING]</div>
+                        <br>
+                        <div><span style="color:#E95420">Today's Objective:</span></div>
+                        <div style="color:#aaa; margin-top: 5px;">
+                            We stop clicking randomly.<br>
+                            We start understanding the OS structure.
+                        </div>
+                    </div>
+
+                    <div class="timing-box">
+                        <span style="color:#E95420; font-weight:bold; font-family:'Fira Code', monospace;">⏰ T-MINUS: 7:00 PM IST</span>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- PROGRESS AGENDA -->
+            <tr>
+                <td class="agenda-container">
+                    <span style="font-family: 'Fira Code', monospace; color: #555; font-size: 12px; display: block; margin-bottom: 20px;">// INSTALLATION LOG</span>
+
+                    <!-- Day 1 (ACTIVE) -->
+                    <div class="code-row active">
+                        <span class="line-num">01</span>
+                        <span class="line-status" style="color:#27c93f">[RUNNING]</span>
+                        <span class="code-content" style="color:#fff;">
+                            <strong>Foundation & Basics</strong><br>
+                            <span style="color:#888; font-size:11px;">Intro, Installation, Shortcuts</span>
+                        </span>
+                    </div>
+
+                    <!-- Future Days (DIMMED) -->
+                    <div class="code-row">
+                        <span class="line-num">02</span>
+                        <span class="line-status" style="color:#666">[WAITING]</span>
+                        <span class="code-content">Customization (Themes, Tweaks)</span>
+                    </div>
+                    <div class="code-row">
+                        <span class="line-num">03</span>
+                        <span class="line-status" style="color:#666">[WAITING]</span>
+                        <span class="code-content">App Ecosystem (Snap/Flatpak)</span>
+                    </div>
+                    <div class="code-row">
+                        <span class="line-num">04</span>
+                        <span class="line-status" style="color:#666">[WAITING]</span>
+                        <span class="code-content">Productivity Suite</span>
+                    </div>
+                    <div class="code-row">
+                        <span class="line-num">05</span>
+                        <span class="line-status" style="color:#666">[WAITING]</span>
+                        <span class="code-content">Power User Tools</span>
+                    </div>
+                    <div class="code-row">
+                        <span class="line-num">06</span>
+                        <span class="line-status" style="color:#666">[WAITING]</span>
+                        <span class="code-content">System Maintenance</span>
+                    </div>
+
+                </td>
+            </tr>
+
+            <!-- CTA -->
+            <tr>
+                <td class="btn-block">
+                    <a href="https://meet.google.com/ezg-qpcv-pzt" class="btn-primary">
+                        ENTER SESSION >
+                    </a>
+                    <p style="margin-top: 20px; color: #666; font-size: 12px; font-family:'Fira Code', monospace;">
+                        Status: <span style="color:#E95420">Waiting for user login...</span>
+                    </p>
+                </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+                <td class="footer">
+                    <div style="margin-bottom: 20px;">
+                        <a href="https://www.instagram.com/sundarbansiitm" style="color:#888; text-decoration:none; margin:0 10px; font-weight:bold;">INSTAGRAM</a>
+                        <span style="color:#333">|</span>
+                        <a href="https://www.linkedin.com/company/sundarbans-iitm/" style="color:#888; text-decoration:none; margin:0 10px; font-weight:bold;">LINKEDIN</a>
+                        <span style="color:#333">|</span>
+                        <a href="https://www.youtube.com/@SundarbansIITM" style="color:#888; text-decoration:none; margin:0 10px; font-weight:bold;">YOUTUBE</a>
+                    </div>
+                    &copy; 2026 SUNDARBANS HOUSE<br>
+                    <span style="color:#444; font-size:9px;">[ LOG_END ] SYSTEM_READY</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

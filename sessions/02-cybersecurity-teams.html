@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>Session 02: Cybersecurity Teams // TODAY</title>
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        /* =====================================
+           🎨 THEME CONFIGURATION
+           ===================================== */
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-foil: #BF953F;
+            --cyber-blue: #00f0ff;
+            --bg-deep: #010409;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8b949e;
+        }
+
+        /* =====================================
+           BASE STYLES
+           ===================================== */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #010409;
+            font-family: 'Outfit', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* =====================================
+           CUSTOM CLASSES
+           ===================================== */
+        .glass-card {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .code-font {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FBF5E6 0%, #BF953F 25%, #FBF5E6 50%, #BF953F 75%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+        }
+
+        .cyber-btn {
+            background: #D4AF37;
+            color: #000000;
+            border: 1px solid #D4AF37;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Status Badges */
+        .status-badge-live {
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid #00f0ff;
+            color: #00f0ff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .status-badge-done {
+            background: rgba(139, 148, 158, 0.1);
+            border: 1px solid #8b949e;
+            color: #8b949e;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .replay-btn {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #D4AF37;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 900px) {
+            .mobile-full { width: 100% !important; display: block !important; }
+            .mobile-pad { padding: 30px 20px !important; }
+            .hero-title { font-size: 36px !important; line-height: 42px !important; }
+            
+            /* Speaker Section Mobile Overrides */
+            .mobile-block { display: block !important; width: 100% !important; text-align: left !important; padding-left: 0 !important; padding-right: 0 !important; }
+            .mobile-center { text-align: center !important; margin: 0 auto !important; }
+            .mobile-pad-top { padding-top: 8px !important; }
+            .mobile-avatar { width: 40px !important; height: 40px !important; margin: 0 auto !important; }
+            .mobile-name { font-size: 16px !important; }
+            .mobile-role { font-size: 12px !important; }
+            .mobile-left-align { text-align: left !important; }
+        }
+
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #010409;">
+
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        >> ACTIVITY LOG: Session 01 [COMPLETE]. Session 02 [INITIATING TODAY].
+    </div>
+
+    <!-- Main Table -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #010409; background-image: radial-gradient(circle at 50% 0%, #0d1117 0%, #010409 60%);">
+        
+        <!-- Header -->
+        <tr>
+            <td align="center" style="padding: 40px 0 0 0;">
+                <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" width="60" alt="Sundarbans" style="display: block; width: 60px; margin-bottom: 15px;">
+                <p style="margin: 0; font-family: 'Cinzel', serif; color: #D4AF37; letter-spacing: 4px; font-size: 14px; text-transform: uppercase;">
+                    Sundarbans House
+                </p>
+                <!-- Tech Divider -->
+                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 15px;">
+                    <tr>
+                        <td style="width: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3);"></td>
+                        <td style="padding: 0 10px; color: #D4AF37; font-size: 10px;">◆</td>
+                        <td style="width: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3);"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Hero Section (Session 2 Focus) -->
+        <tr>
+            <td align="center" style="padding: 20px 20px 40px 20px;" class="mobile-pad">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; margin: 0 auto;">
+                    <tr>
+                        <td align="center">
+                            <div style="font-size: 48px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);">🛡️</div>
+                            
+                            <h2 class="code-font" style="margin: 0 0 15px 0; color: #00f0ff; font-size: 14px; letter-spacing: 3px; text-transform: uppercase;">
+                                &lt;Status: LIVE_TODAY /&gt;
+                            </h2>
+                            <h1 class="hero-title gold-gradient-text" style="margin: 0 0 20px 0; font-family: 'Tahoma', sans-serif; font-size: 42px; line-height: 48px; font-weight: 700; color: #D4AF37;">
+                                WEB TRAPPED :<br>SESSION 02
+                            </h1>
+                            <p style="margin: 0 auto; max-width: 500px; font-size: 18px; line-height: 28px; color: #FFFFFF; font-family: 'Outfit', sans-serif; font-weight: 500;">
+                                Decoding the Color Framework: Red, Blue & Purple.
+                            </p>
+                            
+                            <!-- Session Details Box -->
+                            <div style="margin-top: 25px; background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; padding: 20px; text-align: left;">
+                                <p style="margin: 0 0 10px 0; font-size: 12px; color: #00f0ff; letter-spacing: 1px; text-transform: uppercase; font-weight: 700;">
+                                    // MISSION BRIEFING
+                                </p>
+                                <ul style="margin: 0; padding: 0 0 0 20px; color: #d0d7de; font-size: 14px; line-height: 24px;">
+                                    <li style="margin-bottom: 5px;"><strong>Red Team:</strong> The Offensive Mindset & Attack Simulation.</li>
+                                    <li style="margin-bottom: 5px;"><strong>Blue Team:</strong> Defensive Strategies & Threat Mitigation.</li>
+                                    <li style="margin-bottom: 5px;"><strong>Purple Team:</strong> Bridging the gap for continuous security.</li>
+                                    <li><strong>War Games:</strong> Real-world applications of team dynamics.</li>
+                                </ul>
+                                <p style="margin: 15px 0 0 0; font-size: 13px; color: #8b949e; border-top: 1px solid rgba(48, 54, 61, 0.5); padding-top: 10px;">
+                                    <span style="color: #D4AF37;">⏰ TIMING: 7:00 PM - 8:00 PM IST (TONIGHT)</span>
+                                </p>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Speaker Section -->
+        <tr>
+            <td align="center" style="padding: 0 20px 40px 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; margin: 0 auto;" class="glass-card">
+                    <!-- Tech header line -->
+                    <tr><td style="height: 2px; background: linear-gradient(90deg, transparent, #D4AF37, transparent); opacity: 0.5;"></td></tr>
+                    <tr>
+                        <td style="padding: 30px 20px 30px 16px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <!-- Left: Avatar -->
+                                    <td width="60" valign="middle" class="mobile-block mobile-center">
+                                        <div class="mobile-avatar" style="width: 63px; height: 63px; border-radius: 50%; background: #21262d; border: 3px solid #D4AF37; overflow: hidden; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);">
+                                            <img src="https://lh3.googleusercontent.com/d/1hgp96lBRfaM1KiDjHN7qRyUwOPJ2yz85" alt="RC" width="70" height="70" style="display: block; width: 100%; height: auto;">
+                                        </div>
+                                    </td>
+                                    
+                                    <!-- Middle: Info -->
+                                    <td valign="middle" style="padding-left: 13px;" class="mobile-block mobile-pad-top">
+                                        <span class="code-font" style="display: block; font-size: 10px; color: #00f0ff; letter-spacing: 2px; margin-bottom: 5px;">// INSTRUCTOR</span>
+                                        <h3 class="mobile-name" style="margin: 0 0 5px 0; font-family: 'Verdana', sans-serif; font-size: 20px; color: #FFFFFF; font-weight: normal;">Rohini Chaudhari</h3>
+                                        <p class="mobile-role" style="margin: 0; font-size: 13px; color: #8b949e;">Sr. Project Engineer @ Wipro</p>
+                                    </td>
+
+                                    <!-- Right: Action -->
+                                    <td valign="middle" align="left" width="50" class="mobile-block mobile-pad-top mobile-left-align">
+                                        <a href="https://www.linkedin.com/in/rohini-chudhari-cybersecurity" style="display: inline-block; padding: 10px 0; font-size: 12px; color: #D4AF37; text-decoration: none; border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                                            View Profile ↗
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- The Roadmap (Schedule with Progress) -->
+        <tr>
+            <td align="center" style="padding: 0 20px 40px 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto;">
+                    <tr>
+                        <td align="left" style="padding-bottom: 20px;">
+                            <h2 style="font-family: 'Cinzel', serif; font-size: 18px; color: #FFFFFF; font-weight: 400; letter-spacing: 2px; border-left: 3px solid #D4AF37; padding-left: 15px; margin: 0;">
+                                MISSION LOG
+                            </h2>
+                        </td>
+                    </tr>
+                    
+                    <!-- Session 1: COMPLETED (Dimmed + Replay Link) -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: rgba(13, 17, 23, 0.4); border: 1px solid #30363d; border-radius: 8px;">
+                                <tr>
+                                    <td width="70" align="center" style="padding: 15px; border-right: 1px solid #30363d; opacity: 0.7;">
+                                        <span class="code-font" style="display: block; font-size: 10px; color: #8b949e;">JAN</span>
+                                        <span style="display: block; font-size: 20px; font-weight: 700; color: #8b949e; font-family: 'Cinzel', serif;">22</span>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                            <span class="status-badge-done">COMPLETED</span>
+                                        </div>
+                                        <h4 style="margin: 5px 0 0 0; color: #8b949e; font-size: 15px; text-decoration: line-through;">Cyber Fundamentals</h4>
+                                        <a href="https://www.youtube.com/live/ye3HHX9Qfsg?si=NdBNR-04M_aDD6lI" class="replay-btn">
+                                            ▶ Watch Replay
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Session 2: LIVE (Highlighted) -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: rgba(0, 240, 255, 0.05); border: 1px solid #00f0ff; border-radius: 8px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);">
+                                <tr>
+                                    <td width="70" align="center" style="padding: 15px; border-right: 1px solid #00f0ff;">
+                                        <span class="code-font" style="display: block; font-size: 10px; color: #00f0ff;">JAN</span>
+                                        <span style="display: block; font-size: 20px; font-weight: 700; color: #00f0ff; font-family: 'Cinzel', serif;">23</span>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                            <span class="status-badge-live">⚡ LIVE TODAY</span>
+                                        </div>
+                                        <h4 style="margin: 5px 0 5px 0; color: #FFF; font-size: 16px;">Cybersecurity Teams</h4>
+                                        <p style="margin: 0; font-size: 12px; color: #8b949e;">
+                                            Red, Blue & Purple Framework.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Session 3: UPCOMING -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: rgba(13, 17, 23, 0.4); border: 1px solid #30363d; border-radius: 8px;">
+                                <tr>
+                                    <td width="70" align="center" style="padding: 15px; border-right: 1px solid #30363d; opacity: 0.5;">
+                                        <span class="code-font" style="display: block; font-size: 10px; color: #8b949e;">JAN</span>
+                                        <span style="display: block; font-size: 20px; font-weight: 700; color: #8b949e; font-family: 'Cinzel', serif;">24</span>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                        <h4 style="margin: 0; color: #8b949e; font-size: 15px;">Reconnaissance</h4>
+                                        <p style="margin: 3px 0 0 0; font-size: 11px; color: #6b7280;">LOCKED</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+        <!-- CTA Section -->
+        <tr>
+            <td align="center" style="padding: 0 20px 60px 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto;">
+                    <tr>
+                        <td align="center">
+                            <!-- Button -->
+                            <a href="https://meet.google.com/fut-zjjr-kkq" class="cyber-btn" style="display: inline-block; padding: 20px 40px; font-size: 16px; width: 200px;">
+                                ENTER LOBBY
+                            </a>
+                            
+                            <p style="margin-top: 30px; font-size: 13px; color: #8b949e; line-height: 20px;">
+                                ⚠️ <strong>Note:</strong> Official Certificates awarded for attendance.<br>
+                                Join 5 minutes early to secure your connection.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td align="center" style="padding: 40px 20px; border-top: 1px solid #21262d;">
+                
+                <!-- Social Media -->
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto 20px auto;">
+                    <tr>
+                        <td style="padding: 0 15px;">
+                            <a href="https://www.instagram.com/sundarbansiitm" style="color: #484f58; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: color 0.3s;">Instagram</a>
+                        </td>
+                        <td style="padding: 0 15px; color: #30363d;">|</td>
+                        <td style="padding: 0 15px;">
+                            <a href="https://www.linkedin.com/company/sundarbans-iitm/" style="color: #484f58; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: color 0.3s;">LinkedIn</a>
+                        </td>
+                        <td style="padding: 0 15px; color: #30363d;">|</td>
+                        <td style="padding: 0 15px;">
+                            <a href="https://www.youtube.com/@SundarbansIITM" style="color: #484f58; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: color 0.3s;">YouTube</a>
+                        </td>
+                    </tr>
+                </table>
+
+                 <p style="margin: 0; font-family: 'Cinzel', serif; color: #484f58; font-size: 12px; letter-spacing: 2px;">
+                    SUNDARBANS HOUSE
+                </p>
+                <p style="margin: 10px 0 0 0; font-size: 11px; color: #30363d; font-family: 'JetBrains Mono', monospace;">
+                    TRANSMISSION END // 2026
+                </p>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

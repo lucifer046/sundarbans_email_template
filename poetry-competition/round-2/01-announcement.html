@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    
+    <title>Manthan-e-Alfaaz: Round 1 Slamoria</title>
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        /* Natural Inversion Strategy: No locks, let the email client invert pure CSS colors gracefully */
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            display: block;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            /* A sophisticated dark canvas behind the main email card */
+            background-color: #0d1117; 
+            font-family: 'Outfit', sans-serif;
+            color: #1a1612;
+        }
+
+        /* The Main Email Card */
+        .poster-card {
+            /* Warm cream color that inverts to a rich charcoal in dark mode */
+            background-color: #fcf9f2; 
+            border: 2px solid #c4a052;
+            position: relative;
+            border-radius: 4px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Outer double-line border effect for royal decree feel */
+        .poster-card-outer {
+            padding: 8px;
+            background-color: transparent;
+            border: 1px solid rgba(196,160,82,0.4);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .inner-content {
+            padding: 40px 50px 60px 50px; 
+            background: transparent;
+        }
+
+        /* Typography */
+        .serif-title {
+            font-family: 'Cinzel', serif;
+            color: #1e2c18;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .title-glow {
+            color: #8b2e16;
+            font-weight: 900;
+        }
+
+        .hindi-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #8b2e16;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .italic-accent {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #1e2c18;
+            font-weight: 600;
+        }
+
+        /* Ornamental Dividers */
+        .gold-divider {
+            height: 1px;
+            background-color: #c4a052;
+            margin: 30px auto;
+            width: 50%;
+        }
+        
+        .gold-divider-ornate {
+            border-top: 1px solid #c4a052;
+            border-bottom: 1px solid #c4a052;
+            height: 4px;
+            margin: 30px auto;
+            width: 70%;
+        }
+
+        .black-text {
+            color: #1a1612;
+        }
+
+        /* Text colors designed to invert beautifully */
+        .text-dark { color: #1a1612; }
+        .text-forest { color: #1e2c18; }
+        .text-rust { color: #8b2e16; }
+        .text-gold { color: #c4a052; }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #8b2e16;
+            color: #fcf9f2 !important;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 4px;
+            border: 2px solid #8b2e16;
+            margin: 10px 5px;
+            text-transform: uppercase;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: #1a1612 !important;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 4px;
+            border: 2px solid #1e2c18;
+            margin: 10px 5px;
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 600px) {
+            .responsive-table { width: 100% !important; }
+            .responsive-td { 
+                display: block !important; 
+                width: 100% !important; 
+                box-sizing: border-box !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .responsive-td-border {
+                border-right: none !important;
+                border-bottom: 1px dashed rgba(196,160,82,0.5) !important;
+                padding-bottom: 20px !important;
+            }
+            .mobile-pad { padding: 30px 20px !important; }
+            .hero-title { font-size: 28px !important; line-height: 36px !important; }
+            .hindi-text { font-size: 18px !important; }
+            .inner-content { padding: 20px 20px 40px 20px !important; }
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #0d1117;">
+
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Congratulations! You have been selected to represent your house in Round 2: Alankaar.
+    </div>
+
+    <!-- Main Container -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 40px 15px 60px 15px;">
+                
+                <!-- 7 Houses Elegant Logo Bar (Stays dark, high contrast) -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px; margin-bottom: 25px; background-color: #121810; border: 1px solid #c4a052; border-radius: 4px;">
+                    <tr>
+                        <td align="center" style="padding: 20px 10px;">
+                            <div style="font-family: 'Cinzel', serif; font-size: 11px; color: #e8d08d; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; font-weight: bold;">
+                                🪶 ROUND 2: INTER-HOUSE FACE-OFF 🪶
+                            </div>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <!-- Houses -->
+                                                                        <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/1m2WlDq1VCcLM0f-bJojm63WFK_uycL-V" alt="Gir" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">GIR</div>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/16GhPmhI1LSeJ3dfWj5f7tz9DHRgeNgRO" alt="Kanha" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">KANHA</div>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/1Z5QxD3tz4uXMdrjNFoXsuUNBVUlPFj7Q" alt="Nallamalla" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">NALLAMALLA</div>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/1DmR0st7t2UXsnU5h0VqwsdixVQbKKFbF" alt="Namdapha" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">NAMDAPHA</div>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/198mPPeiHc26WeFBTXVUyG64GYc1aovTl" alt="Pichavaram" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">PICHAVARAM</div>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/16NnvP7-pqrMsDHQuLfaI4u4FpHEH7cxk" alt="Saranda" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">SARANDA</div>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="14%" style="padding: 0 2px;">
+                                        <div style="display: block;">
+                                            <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" alt="Sundarbans" width="35" height="35" style="border-radius: 50%; border: 1px solid #c4a052; object-fit: cover; display: block; margin: 0 auto; box-shadow: 0 0 5px rgba(196,160,82,0.3);">
+                                            <div style="font-family: 'Cinzel', serif; font-size: 8px; color: #f4e6cb; margin-top: 8px; letter-spacing: 1px;">SUNDARBANS</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Outer Decorative Frame -->
+                <div class="poster-card-outer">
+                    <!-- Designed Card Container (The Scroll) -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="poster-card">
+                        
+                        <!-- Header Emblem Image -->
+                        <tr>
+                            <td align="center" style="padding: 20px 0 0 0;">
+                                <img src="https://lh3.googleusercontent.com/d/15WuBuJT9XYzqMGGIn2hIh7lDMo3qBhPs" alt="Quill and Sword" width="100%" style="max-width: 350px; height: auto; display: block; margin: 0 auto;">
+                            </td>
+                        </tr>
+
+                        <!-- Content Area -->
+                        <tr>
+                            <td align="center">
+                                <div class="inner-content">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" class="mobile-pad">
+                                                
+                                                <h1 class="serif-title hero-title title-glow text-rust" style="font-size: 34px; line-height: 44px; margin: 0 0 15px 0;">
+                                                    Manthan-e-Alfaaz
+                                                </h1>
+                                                
+                                                <p class="hindi-text text-rust" style="margin: 0 0 25px 0; font-size: 20px;">
+                                                    जहाँ शब्द तलवार बनते हैं, और कविता मैदान।
+                                                </p>
+
+                                                <div class="gold-divider-ornate"></div>
+
+                                                <p class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 28px; margin: 25px 0 15px 0; font-weight: 500;">
+                                                    <span class="text-rust" style="letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px;">You have survived the first strike.</span><br>
+                                                    <strong class="serif-title text-forest" style="font-size: 22px; display: block; margin-top: 15px; letter-spacing: 2px;">Round 2: Alankaar<br><span style="font-size:14px; letter-spacing: 1px;">(Inter-House Face-Off)</span></strong>
+                                                </p>
+                                                
+                                                <p class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 28px; margin: 0 0 35px 0;">
+                                                    Out of hundreds of voices, yours has been chosen to represent your house on the grand stage. <strong>Congratulations on conquering Round 1!</strong><br><br>
+                                                    But the true battle begins now. In <strong>Alankaar</strong>, you will face the chosen poets from all 7 houses: <strong>Gir, Kanha, Nallamalla, Namdapha, Pichavaram, Saranda, and Sundarbans</strong>.<br><br>
+                                                    This time, you must write according to a theme.
+                                                </p>
+
+                                                <!-- Selected Participants Placeholder -->
+                                                <div style="background-color: rgba(139,46,22,0.05); border: 1px dashed #8b2e16; padding: 20px; border-radius: 4px; margin-bottom: 35px; text-align: left;">
+                                                    <h3 class="serif-title text-rust" style="font-size: 16px; margin: 0 0 15px 0; letter-spacing: 1px; text-align: center;">
+                                                        🌟 Selected Champions 🌟
+                                                    </h3>
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="responsive-table">
+                                                        <tr>
+                                                            <td width="50%" valign="top" style="padding-right: 10px;" class="responsive-td responsive-td-border">
+                                                                <h4 class="text-forest" style="font-family: 'Outfit', sans-serif; font-size: 14px; margin: 0 0 10px 0; border-bottom: 1px solid #c4a052; padding-bottom: 5px;">English Category</h4>
+                                                                <ul class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 24px; margin: 0; padding-left: 20px;">
+                                                                    <li>Mercy Keziah Dorothy J</li>
+                                                                    <li>R Sai Sahanaa</li>
+                                                                    <li>Anindita Jana</li>
+                                                                    <li>Ishwaryah P</li>
+                                                                    <li>Alhamda Iqbal Sadiq</li>
+                                                                    <li>Naznin Hossain</li>
+                                                                    <li>Sanjeevani Rawat</li>
+                                                                    <li>Nikitha M</li>
+                                                                    <li>Parisha Singh</li>
+                                                                    <li>Misha Agrawal</li>
+                                                                    <li>Racharla Baba Venkata Sai Krishna</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td width="50%" valign="top" style="padding-left: 10px;" class="responsive-td">
+                                                                <h4 class="text-forest" style="font-family: 'Outfit', sans-serif; font-size: 14px; margin: 0 0 10px 0; border-bottom: 1px solid #c4a052; padding-bottom: 5px;">Hindi Category</h4>
+                                                                <ul class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 24px; margin: 0; padding-left: 20px;">
+                                                                    <li>Megha Sharma</li>
+                                                                    <li>Dev Bhardwaj</li>
+                                                                    <li>Dilip Pawar</li>
+                                                                    <li>Deepika Gupta</li>
+                                                                    <li>Gourav</li>
+                                                                    <li>Abhihar Singh Rathore</li>
+                                                                    <li>Gourav Kumar Ghosh</li>
+                                                                    <li>Riddhi Chaure</li>
+                                                                    <li>Damini</li>
+                                                                    <li>Shreya Sharma</li>
+                                                                    <li>Disha Singh</li>
+                                                                    <li>Vishvesh Mishra</li>
+                                                                    <li>Ishu Raj</li>
+                                                                    <li>Suryansh Mishra</li>
+                                                                    <li>Vatsal Gupta</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <!-- Theme Callout Box -->
+                                                <div style="border: 1px solid #c4a052; background-color: rgba(139,46,22,0.03); border-top: 3px solid #8b2e16; padding: 30px 20px; border-radius: 6px; margin: 0 auto 35px auto; max-width: 480px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                                                    <p class="text-rust" style="font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; letter-spacing: 3px; margin: 0 0 10px 0; text-transform: uppercase;">
+                                                        Round 2 Theme
+                                                    </p>
+                                                    <h2 class="serif-title text-forest" style="font-size: 28px; line-height: 36px; margin: 0 0 5px 0;">
+                                                        DAASTAAN - E - DIL
+                                                    </h2>
+                                                    <p class="italic-accent text-rust" style="font-size: 16px; letter-spacing: 1px; margin: 0 0 20px 0;">
+                                                        — It's all about Love & Relationships —
+                                                    </p>
+                                                    <p class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 28px; margin: 0;">
+                                                        <em>Every heart carries a story.</em><br>
+                                                        Of the glance that made time stop.<br>
+                                                        Of love that bloomed quietly, or the love that burned too fast.<br><br>
+                                                        <strong>This round, write yours...</strong>
+                                                    </p>
+                                                </div>
+                                                
+                                                <p class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 26px; margin: 0 0 35px 0;">
+                                                    Sharpen your ink. Defend your house's honor.
+                                                </p>
+
+                                                <!-- Round Details Box -->
+                                                <div style="text-align: left; background-color: rgba(196,160,82,0.1); padding: 30px; border: 1px solid #e0cd9b; border-radius: 4px; margin-bottom: 35px;">
+                                                    <h3 class="serif-title text-forest" style="font-size: 16px; margin: 0 0 15px 0; letter-spacing: 1px; text-align: center;">
+                                                        <span style="font-size: 20px; vertical-align: middle;">📜</span> Round 2 Guidelines
+                                                    </h3>
+                                                    <ul class="black-text text-dark" style="font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 26px; margin: 0; padding-left: 20px;">
+                                                        <li style="margin-bottom: 12px;">One original poem strictly based on the Theme</li>
+                                                        <li style="margin-bottom: 12px;">Maximum time limit: 5 minutes</li>
+                                                        <li style="margin-bottom: 12px;">Both English and Hindi poetry are accepted</li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- Date & Time Info Redesign -->
+                                                <div style="margin: 0 0 45px 0;">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="center">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 450px; border-top: 1px solid #c4a052; border-bottom: 1px solid #c4a052; padding: 20px 0;" class="responsive-table">
+                                                                    <tr>
+                                                                        <td align="center" width="50%" style="padding: 10px 15px; border-right: 1px dashed rgba(196,160,82,0.5);" class="responsive-td responsive-td-border">
+                                                                            <div class="text-rust" style="font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 8px;">The Time</div>
+                                                                            <div class="serif-title text-dark" style="font-size: 18px; font-weight: 700; text-transform: none;">28th May</div>
+                                                                            <div class="text-forest" style="font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 500; margin-top: 4px;">7:00 PM</div>
+                                                                        </td>
+                                                                        <td align="center" width="50%" style="padding: 10px 15px;" class="responsive-td">
+                                                                            <div class="text-rust" style="font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 8px;">The Arena</div>
+                                                                            <div class="serif-title text-dark" style="font-size: 18px; font-weight: 700; text-transform: none;">Google Meet</div>
+                                                                            <div style="margin-top: 12px;">
+                                                                                <a href="https://meet.google.com/oov-uhgz-odz" style="display: inline-block; padding: 8px 16px; background-color: #1e2c18; color: #fcf9f2; border-radius: 4px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Join Meet</a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <!-- The Battle Map / Timeline -->
+                                                <div style="margin: 0 0 45px 0; padding: 25px 15px; background-color: rgba(196,160,82,0.05); border: 1px solid rgba(196,160,82,0.3); border-radius: 6px;">
+                                                    <h3 class="serif-title text-forest" style="font-size: 14px; margin: 0 0 25px 0; letter-spacing: 2px; text-align: center;">The Campaign Route</h3>
+                                                    
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <!-- Round 1 (Completed) -->
+                                                            <td align="center" width="33%" style="vertical-align: top; padding: 0 5px;">
+                                                                <div style="width: 34px; height: 34px; border-radius: 50%; background-color: #1e2c18; color: #fcf9f2; line-height: 34px; font-family: 'Outfit', sans-serif; font-weight: bold; font-size: 16px; margin: 0 auto 12px auto; border: 2px solid #1e2c18;">✓</div>
+                                                                <div class="serif-title text-dark" style="font-size: 13px; font-weight: 700; margin-bottom: 4px; text-transform: uppercase;">Slamoria</div>
+                                                                <div class="text-forest" style="font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Completed</div>
+                                                            </td>
+                                                            
+                                                            <!-- Round 2 (Current) -->
+                                                            <td align="center" width="33%" style="vertical-align: top; padding: 0 5px;">
+                                                                <div style="width: 34px; height: 34px; border-radius: 50%; background-color: #8b2e16; color: #fcf9f2; line-height: 34px; font-family: 'Cinzel', serif; font-weight: bold; font-size: 16px; margin: 0 auto 12px auto; border: 2px solid #c4a052; box-shadow: 0 0 12px rgba(196,160,82,0.6);">II</div>
+                                                                <div class="serif-title text-dark" style="font-size: 13px; font-weight: 700; margin-bottom: 4px; text-transform: uppercase;">Alankaar</div>
+                                                                <div class="text-rust" style="font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Current Stage</div>
+                                                            </td>
+                                                            
+                                                            <!-- Round 3 (Upcoming) -->
+                                                            <td align="center" width="33%" style="vertical-align: top; padding: 0 5px; opacity: 0.3; filter: grayscale(100%);">
+                                                                <div style="width: 34px; height: 34px; border-radius: 50%; background-color: transparent; color: #1e2c18; line-height: 34px; font-family: 'Cinzel', serif; font-weight: bold; font-size: 16px; margin: 0 auto 12px auto; border: 2px dashed #1e2c18;">III</div>
+                                                                <div class="serif-title text-dark" style="font-size: 13px; font-weight: 700; margin-bottom: 4px; text-transform: uppercase;">Shabd Samraat</div>
+                                                                <div class="text-forest" style="font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">🔒 Finale</div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <h2 class="serif-title text-forest" style="font-size: 20px; line-height: 30px; margin: 0 0 20px 0; font-weight: 700;">
+                                                    The arena expands.<br>
+                                                    May the best poet prevail.
+                                                </h2>
+
+                                                <div class="gold-divider"></div>
+
+                                                <p class="italic-accent text-rust" style="font-size: 18px; margin: 0 0 35px 0;">
+                                                    ❤️ Let your heart bleed onto the paper.<br>
+                                                    May your poetry echo louder than applause.
+                                                </p>
+
+                                                <!-- Action Buttons with Hover Effects -->
+                                                <div style="margin-top: 15px; margin-bottom: 20px;">
+                                                    <div style="margin-top: 10px;">
+                                                        <a href="https://docs.google.com/document/d/1d0kqYx0Fkhzg6bPdKbiKb-AN2q5ZFzMfVQjOjCJ0RaA/edit?usp=sharing" class="btn-secondary">
+                                                            Read Rulebook
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

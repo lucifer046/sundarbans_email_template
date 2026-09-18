@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>Cyber Security Immersion: The Roadmap</title>
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        /* =====================================
+           🎨 THEME CONFIGURATION
+           ===================================== */
+        :root {
+            /* ===== COLORS ===== */
+            --gold-primary: #D4AF37;
+            --gold-foil: #BF953F;
+            
+            --cyber-blue: #00f0ff; /* Cyber Accent */
+            --cyber-green: #0aff60; /* Success/Terminal Accent */
+            
+            --bg-deep: #010409;   /* Almost Black */
+            --bg-card: #0d1117;   /* Github Dark Dim */
+            --border-dim: #30363d;
+            
+            --text-primary: #FFFFFF;
+            --text-secondary: #8b949e;
+            
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+
+        /* =====================================
+           ANIMATIONS & EFFECTS
+           ===================================== */
+        
+        @keyframes scanline {
+            0% { transform: translateY(-100%); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(100%); opacity: 0; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* =====================================
+           BASE STYLES
+           ===================================== */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #010409;
+            font-family: 'Outfit', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* =====================================
+           CUSTOM CLASSES
+           ===================================== */
+        .glass-card {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .code-font {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FBF5E6 0%, #BF953F 25%, #FBF5E6 50%, #BF953F 75%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+        }
+
+        .cyber-btn {
+            background: #D4AF37;
+            color: #000000;
+            border: 1px solid #D4AF37;
+            border-radius: 4px; /* More angular for cyber feel */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cyber-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            .mobile-full { width: 100% !important; display: block !important; }
+            .mobile-pad { padding: 30px 20px !important; }
+            .hero-title { font-size: 36px !important; line-height: 42px !important; }
+            .col-stack { display: block !important; width: 100% !important; margin-bottom: 20px !important; }
+            .col-stack-last { margin-bottom: 0 !important; }
+            .timeline-line { display: none !important; } /* Hide vertical line on mobile */
+        }
+
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #010409;">
+
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        >> SYSTEM ALERT: 5-Day Cyber Security Protocol Initiated. Jan 22-26.
+    </div>
+
+    <!-- Main Table -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #010409; background-image: radial-gradient(circle at 50% 0%, #0d1117 0%, #010409 60%);">
+        
+        <!-- Header / Logo Area -->
+        <tr>
+            <td align="center" style="padding: 40px 0 0 0;">
+                <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" width="60" alt="Sundarbans" style="display: block; width: 60px; margin-bottom: 15px; margin-left: auto; margin-right: auto;">
+                <p style="margin: 0; font-family: 'Cinzel', serif; color: #D4AF37; letter-spacing: 4px; font-size: 14px; text-transform: uppercase;">
+                    Sundarbans House
+                </p>
+                <!-- Tech Divider -->
+                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 15px; margin-left: auto; margin-right: auto;">
+                    <tr>
+                        <td style="width: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3);"></td>
+                        <td style="padding: 0 10px; color: #D4AF37; font-size: 10px;">◆</td>
+                        <td style="width: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3);"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Hero Section -->
+        <tr>
+            <td align="center" style="padding: 20px 20px 60px 20px;" class="mobile-pad">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; margin: 0 auto;">
+                    <tr>
+                        <td align="center">
+                            <!-- Icon / Glitch graphic -->
+                            <div style="font-size: 48px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);">🛡️</div>
+                            
+                            <h2 class="code-font" style="margin: 0 0 15px 0; color: #00f0ff; font-size: 14px; letter-spacing: 3px; text-transform: uppercase;">
+                                &lt;System_Override /&gt;
+                            </h2>
+                            <h1 class="hero-title gold-gradient-text" style="margin: 0 0 25px 0; font-family: 'Tahoma', sans-serif; font-size: 46px; line-height: 52px; font-weight: 700; color: #D4AF37;">
+                                WEB TRAPPED :<br>CYBERSECURITY 101
+                            </h1>
+                            <p style="margin: 0 auto; max-width: 480px; font-size: 16px; line-height: 26px; color: #8b949e; font-family: 'Outfit', sans-serif;">
+                                5 Days. 5 Critical Domains. From fundamental protocols to vulnerability management.<br>
+                                <span style="color: #FFFFFF; font-weight: 500;">Initialize your defense career now.</span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Speaker Section -->
+        <tr>
+            <td align="center" style="padding: 0 20px 40px 20px;" class="mobile-pad">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px; margin: 0 auto;" class="glass-card">
+                    <!-- Tech header line -->
+                    <tr><td style="height: 2px; background: linear-gradient(90deg, transparent, #00f0ff, transparent); opacity: 0.5;"></td></tr>
+                    <tr>
+                        <td style="padding: 30px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <!-- Avatar -->
+                                    <td width="60" valign="middle">
+                                        <div style="width: 60px; height: 60px; border-radius: 50%; background: #21262d; border: 1px solid #D4AF37; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                            <img src="https://lh3.googleusercontent.com/d/1hgp96lBRfaM1KiDjHN7qRyUwOPJ2yz85" alt="RC" width="60" height="60" style="display: block; width: 100%; height: auto;">
+                                        </div>
+                                    </td>
+                                    <!-- Info -->
+                                    <td valign="middle" style="padding-left: 20px;">
+                                        <span class="code-font" style="display: block; font-size: 10px; color: #00f0ff; letter-spacing: 1px; margin-bottom: 5px;">// INSTRUCTOR</span>
+                                        <h3 style="margin: 0 0 5px 0; font-family: 'Verdana', sans-serif; font-size: 18px; font-weight: normal; color: #FFFFFF;">Rohini Chaudhari</h3>
+                                        <a href="https://www.linkedin.com/in/rohini-chudhari-cybersecurity" style="font-size: 12px; color: #8b949e; text-decoration: none; border-bottom: 1px solid #30363d;">View Profile ↗</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- The Roadmap (Schedule) -->
+        <tr>
+            <td align="center" style="padding: 0 20px 60px 20px;" class="mobile-pad">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto;">
+                    <tr>
+                        <td align="left" style="padding-bottom: 30px;">
+                            <h2 style="font-family: 'Cinzel', serif; font-size: 20px; color: #FFFFFF; font-weight: 400; letter-spacing: 2px; border-left: 3px solid #D4AF37; padding-left: 15px; margin: 0;">
+                                SESSION PROTOCOL
+                            </h2>
+                            <div style="margin-top: 12px; margin-left: 15px;">
+                                <span class="code-font" style="display: inline-block; background: rgba(212, 175, 55, 0.1); border: 1px solid #D4AF37; color: #D4AF37; padding: 8px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; letter-spacing: 1px;">
+                                    🕒 TIME: 19:00 - 20:00 (DAILY)
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Loop for Sessions -->
+                    
+                    <!-- Session 1 -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="glass-card">
+                                <tr>
+                                    <td width="80" align="center" style="background: rgba(212, 175, 55, 0.1); border-right: 1px solid #30363d; padding: 20px;">
+                                        <span class="code-font" style="display: block; font-size: 11px; color: #D4AF37; opacity: 0.7;">JAN</span>
+                                        <span style="display: block; font-size: 24px; font-weight: 700; color: #D4AF37; font-family: 'Cinzel', serif;">22</span>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <h4 style="margin: 0 0 5px 0; color: #FFF; font-size: 16px;">Cyber Fundamentals</h4>
+                                        <p style="margin: 0; font-size: 13px; color: #8b949e; line-height: 20px;">
+                                            Career Scope, CIA Triad & Beyond.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Session 2 -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="glass-card">
+                                <tr>
+                                    <td width="80" align="center" style="background: rgba(0, 240, 255, 0.05); border-right: 1px solid #30363d; padding: 20px;">
+                                        <span class="code-font" style="display: block; font-size: 11px; color: #00f0ff; opacity: 0.7;">JAN</span>
+                                        <span style="display: block; font-size: 24px; font-weight: 700; color: #00f0ff; font-family: 'Cinzel', serif;">23</span>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <h4 style="margin: 0 0 5px 0; color: #FFF; font-size: 16px;">Cybersecurity Teams</h4>
+                                        <p style="margin: 0; font-size: 13px; color: #8b949e; line-height: 20px;">
+                                            Red, Blue, Purple Teams - The Color Framework.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Session 3 -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="glass-card">
+                                <tr>
+                                    <td width="80" align="center" style="background: rgba(212, 175, 55, 0.1); border-right: 1px solid #30363d; padding: 20px;">
+                                        <span class="code-font" style="display: block; font-size: 11px; color: #D4AF37; opacity: 0.7;">JAN</span>
+                                        <span style="display: block; font-size: 24px; font-weight: 700; color: #D4AF37; font-family: 'Cinzel', serif;">24</span>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <h4 style="margin: 0 0 5px 0; color: #FFF; font-size: 16px;">Reconnaissance</h4>
+                                        <p style="margin: 0; font-size: 13px; color: #8b949e; line-height: 20px;">
+                                            Information Gathering Techniques & OSINT.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Session 4 -->
+                    <tr>
+                        <td style="padding-bottom: 15px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="glass-card">
+                                <tr>
+                                    <td width="80" align="center" style="background: rgba(0, 240, 255, 0.05); border-right: 1px solid #30363d; padding: 20px;">
+                                        <span class="code-font" style="display: block; font-size: 11px; color: #00f0ff; opacity: 0.7;">JAN</span>
+                                        <span style="display: block; font-size: 24px; font-weight: 700; color: #00f0ff; font-family: 'Cinzel', serif;">25</span>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <h4 style="margin: 0 0 5px 0; color: #FFF; font-size: 16px;">Web App Security</h4>
+                                        <p style="margin: 0; font-size: 13px; color: #8b949e; line-height: 20px;">
+                                            Securing the Modern Web Landscape.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Session 5 -->
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="glass-card">
+                                <tr>
+                                    <td width="80" align="center" style="background: rgba(212, 175, 55, 0.1); border-right: 1px solid #30363d; padding: 20px;">
+                                        <span class="code-font" style="display: block; font-size: 11px; color: #D4AF37; opacity: 0.7;">JAN</span>
+                                        <span style="display: block; font-size: 24px; font-weight: 700; color: #D4AF37; font-family: 'Cinzel', serif;">26</span>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <h4 style="margin: 0 0 5px 0; color: #FFF; font-size: 16px;">Vulnerability Management</h4>
+                                        <p style="margin: 0; font-size: 13px; color: #8b949e; line-height: 20px;">
+                                            OWASP Top 10 & Managing Threats.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+        <!-- CTA Section -->
+        <tr>
+            <td align="center" style="padding: 0 20px 80px 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto;">
+                    <tr>
+                        <td align="center" style="padding: 40px; border: 1px dashed #30363d; border-radius: 20px; background: rgba(13, 17, 23, 0.5);">
+                            <div style="margin-bottom: 25px;">
+                                <span class="code-font" style="display: inline-block; background: rgba(10, 255, 96, 0.1); border: 1px solid #0aff60; color: #0aff60; padding: 8px 20px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 0 10px rgba(10, 255, 96, 0.2);">
+                                    ● STATUS: OPEN TO ALL
+                                </span>
+                            </div>
+                            
+                            <!-- CTA Buttons Area -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 10px;">
+                                <tr>
+                                    <td align="center" style="padding: 10px 10px 5px 10px;">
+                                        <!-- Registration Button -->
+                                        <a href="https://forms.gle/iGjU9sCJn7r8g1jj6" class="cyber-btn" style="display: inline-block; padding: 18px 30px; font-size: 14px; white-space: nowrap; width: 220px;">
+                                            Initiate Sequence
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 5px 10px 10px 10px;">
+                                        <!-- Calendar Button -->
+                                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Web+Trapped+:+CyberSecurity+101&dates=20260122T133000Z/20260122T143000Z&details=Join+Session:+https://meet.google.com/fut-zjjr-kkq%0A%0ACertificates+awarded+for+attendance!&location=https://meet.google.com/fut-zjjr-kkq&recur=RRULE:FREQ=DAILY;COUNT=5" class="cyber-btn" style="display: inline-block; padding: 18px 30px; font-size: 14px; white-space: nowrap; width: 220px;">
+                                            📅 Add to Calendar
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p style="margin-top: 25px; font-size: 13px; color: #FFFFFF; line-height: 20px;">
+                                ✨ <strong>Official Participation Certificates</strong> will be awarded to all attendees.<br>
+                                <span style="font-size: 12px; color: #8b949e; display: block; margin-top: 5px;">*Sessions daily at 7 PM IST on <a href="https://meet.google.com/fut-zjjr-kkq" style="color: #00f0ff; text-decoration: none;">Google Meet</a></span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td align="center" style="padding: 40px 20px; background-color: #010409; border-top: 1px solid #21262d;">
+                <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                    <tr>
+                        <td align="center" style="padding-bottom: 20px;">
+                            <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" width="40" alt="Logo" style="display: block; width: 40px; opacity: 0.5; margin-bottom: 20px; margin-left: auto; margin-right: auto;">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                                <tr>
+                                    <td style="padding: 0 15px;"><a href="https://www.instagram.com/sundarbansiitm" style="color: #484f58; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">Instagram</a></td>
+                                    <td style="padding: 0 15px; color: #30363d;">|</td>
+                                    <td style="padding: 0 15px;"><a href="https://www.linkedin.com/company/sundarbans-iitm/" style="color: #484f58; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">LinkedIn</a></td>
+                                    <td style="padding: 0 15px; color: #30363d;">|</td>
+                                    <td style="padding: 0 15px;"><a href="https://www.youtube.com/@SundarbansIITM" style="color: #484f58; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">YouTube</a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font-size: 12px; color: #484f58; font-family: 'Outfit', sans-serif;">
+                            <p style="margin: 0 0 10px 0;">Sundarbans House · IITMBS Degree</p>
+                            <p style="margin: 0;">&copy; 2026 Secured Transmission.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

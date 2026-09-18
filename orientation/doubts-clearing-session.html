@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>Doubts Clearing Session</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+        /* Base Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #051a14;
+            color: #ffffff;
+        }
+        
+        /* Container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #08221b; /* Ensure this is here so it isn't transparent */
+            overflow: hidden;
+            border-radius: 20px; /* Rounded corners for the whole email */
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #051a14 0%, #0c3329 100%);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+            position: relative;
+        }
+
+        /* Ambient Glow */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Logo */
+        .house-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px 5px rgba(212, 175, 55, 0.5); /* Glowing effect */
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+        }
+
+        .brand-title {
+            color: #d4af37; /* Gold */
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .main-title {
+            font-size: 32px; 
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #d4af37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            /* Fallback for email clients that don't support text-fill-color */
+            color: #d4af37; 
+            margin-bottom: 10px;
+        }
+
+        .sub-title {
+            font-size: 16px;
+            color: #a0c4b8;
+            margin-top: 10px;
+            line-height: 1.5;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+            background-color: #08221b; /* CRITICAL: Explicit background for content area */
+            color: #ffffff;
+        }
+
+        .intro-text {
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .intro-text strong {
+            color: #d4af37;
+        }
+
+        /* Info Card */
+        .info-card {
+            background-color: #0b2b22; /* Fallback for no RGBA support */
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 120px;
+            margin: 10px;
+        }
+
+        .info-label {
+            display: block;
+            color: #d4af37;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Agenda Section */
+        .agenda {
+            text-align: left;
+            margin: 30px auto;
+            max-width: 450px;
+            background-color: #0b2b22;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 3px solid #d4af37;
+            color: #ffffff;
+        }
+        
+        .agenda-title {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #1a3d33;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .agenda ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .agenda li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: #e0e0e0;
+            font-size: 15px;
+        }
+
+        .agenda li::before {
+            content: '•';
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .language-note {
+             margin: 25px 0;
+             padding: 15px;
+             background-color: rgba(212, 175, 55, 0.05);
+             border-radius: 8px;
+             text-align: left;
+             font-size: 14px;
+             color: #e0e0e0;
+        }
+
+        .language-note strong {
+            color: #d4af37;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .closing-text {
+            margin-top: 30px;
+            font-size: 15px;
+            font-style: italic;
+            color: #a0c4b8;
+            line-height: 1.5;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #d4af37; /* Fallback */
+            background: linear-gradient(45deg, #d4af37, #b4941f);
+            color: #051a14;
+            padding: 16px 36px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(45deg, #e5c14d, #c5a328);
+        }
+
+        .cta-note {
+            display: block;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #a0c4b8;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #04140f;
+            padding: 25px;
+            text-align: center;
+            font-size: 13px;
+            color: #5c7a70;
+            border-top: 1px solid #1a3d33;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer strong {
+            color: #d4af37;
+        }
+
+
+        /* Animation for Power Transfer */
+        @keyframes powerFlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); 
+                filter: brightness(1);
+            }
+            50% { 
+                box-shadow: 0 0 50px 15px rgba(212, 175, 55, 1); 
+                filter: brightness(1.2);
+            }
+        }
+
+        .parent-logo {
+            animation: powerFlow 2s ease-in-out infinite;
+        }
+
+        .child-logo {
+            animation: powerFlow 2s ease-in-out infinite;
+            animation-delay: 1s; /* Delays the child's glow to create the 'transfer' effect */
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+            .info-card {
+                display: block;
+            }
+            .info-item {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #051a14; color: #ffffff;">
+    <div style="background-color: #051a14; padding: 20px 0;"> <!-- Outer wrapper for background safety -->
+        <div class="email-container" style="background-color: #08221b; max-width: 600px; margin: 0 auto; overflow: hidden; color: #ffffff;">
+            <!-- Hero Section -->
+            <div class="hero" style="background-color: #08221b; padding: 50px 20px; text-align: center; border-bottom: 2px solid #d4af37;">
+                <div class="hero-content">
+                    <div style="margin: 0 auto 20px auto; position: relative; text-align: center;">
+                        <!-- Shared Glow Container -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 280px; height: 180px; background: radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, rgba(8, 34, 27, 0) 70%); z-index: 0; pointer-events: none;"></div>
+                        
+                        <!-- Logos -->
+                        <div style="position: relative; z-index: 1; white-space: nowrap; font-size: 0; line-height: 0;">
+                            <!-- Sundarbans Logo (Parent - Larger) -->
+                            <img src="https://lh3.googleusercontent.com/d/1KIkGms3WCfWsvsDTSEQ0ce3_tdnVBkg2" alt="Sundarbans House Logo" width="130" height="130" class="parent-logo" style="width: 130px; height: 130px; border-radius: 50%; border: 2px solid #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); vertical-align: middle; display: inline-block; position: relative; z-index: 1;">
+                            
+                            <!-- Delhi Logo (Child - Smaller) -->
+                            <img src="https://lh3.googleusercontent.com/d/1eKBOyc7edZlKaohtuKfk2SBf7p8Zt7Oq" alt="Delhi Region Logo" width="90" height="90" class="child-logo" style="width: 90px; height: 90px; border-radius: 50%; border: 2px solid #d4af37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); vertical-align: middle; display: inline-block; margin-left: -50px; background-color: #051a14; position: relative; z-index: 2;">
+                        </div>
+                    </div>
+                    
+                    <div class="brand-title" style="color: #d4af37; font-size: 16px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; font-weight: 800; text-shadow: 0 0 10px rgba(0,0,0,0.5); line-height: 1.4;">WELCOME TO<br>SUNDARBANS – DELHI REGION</div>
+                    
+                    <h1 class="main-title" style="color: #d4af37; font-size: 38px; margin: 0; line-height: 1.1; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">DOUBTS CLEARING<br>SESSION</h1>
+                    
+                    <p class="sub-title" style="font-size: 16px; color: #a0c4b8; margin-top: 15px; line-height: 1.5;">Term: Jan 2026</p>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="content" style="padding: 40px 30px; text-align: center; background-color: #08221b; color: #ffffff;">
+                
+                <!-- Intro Paragraphs -->
+                <div class="intro-text" style="text-align: left;">
+                    <p style="margin-bottom: 15px;">Get ready to begin your journey with Sundarbans House, Delhi Region.</p>
+                    <p style="margin-bottom: 15px;">This session is primarily focused on <strong style="color: #d4af37;">clearing your doubts</strong> and helping you understand how things work in the IITM BS program. Common questions and concerns faced by freshers will be addressed in detail.</p>
+                </div>
+
+                <!-- Info Card with Date/Time -->
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0b2b22; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; margin: 30px 0; border-collapse: separate;">
+                    <tr>
+                        <td width="33%" style="padding: 20px 5px; text-align: center; vertical-align: top;">
+                            <span class="info-label" style="display: block; color: #d4af37; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">Date</span>
+                            <div class="info-value" style="font-size: 18px; font-weight: 700; color: #ffffff;">17th Feb</div>
+                        </td>
+                        <td width="33%" style="padding: 20px 5px; text-align: center; vertical-align: top; border-left: 1px solid rgba(212, 175, 55, 0.1); border-right: 1px solid rgba(212, 175, 55, 0.1);">
+                            <span class="info-label" style="display: block; color: #d4af37; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">Day</span>
+                            <div class="info-value" style="font-size: 18px; font-weight: 700; color: #ffffff;">Tuesday</div>
+                        </td>
+                        <td width="33%" style="padding: 20px 5px; text-align: center; vertical-align: top;">
+                            <span class="info-label" style="display: block; color: #d4af37; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">Time</span>
+                            <div class="info-value" style="font-size: 18px; font-weight: 700; color: #ffffff;">8:00 PM</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="padding: 10px 5px 20px 5px; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1);">
+                             <span class="info-label" style="display: block; color: #d4af37; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;">Venue</span>
+                             <div class="info-value" style="font-size: 16px; font-weight: 700; color: #ffffff;">Google Meet (Virtual Event)</div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Agenda -->
+                <div class="agenda" style="text-align: left; margin: 0 auto; max-width: 450px; background-color: #0b2b22; padding: 25px; border-radius: 8px; border-left: 3px solid #d4af37; color: #ffffff;">
+                    <div class="agenda-title" style="color: #d4af37; font-size: 18px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #1a3d33; padding-bottom: 10px; font-weight: 700;">Points to be covered / Topics</div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Sundarbans House (Delhi Region)
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Clubs & Societies
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Opportunities & Student Activities
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Campus Stay & Regional Engagement
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Course Drop Process
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Exam City Change Option
+                        </li>
+                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> House Change Form
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> SCT Details
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 20px; position: relative; color: #e0e0e0; font-size: 15px;">
+                            <span style="position: absolute; left: 0; color: #d4af37; font-weight: bold;">•</span> Open Q&A: Your doubts, our answers
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Language Note -->
+                <div class="language-note" style="max-width: 450px; margin: 25px auto;">
+                    <strong>Language of the session</strong>
+                    The session will be conducted in both Hindi and English, based on participant preference.
+                </div>
+
+                <div class="closing-text" style="margin-top: 30px; font-size: 15px; font-style: italic; color: #a0c4b8; line-height: 1.5;">
+                    <p style="margin-bottom: 10px;">If you have any questions related to academics, exams, houses, or campus life, feel free to bring them to the session. We are here to help you settle in with clarity and confidence.</p>
+                     <p style="font-size: 14px; margin-top: 5px;">Please join 5 minutes early so we can start on time.</p>
+                </div>
+
+                <!-- CTA -->
+                <a href="#" class="cta-button" style="display: inline-block; background-color: #d4af37; color: #051a14; padding: 16px 36px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; margin-top: 20px;">Join Session</a>
+                <!-- <span class="cta-note" style="display: block; margin-top: 10px; font-size: 13px; color: #a0c4b8; font-style: italic;">[Meeting link will be shared]</span> -->
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer" style="background-color: #04140f; padding: 25px; text-align: center; font-size: 13px; color: #5c7a70; border-top: 1px solid #1a3d33;">
+                <p style="margin: 5px 0;">Warm regards,</p>
+                <p style="margin: 5px 0; color: #d4af37; font-weight: bold;">Sundarbans House Council</p>
+                <p style="margin: 5px 0;">Delhi Region</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!--
+DIAGNOSTIC TEST v2 — not the real email.
+Removed the outer width="100%" wrapper table entirely. Full-bleed background
+now comes only from <body bgcolor>, which always fills the viewport correctly
+(no % resolution ambiguity the way tables can have). Centering is just
+<center> + one fixed-pixel-width table, nothing else declares a width.
+
+Send this exact file the same way you sent the last test and check the
+received result: does the sideways scrollbar go away now?
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#080705" style="margin:0; padding:0; background-color:#080705;">
+<center style="width:100%; background-color:#080705; padding:20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="400" bgcolor="#F3C649" align="center">
+<tr>
+<td style="padding:40px; text-align:center; font-family:Arial,sans-serif; font-size:16px; color:#080705;">
+This yellow box is exactly 400px wide and the whole email should NOT scroll sideways anymore.
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

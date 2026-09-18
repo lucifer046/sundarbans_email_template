@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 06: System Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE */
+        body { margin: 0; padding: 0; width: 100% !important; background-color: #1a1a1a; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; color: #ffffff; -webkit-font-smoothing: antialiased; }
+        table { width: 100%; border-spacing: 0; border-collapse: collapse; }
+        td { padding: 0; }
+        img { border: 0; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* TYPOGRAPHY */
+        .font-mono { font-family: 'Fira Code', 'Courier New', monospace; }
+        .text-orange { color: #E95420; }
+        .text-green { color: #27c93f; }
+        .text-gray { color: #666; }
+        
+        /* LAYOUT */
+        .wrapper { width: 100%; table-layout: fixed; background-color: #1a1a1a; padding-bottom: 60px; }
+        .main { max-width: 900px; margin: 0 auto; background-color: #0E0E0E; overflow: hidden; border: 1px solid #333; }
+        
+        /* TERMINAL BAR */
+        .terminal-bar { background-color: #2c2c2c; padding: 10px 15px; border-bottom: 1px solid #000; }
+        .dot { height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+
+        /* HEADER */
+        .header { padding: 40px 20px; text-align: center; border-bottom: 1px dashed #333; }
+        .logo-img { width: 60px; height: auto; margin: 0 auto 15px; }
+        .house-name { font-size: 21px; letter-spacing: 2px; text-transform: uppercase; color: #E95420; font-weight: 700; margin-bottom: 20px; }
+        .headline { font-size: 62px; font-weight: 700; line-height: 1.2; margin: 0 0 10px; color: #fff; }
+        .subtitle { font-family: 'Fira Code', monospace; color: #888; font-size: 21px; margin-top: 5px; }
+
+        /* CONSOLE BOX (SIMPLIFIED) */
+        .focus-section { padding: 30px; background-color: #111; border-bottom: 1px solid #222; }
+        .console-box { background-color: #000; padding: 25px; border-left: 4px solid #E95420; font-family: 'Fira Code', monospace; font-size: 24px; line-height: 1.6; color: #ccc; }
+        .cmd { color: #27c93f; margin-right: 10px; }
+        
+        /* TIMING ALERT */
+        .timing-box { margin-top: 25px; background-color: #1a1a1a; border: 1px solid #333; padding: 15px; border-radius: 4px; text-align: left; }
+        
+        /* RECORDINGS GRID */
+        .recordings-section { padding: 30px; border-bottom: 1px dashed #333; background-color: #141414; }
+        .section-label { font-family: 'Fira Code', monospace; color: #555; font-size: 16px; margin-bottom: 20px; display: block; text-transform: uppercase; letter-spacing: 1px; }
+        .rec-grid { text-align: center; }
+        .rec-link { display: inline-block; margin: 5px; padding: 10px 15px; background-color: #222; border: 1px solid #333; color: #888; font-family: 'Fira Code', monospace; font-size: 16px; border-radius: 4px; transition: all 0.2s; }
+        .rec-link:hover { color: #fff; border-color: #E95420; background-color: #333; }
+
+        /* MISSION MODULES (SIMPLIFIED AGENDA) */
+        .agenda-container { padding: 40px 30px; }
+        .module-box { border: 1px solid #333; background-color: #111; padding: 20px; margin-bottom: 20px; display: block; border-left: 4px solid #444; }
+        .module-box.active { border-color: #E95420; border-left-color: #E95420; background-color: #1a1a1a;}
+        .module-header { font-family: 'Fira Code', monospace; font-size: 20px; color: #E95420; margin-bottom: 8px; display: block; font-weight: bold; }
+        .module-desc { font-size: 22px; color: #fff; line-height: 1.4; display: block; }
+        .module-sub { font-size: 16px; color: #888; margin-top: 5px; display: block; }
+
+        /* BUTTONS */
+        .btn-block { padding: 30px; text-align: center; border-top: 1px solid #222; }
+        .btn-primary { background-color: #E95420; color: #fff; padding: 16px 40px; font-family: 'Fira Code', monospace; font-weight: bold; font-size: 26px; text-transform: uppercase; border-radius: 4px; display: inline-block; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+
+        /* FOOTER */
+        .footer { padding: 30px; background-color: #000; text-align: center; font-family: 'Fira Code', monospace; font-size: 16px; color: #444; border-top: 1px solid #222; }
+
+        /* MOBILE */
+        @media screen and (max-width: 600px) {
+            .wrapper { width: 100% !important; }
+            .main { width: 100% !important; border: none; }
+            .header, .focus-section, .agenda-container, .btn-block, .recordings-section { padding-left: 15px !important; padding-right: 15px !important; }
+            .headline { font-size: 42px !important; }
+            .rec-link { display: block; margin: 5px 0; width: auto; text-align: center; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table class="main" role="presentation" align="center">
+            
+            <!-- TERMINAL BAR -->
+            <tr>
+                <td class="terminal-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span style="font-family:'Fira Code', monospace; font-size: 16px; color: #666; margin-left: 10px;">./day_06_final.sh</span>
+                </td>
+            </tr>
+
+            <!-- HEADER -->
+            <tr>
+                <td class="header">
+                    <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" alt="Sundarbans Logo" class="logo-img">
+                    <div class="house-name">&lt; SUNDARBANS HOUSE /&gt;</div>
+                    
+                    <span class="status-badge">● LIVE TODAY</span>
+                    <h1 class="headline">System Maintenance</h1>
+                    <div class="subtitle">The Final Session</div>
+                </td>
+            </tr>
+
+            <!-- CONSOLE FOCUS (SIMPLIFIED) -->
+            <tr>
+                <td class="focus-section">
+                    <div class="console-box">
+                        <div><span class="cmd">root@workshop:~$</span> ./check_system_status</div>
+                        <div style="color: #fff; margin-top: 5px;">>> ANALYZING...</div>
+                        <div style="color: #27c93f;">>> MISSION STATUS: CRITICAL</div>
+                        <br>
+                        <div style="color:#aaa;">
+                            We are not just using Linux.<br>
+                            We are fixing it. We are mastering it.<br>
+                            This is how you become a Power User.
+                        </div>
+                    </div>
+
+                    <div class="timing-box">
+                        <span style="color:#E95420; font-weight:bold; font-family:'Fira Code', monospace; font-size: 20px;">
+                            ⏰ TIME: 7:00 PM - 8:30 PM IST
+                        </span>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- RECORDINGS (PREVIOUS LOGS) -->
+            <tr>
+                <td class="recordings-section">
+                    <span class="section-label">// ACCESS PREVIOUS LOGS</span>
+                    <div class="rec-grid">
+                        <a href="https://www.youtube.com/live/A-5W2KQn5Tw?si=wITgpRMmEi3-9gTx" class="rec-link">Day 01: Basics</a>
+                        <a href="https://www.youtube.com/live/yssaas7dCsA?si=Oczc28nNNwEDn9JP" class="rec-link">Day 02: Custom</a>
+                        <a href="https://www.youtube.com/live/oZ877WtmlDM?si=8UlpyV-MshTXJsLi" class="rec-link">Day 03: Apps</a>
+                        <a href="https://www.youtube.com/live/VGzoMrozkYk?si=9qnSOPipdBM2-XbD" class="rec-link">Day 04: Suite</a>
+                        <a href="https://www.youtube.com/live/FmdTfijyoww?si=8O7ZEVJ2NyLvzssa" class="rec-link">Day 05: Power</a>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- MISSION MODULES (TODAY) -->
+            <tr>
+                <td class="agenda-container">
+                    <span class="section-label" style="margin-bottom: 20px; display:block;">// TODAY'S MISSION MODULES</span>
+
+                    <!-- Module 1 -->
+                    <div class="module-box active">
+                        <span class="module-header">[ TASK 01 ] STORAGE REPAIR 💾</span>
+                        <span class="module-desc">Fixing Corrupted Pendrives</span>
+                        <span class="module-sub">Learn how to resurrect broken storage devices instantly.</span>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="module-box active">
+                        <span class="module-header">[ TASK 02 ] VIRTUAL WORLDS 🖥️</span>
+                        <span class="module-desc">Run Windows inside Linux</span>
+                        <span class="module-sub">Use KVM & Multipass to run any OS without rebooting.</span>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="module-box active">
+                        <span class="module-header">[ TASK 03 ] INTERFACE 🎨</span>
+                        <span class="module-desc">Choose Your Desktop</span>
+                        <span class="module-sub">GNOME vs KDE vs XFCE. Find your perfect style.</span>
+                    </div>
+
+                </td>
+            </tr>
+
+            <!-- CTA -->
+            <tr>
+                <td class="btn-block">
+                    <a href="https://meet.google.com/ezg-qpcv-pzt" class="btn-primary">
+                        ENTER SESSION >
+                    </a>
+                </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+                <td class="footer">
+                    <div style="margin-bottom: 20px;">
+                        <a href="https://www.instagram.com/sundarbansiitm" style="color:#888; text-decoration:none; margin:0 10px; font-weight:bold;">INSTAGRAM</a>
+                        <span style="color:#333">|</span>
+                        <a href="https://www.linkedin.com/company/sundarbans-iitm/" style="color:#888; text-decoration:none; margin:0 10px; font-weight:bold;">LINKEDIN</a>
+                        <span style="color:#333">|</span>
+                        <a href="https://www.youtube.com/@SundarbansIITM" style="color:#888; text-decoration:none; margin:0 10px; font-weight:bold;">YOUTUBE</a>
+                    </div>
+                    &copy; 2026 SUNDARBANS HOUSE<br>
+                    <span style="color:#444; font-size:14px;">[ LOG_END ] SYSTEM_READY</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

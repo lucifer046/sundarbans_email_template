@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundarbans House Galentine's Meetup</title>
+    <!-- Google Fonts for that Premium Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #f7f2ec; /* Soft Pink Background */
+            font-family: 'Playfair Display', serif;
+            color: #5a3e36;
+        }
+        
+        /* Container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Subtle texture */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #f8bbd0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #efe3e6;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.5);
+            pointer-events: none;
+        }
+
+        .brand-logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .hero-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #ad1457;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .hero-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 58px;
+            color: #880e4f;
+            line-height: 1.2;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+        }
+        
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 18px;
+            color: #560027;
+            margin-bottom: 20px;
+        }
+
+        /* Whistledown content */
+        .content-box {
+            padding: 40px 30px;
+            text-align: center;
+            background-color: #fff0f5; /* Lavender Blush */
+            margin: 20px;
+            border-radius: 4px;
+            border: 1px solid #f3e5f5;
+            position: relative;
+        }
+
+        .gentle-reader {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #880e4f;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 1px solid #880e4f;
+            padding-bottom: 5px;
+        }
+
+        .body-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 25px;
+        }
+
+        .highlight-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #c2185b;
+            font-style: italic;
+            display: block;
+            margin: 20px 0;
+        }
+
+        /* Details Grid */
+        .details-grid {
+            display: table;
+            width: 100%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(244, 143, 177, 0.15);
+        }
+
+        .detail-item {
+            display: table-cell;
+            width: 33.33%;
+            padding: 20px 10px;
+            text-align: center;
+            vertical-align: middle;
+            border-right: 1px dashed #f8bbd0;
+        }
+
+        .detail-item:last-child {
+            border-right: none;
+        }
+
+        .detail-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .detail-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            color: #880e4f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .detail-value {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Activities Section */
+        .activities-section {
+            padding: 30px;
+        }
+
+        .activities-title {
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            color: #ad1457;
+            margin-bottom: 20px;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .activity-item {
+            display: inline-block;
+            margin: 10px;
+            background: #ffffff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #f8bbd0;
+            font-family: 'Lato', sans-serif;
+            color: #880e4f;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: url('https://www.transparenttextures.com/patterns/shattered-island.png');
+            background-color: #fce4ec;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #ba2d65, #880e4f);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 40px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 2px;
+            letter-spacing: 2px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(136, 14, 79, 0.3);
+            border: 1px solid #ffffff;
+            position: relative;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(136, 14, 79, 0.4);
+        }
+
+        .limited-slots {
+            margin-top: 15px;
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+            color: #880e4f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #560027;
+            color: #f8bbd0;
+            text-align: center;
+            padding: 30px;
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+            .hero-title {
+                font-size: 42px !important;
+            }
+            .content-box {
+                margin: 10px !important;
+                padding: 20px !important;
+            }
+            .detail-item {
+                display: block !important;
+                width: 100% !important;
+                border-right: none !important;
+                border-bottom: 1px dashed #f8bbd0;
+                padding: 15px !important;
+            }
+            .detail-item:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-subtitle">Sundarbans House Presents</div>
+            <h1 class="hero-title">Unapologetically Her...</h1>
+            <div class="hero-tagline">Degree's first only for girls meetup</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-box">
+            <div class="gentle-reader">Dearest Gentle Reader,</div>
+            
+            <p class="body-text">
+                Whispers through the capital speak of a gathering most exquisite, one that opens but once... 
+                It has come to this author's attention that Sundarbans House is hosting the season's 
+                most coveted gathering.
+            </p>
+
+            <span class="highlight-text">
+                "Where girls celebrate girls."<br>
+                <span style="font-size: 18px; display: block; margin-top: 5px;">A meetup led by girls for girls.</span>
+            </span>
+
+            <p class="body-text">
+                Leave your worries at the door and step into a world of elegance, laughter, and unabashed joy. 
+                This is not merely a meetup; it is a declaration of self-love.
+            </p>
+
+            <!-- Details Grid -->
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="detail-icon">📅</span>
+                    <span class="detail-label">When</span>
+                    <div class="detail-value">Sunday, Feb 8th<br>2026</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🕰️</span>
+                    <span class="detail-label">Time</span>
+                    <div class="detail-value">2:00 PM<br>Onwards</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">📍</span>
+                    <span class="detail-label">Where</span>
+                    <div class="detail-value">Pacific Mall,<br>Tagore Garden</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activities -->
+        <div class="activities-section">
+            <h2 class="activities-title">The Cute Section</h2>
+            <ul class="activity-list">
+                <li class="activity-item">🎨 Clay Art<br><small>Get messy, make it cute</small></li>
+                <li class="activity-item">🕯️ Candle Decoration<br><small>Glow it up</small></li>
+                <li class="activity-item">📸 Aesthetic Photo Booth<br><small>Memories > Everything</small></li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <a href="https://forms.gle/k49v3uRJbMagSJjc9" class="cta-button">Express Your Interest</a>
+            <div class="limited-slots">For Girls Only • Limited Slots Available</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Sundarbans House • Delhi Region</p>
+            <p>IITM BS Degree</p>
+            <div style="margin-top: 15px; opacity: 0.7; font-size: 10px;">
+                You are receiving this because you are a part of our esteemed community.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

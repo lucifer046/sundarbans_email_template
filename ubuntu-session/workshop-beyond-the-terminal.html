@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond The Terminal</title>
+    <!-- Import Mono font for that 'Dev' feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE */
+        body { margin: 0; padding: 0; width: 100% !important; background-color: #1a1a1a; font-family: 'Ubuntu', Helvetica, Arial, sans-serif; color: #ffffff; -webkit-font-smoothing: antialiased; }
+        table {width: 50%; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        td { padding: 0; }
+        img { border: 0; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* TYPOGRAPHY */
+        .font-mono { font-family: 'Fira Code', 'Courier New', monospace; }
+        .text-orange { color: #E95420; }
+        .text-purple { color: #772953; }
+        .text-gray { color: #888888; }
+        .text-white { color: #ffffff; }
+        
+        /* LAYOUT UTILS */
+        .wrapper { width: 100%; table-layout: fixed; background-color: #1a1a1a; padding-bottom: 60px; }
+        .main { max-width: 900px; margin: 0 auto; background-color: #0E0E0E; overflow: hidden; border: 1px solid #333; }
+        
+        /* TERMINAL TOP BAR */
+        .terminal-bar { background-color: #2c2c2c; padding: 10px 15px; border-bottom: 1px solid #000; }
+        .dot { height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+
+        /* HEADER */
+        .header { padding: 40px 20px; text-align: center; border-bottom: 1px dashed #333; }
+        .logo-img { width: 60px; height: auto; margin: 0 auto 15px; }
+        .house-name { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #E95420; font-weight: 700; margin-bottom: 10px; }
+        .headline { font-size: 32px; font-weight: 700; line-height: 1.2; margin: 0 0 10px; }
+        .tagline { font-family: 'Fira Code', monospace; color: #888; font-size: 13px; background: #1a1a1a; padding: 5px 10px; display: inline-block; border-radius: 4px; }
+
+        /* HOOK - CODE DIFF STYLE */
+        .hook-section { padding: 30px; background-color: #111; border-bottom: 1px solid #222; }
+        .console-box { background-color: #000; padding: 20px; border-left: 3px solid #E95420; font-family: 'Fira Code', monospace; font-size: 13px; line-height: 1.6; color: #ccc; }
+        .cmd-line { margin-bottom: 10px; display: block; }
+        .cursor { display: inline-block; width: 8px; height: 16px; background-color: #E95420; animation: blink 1s infinite; vertical-align: middle; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* AGENDA - CODE LINES */
+        .agenda-container { padding: 40px 30px; }
+        .section-comment { font-family: 'Fira Code', monospace; color: #555; font-size: 14px; margin-bottom: 20px; display: block; }
+        
+        .code-row { margin-bottom: 15px; }
+        .line-num { display: inline-block; width: 30px; color: #444; font-family: 'Fira Code', monospace; font-size: 12px; text-align: right; margin-right: 15px; }
+        .code-content { display: inline-block; vertical-align: top; max-width: 85%; }
+        .var-name { color: #E95420; font-weight: bold; font-family: 'Fira Code', monospace; font-size: 14px; }
+        .var-val { color: #999; font-size: 13px; display: block; margin-top: 3px; }
+
+        /* BUTTONS */
+        .btn-block { padding: 40px 30px; text-align: center; }
+        .btn-primary { background-color: #E95420; color: #ffffff; padding: 15px 35px; font-family: 'Fira Code', monospace; font-weight: bold; text-transform: uppercase; border-radius: 4px; display: inline-block; box-shadow: 0 4px 0 #b3360a; transition: all 0.2s; }
+        .btn-primary:hover { background-color: #d14010; box-shadow: 0 2px 0 #b3360a; transform: translateY(2px); }
+
+        /* FOOTER */
+        .footer { padding: 30px; background-color: #111; text-align: center; border-top: 1px solid #222; }
+        .social-link { color: #888; font-size: 12px; margin: 0 10px; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; }
+        .social-link:hover { color: #E95420; }
+        .copy-text { margin-top: 20px; font-family: 'Fira Code', monospace; font-size: 10px; color: #444; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media screen and (max-width: 600px) {
+            .wrapper { width: 100% !important; padding: 0 !important; }
+            .main { width: 100% !important; max-width: 100% !important; border: none !important; margin: 0 !important; }
+            .header, .hook-section, .agenda-container, .btn-block, .footer { padding-left: 15px !important; padding-right: 15px !important; }
+            .headline { font-size: 26px !important; }
+            .code-content { max-width: 100% !important; display: block !important; margin-top: 5px; }
+            .line-num { display: none !important; } /* Hidden on mobile to save space, or keep if preferred. I'll keep it visible but maybe smaller? No, let's keep it simple and just full width. */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table class="main" role="presentation" align="center">
+            
+            <!-- FAKE TERMINAL BAR -->
+            <tr>
+                <td class="terminal-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span style="font-family:'Fira Code', monospace; font-size: 10px; color: #666; margin-left: 10px;">bash — ubuntu-workshop</span>
+                </td>
+            </tr>
+
+            <!-- BRAND HEADER -->
+            <tr>
+                <td class="header">
+                    <!-- LOGO -->
+                    <img src="https://lh3.googleusercontent.com/d/1SMhG3E-CHIJdFQUKQJuVsBcu857i1wEf" alt="Sundarbans Logo" class="logo-img">
+                    <div class="house-name">&lt; SUNDARBANS HOUSE /&gt;</div>
+                    
+                    <h1 class="headline">Beyond The Terminal</h1>
+                    <div class="tagline">sudo apt-get install superpowers</div>
+                </td>
+            </tr>
+
+            <!-- TECH HOOK -->
+            <tr>
+                <td class="hook-section">
+                    <div class="console-box">
+                        <span class="cmd-line"><span style="color:#27c93f">user@laptop:~$</span> whoami</span>
+                        <span class="cmd-line" style="color:#fff">>> Two users found.</span>
+                        <br>
+                        <span class="cmd-line"><span style="color:#E95420">[User A]</span> Windows Only <span style="color:#555">// Restricted access</span></span>
+                        <span class="cmd-line"><span style="color:#E95420">[User B]</span> Windows + Ubuntu <span style="color:#27c93f">// Full System Control</span></span>
+                        <br>
+                        <span class="cmd-line"><span style="color:#27c93f">user@laptop:~$</span> echo "Who stands out?"<span class="cursor"></span></span>
+                    </div>
+                    <p style="text-align: center; color: #888; font-size: 13px; margin-top: 20px; margin-bottom: 0;">
+                        Stop being a guest on your own machine.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- CODE AGENDA -->
+            <tr>
+                <td class="agenda-container">
+                    <span class="section-comment">// SCHEDULE: 6 MODULES (DISTRIBUTED DAILY)</span>
+                    <div style="height: 10px;"></div>
+
+                    <!-- Day 1 -->
+                    <div class="code-row">
+                        <span class="line-num">01</span>
+                        <div class="code-content">
+                            <span class="var-name">const Day_01_Jan29 = "Foundation";</span>
+                            <span class="var-val">Installation, Shortcuts, Basic UI & Filesystem</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="code-row">
+                        <span class="line-num">02</span>
+                        <div class="code-content">
+                            <span class="var-name">const Day_02_Jan30 = "Customization";</span>
+                            <span class="var-val">Gnome Tweaks, Themes, Wayland vs X11</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="code-row">
+                        <span class="line-num">03</span>
+                        <div class="code-content">
+                            <span class="var-name">const Day_03_Jan31 = "App_Ecosystem";</span>
+                            <span class="var-val">Repositories, Snap, Flatpak, Extensions</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div class="code-row">
+                        <span class="line-num">04</span>
+                        <div class="code-content">
+                            <span class="var-name">const Day_04_Feb01 = "Productivity";</span>
+                            <span class="var-val">LibreOffice, Obsidian, GIMP, Krita</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 -->
+                    <div class="code-row">
+                        <span class="line-num">05</span>
+                        <div class="code-content">
+                            <span class="var-name">const Day_05_Feb02 = "Power_User";</span>
+                            <span class="var-val">AppImages, OBS Studio, PPA, Network Tools</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 6 -->
+                    <div class="code-row">
+                        <span class="line-num">06</span>
+                        <div class="code-content">
+                            <span class="var-name">const Day_06_Feb03 = "Maintenance";</span>
+                            <span class="var-val">Troubleshooting, Backup (Timeshift), AI Helpers</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px; background-color: #111; border-left: 4px solid #E95420; padding: 15px 20px; text-align: left;">
+                        <span style="font-family:'Fira Code', monospace; font-size: 12px; color:#666; display: block; margin-bottom: 5px;">/* CRON JOB: DAILY */</span>
+                        <span style="font-family:'Fira Code', monospace; font-size: 20px; color:#ffffff; font-weight: bold;">
+                            7:00 PM - 8:00 PM IST
+                        </span>
+                    </div>
+
+                </td>
+            </tr>
+
+            <!-- CTA -->
+            <tr>
+                <td class="btn-block">
+                    <a href="https://forms.gle/XDuvAdSvVycWiAHYA" class="btn-primary">
+                        ./register.sh
+                    </a>
+                    <br><br>
+                    <a href="https://meet.google.com/ezg-qpcv-pzt" style="color: #666; font-size: 12px; text-decoration: underline; font-family: 'Fira Code', monospace;">
+                        ssh join@google-meet
+                    </a>
+                    <br><br>
+                    <a href="https://www.youtube.com/live/7V0BWb0XZr4?si=9PtJWhtf2Q9h9w07" style="color: #E95420; font-size: 11px; font-family: 'Fira Code', monospace;">
+                        [ VIEW_PREVIOUS_LOGS ]
+                    </a>
+                </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+                <td class="footer">
+                    <div style="margin-bottom: 20px;">
+                        <a href="https://www.instagram.com/sundarbansiitm" class="social-link">Instagram</a>
+                        <span style="color:#333">|</span>
+                        <a href="https://www.linkedin.com/company/sundarbans-iitm/" class="social-link">LinkedIn</a>
+                        <span style="color:#333">|</span>
+                        <a href="https://www.youtube.com/@SundarbansIITM" class="social-link">YouTube</a>
+                    </div>
+                    <div class="copy-text">
+                        &copy; 2026 SUNDARBANS HOUSE.<br>
+                        System Ready.
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
