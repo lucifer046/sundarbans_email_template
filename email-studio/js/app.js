@@ -51,7 +51,9 @@ class EmailStudioApp {
 
   async loadData() {
     try {
-      const res = await fetch('data/templates.json');
+      const isStudioDir = window.location.pathname.includes('/email-studio');
+      const dataUrl = isStudioDir ? 'data/templates.json' : 'email-studio/data/templates.json';
+      const res = await fetch(dataUrl);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       this.data = await res.json();
     } catch (e) {

@@ -79,6 +79,15 @@ class StudioPreviewController {
     });
   }
 
+  getTemplateUrl(template) {
+    if (!template) return '';
+    const isStudioDir = window.location.pathname.includes('/email-studio');
+    if (isStudioDir) {
+      return template.file;
+    }
+    return template.raw_path || template.file.replace(/^\.\.\//, '');
+  }
+
   openPreview(template) {
     if (!template) return;
     this.currentTemplate = template;
@@ -93,6 +102,8 @@ class StudioPreviewController {
 
     // Reset device to desktop
     this.setDeviceViewport('desktop');
+
+    const templateUrl = this.getTemplateUrl(template);
 
     // Load template file in isolated iframe with custom botanical scrollbar
     if (this.iframe) {
@@ -111,12 +122,12 @@ class StudioPreviewController {
       this.iframe.removeAttribute('srcdoc');
       this.iframe.src = 'about:blank';
       setTimeout(() => {
-        this.iframe.src = template.file;
+        this.iframe.src = templateUrl;
       }, 40);
     }
 
     // Pre-fetch raw HTML: enables zero-flicker styled srcdoc & clean copy/view actions
-    this.fetchAndApplyTemplateHtml(template.file);
+    this.fetchAndApplyTemplateHtml(templateUrl);
 
     // Open Modal
     this.modalBackdrop?.classList.add('open');
@@ -253,8 +264,9 @@ class StudioPreviewController {
   async getHtmlContent() {
     if (this.currentHtmlContent) return this.currentHtmlContent;
     try {
-      if (this.currentTemplate?.file) {
-        const res = await fetch(this.currentTemplate.file);
+      const fileUrl = this.getTemplateUrl(this.currentTemplate);
+      if (fileUrl) {
+        const res = await fetch(fileUrl);
         if (res.ok) {
           this.currentHtmlContent = await res.text();
           return this.currentHtmlContent;
@@ -342,8 +354,9 @@ class StudioPreviewController {
   }
 
   openInNewTab() {
-    if (this.currentTemplate?.file) {
-      window.open(this.currentTemplate.file, '_blank');
+    const fileUrl = this.getTemplateUrl(this.currentTemplate);
+    if (fileUrl) {
+      window.open(fileUrl, '_blank');
     }
   }
 }

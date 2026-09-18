@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sundarbans Email Studio &middot; Digital Design Gallery &middot; Sundarbans House</title>
+  <meta name="description" content="Explore the curated digital archive and responsive preview studio for the HTML email templates of Sundarbans House, IIT Madras BS Degree.">
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1PmhEx2nZ1Xmrea9if3gOvraX63ti2RWi">
+
+  <!-- Core CSS Stylesheets -->
+  <link rel="stylesheet" href="email-studio/css/style.css">
+  <link rel="stylesheet" href="email-studio/css/components.css">
+  <link rel="stylesheet" href="email-studio/css/animations.css">
+  <link rel="stylesheet" href="email-studio/css/responsive.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       1. SITE HEADER & NAVIGATION BAR
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-wrapper" aria-label="Sundarbans Email Studio Home">
+        <div class="brand-logo-box">
+          <img src="https://lh3.googleusercontent.com/d/1PmhEx2nZ1Xmrea9if3gOvraX63ti2RWi" alt="Sundarbans Crest" class="brand-logo-img">
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Sundarbans Email Studio</span>
+          <span class="brand-subtitle">Sundarbans House &middot; IITM BS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#featured" class="nav-link">Featured</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#catalog" class="nav-link">All Templates</a></li>
+          <li><a href="#design-standards" class="nav-link" data-open-standards>Design Standards</a></li>
+          <li><a href="https://github.com/lucifer046/sundarbans_email_template" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Items -->
+      <div class="header-actions">
+        <button class="search-trigger-btn" id="header-search-btn" title="Search templates (Press /)">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span>Search</span>
+          <kbd class="kbd-shortcut">/</kbd>
+        </button>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle navigation menu">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       2. EDITORIAL HERO SECTION
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <section class="section hero-section" id="hero">
+    <div class="hero-aura"></div>
+    <div class="container hero-content">
+      <div class="hero-tag">
+        <span class="badge badge-gold">Official Digital Archive &middot; 2026&ndash;27</span>
+      </div>
+
+      <h1 class="hero-title">
+        Every message deserves a <br><span class="text-gold">thoughtful design.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Explore the curated collection of responsive HTML email templates engineered for Sundarbans House, IIT Madras BS Degree. Clean table architectures, dark botanical aesthetics, and client-proof rendering.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#catalog" class="btn btn-primary">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Explore Templates
+        </a>
+        <a href="#categories" class="btn btn-secondary">
+          <svg class="icon" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+          Browse Categories
+        </a>
+        <button class="btn btn-ghost" data-open-standards>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          Design Standards
+        </button>
+      </div>
+
+      <!-- Dynamic Hero Statistics -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-total-templates">129</div>
+          <div class="stat-label">Email Templates</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-total-categories">11</div>
+          <div class="stat-label">Curated Categories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Client Tested</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-featured">12+</div>
+          <div class="stat-label">Flagship Designs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       3. FEATURED TEMPLATES SHOWCASE
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-label">Editorial Curation</span>
+          <h2 class="section-title">Flagship Templates</h2>
+          <p class="section-desc">Handcrafted email architectures showcasing bespoke typography, inter-house headers, and dark botanical palettes.</p>
+        </div>
+        <a href="#catalog" class="btn btn-secondary btn-sm">
+          <span>View All in Library</span>
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="featured-grid" id="featured-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       4. CATEGORY EXPLORATION BENTO GRID
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-label">System Taxonomy</span>
+          <h2 class="section-title">Explore by Category</h2>
+          <p class="section-desc">Organized across 11 campus communication categories &middot; from cultural events and orientations to technical workshops.</p>
+        </div>
+      </div>
+
+      <div class="categories-grid" id="categories-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       5. TEMPLATE LIBRARY & EXPLORER
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-label">Complete Archive</span>
+          <h2 class="section-title">Template Library</h2>
+          <p class="section-desc">Search, filter, preview, and inspect the code for every production template in the repository.</p>
+        </div>
+      </div>
+
+      <!-- Search, Filter & Sort Toolbar -->
+      <div class="catalog-toolbar">
+        <div class="toolbar-top-row">
+          <div class="search-input-box">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="search-input" class="search-input" placeholder="Search by title, event name, topic, or filename..." autocomplete="off">
+            <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear search">
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+
+          <div class="sort-select-box">
+            <span class="sort-label">Sort:</span>
+            <div class="custom-dropdown" id="sort-dropdown">
+              <button type="button" class="custom-dropdown-btn" id="sort-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
+                <span class="custom-dropdown-label" id="sort-dropdown-label">Featured First</span>
+                <svg class="icon icon-xs dropdown-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <ul class="custom-dropdown-menu" id="sort-dropdown-menu" role="listbox" aria-label="Sort options">
+                <li class="custom-dropdown-option selected" data-value="featured" role="option" aria-selected="true">
+                  <span>Featured First</span>
+                  <svg class="icon icon-xs check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+                <li class="custom-dropdown-option" data-value="title-asc" role="option" aria-selected="false">
+                  <span>Title: A &ndash; Z</span>
+                  <svg class="icon icon-xs check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+                <li class="custom-dropdown-option" data-value="title-desc" role="option" aria-selected="false">
+                  <span>Title: Z &ndash; A</span>
+                  <svg class="icon icon-xs check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+                <li class="custom-dropdown-option" data-value="category" role="option" aria-selected="false">
+                  <span>Category</span>
+                  <svg class="icon icon-xs check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+                <li class="custom-dropdown-option" data-value="filesize" role="option" aria-selected="false">
+                  <span>File Size (Largest)</span>
+                  <svg class="icon icon-xs check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+              </ul>
+              <select id="sort-select" class="sr-only" tabindex="-1" aria-hidden="true">
+                <option value="featured" selected>Featured First</option>
+                <option value="title-asc">Title: A &ndash; Z</option>
+                <option value="title-desc">Title: Z &ndash; A</option>
+                <option value="category">Category</option>
+                <option value="filesize">File Size (Largest)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Pills Container -->
+        <div class="filter-pills-row" id="filter-pills-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- Results Count Status Bar -->
+      <div class="catalog-status-bar">
+        <span class="results-count-text" id="results-count">Loading templates...</span>
+        <button class="reset-filters-btn" id="reset-filters-btn">Reset Filters</button>
+      </div>
+
+      <!-- Main Template Grid -->
+      <div class="templates-grid" id="templates-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       6. INTERACTIVE PREVIEW STUDIO MODAL (THE CORE EXPERIENCE)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div class="studio-modal-backdrop" id="studio-modal" role="dialog" aria-modal="true" aria-labelledby="studio-modal-title">
+    <div class="studio-modal-container">
+      
+      <!-- Studio Header Toolbar -->
+      <div class="studio-toolbar">
+        <div class="studio-info-col">
+          <span class="badge badge-gold" id="studio-modal-category">Category</span>
+          <h3 class="studio-title" id="studio-modal-title">Template Title</h3>
+        </div>
+
+        <!-- Viewport Switcher -->
+        <div class="device-switcher-box" role="group" aria-label="Device Viewport Switcher">
+          <button class="device-btn active" data-device="desktop" title="Desktop Viewport (720px standard email)">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            <span>Desktop</span>
+          </button>
+          <button class="device-btn" data-device="tablet" title="Tablet Viewport (560px media query breakpoint)">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
+            <span>Tablet (560px)</span>
+          </button>
+          <button class="device-btn" data-device="mobile" title="Mobile Viewport (375px phone screen)">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+            <span>Mobile (375px)</span>
+          </button>
+        </div>
+
+        <!-- Action Items -->
+        <div class="studio-actions-col">
+          <button class="btn btn-secondary btn-sm" id="studio-copy-btn" title="Copy HTML to clipboard">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>Copy HTML</span>
+          </button>
+          <button class="btn btn-secondary btn-sm" id="studio-code-btn" title="Inspect HTML Source">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>View Source</span>
+          </button>
+          <button class="btn btn-ghost btn-sm" id="studio-download-btn" title="Download .html file">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          </button>
+          <button class="btn btn-ghost btn-sm" id="studio-tab-btn" title="Open Raw in New Tab">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </button>
+          <button class="btn btn-ghost btn-sm" id="studio-close-btn" title="Close Preview (Escape)">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Studio Canvas Area & Device Frame -->
+      <div class="studio-canvas-area">
+        <div class="viewport-device-frame desktop" id="viewport-device-frame">
+          <div class="device-frame-header">
+            <div class="frame-dots">
+              <span class="frame-dot red"></span>
+              <span class="frame-dot yellow"></span>
+              <span class="frame-dot green"></span>
+            </div>
+            <span class="frame-width-indicator" id="frame-width-indicator">720px (Desktop)</span>
+            <span style="opacity: 0.6;">sandbox=allow-same-origin</span>
+          </div>
+
+          <!-- Isolated Iframe Preview -->
+          <iframe id="studio-iframe" class="studio-iframe" title="Email Template Live Preview" sandbox="allow-same-origin allow-scripts"></iframe>
+        </div>
+      </div>
+
+      <!-- Studio Bottom Inspector Strip -->
+      <div class="studio-bottom-strip">
+        <div class="studio-meta-item">
+          <span>Path:</span>
+          <strong id="studio-modal-path">events/template.html</strong>
+        </div>
+        <div class="studio-meta-item">
+          <span>Size:</span>
+          <strong id="studio-meta-size">24.5 KB</strong>
+        </div>
+        <div class="studio-meta-item">
+          <span>Header:</span>
+          <strong id="studio-meta-pattern">Pattern A (Sundarbans Letterhead)</strong>
+        </div>
+        <div class="studio-meta-item">
+          <span class="badge badge-forest" style="font-size: 0.68rem; padding: 0.15rem 0.5rem;">Verified AGENTS.md Compliant</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       7. SOURCE CODE INSPECTOR MODAL
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div class="studio-modal-backdrop" id="code-modal" role="dialog" aria-modal="true" aria-labelledby="code-modal-title">
+    <div class="code-modal-container">
+      <div class="code-modal-header">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <h4 id="code-modal-title" style="margin:0;font-size:1rem;color:var(--text-primary);">HTML Source Code</h4>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <button class="btn btn-primary btn-sm" id="code-copy-btn">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>Copy All</span>
+          </button>
+          <button class="btn btn-ghost btn-sm" id="code-close-btn">
+            <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="code-view-area">
+        <pre class="code-pre"><code id="code-view-container"></code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       8. DESIGN STANDARDS MODAL
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div class="studio-modal-backdrop" id="standards-modal" role="dialog" aria-modal="true" aria-labelledby="standards-modal-title">
+    <div class="standards-modal-container">
+      <div class="code-modal-header">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <svg class="icon" style="color:var(--accent-gold);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <h4 id="standards-modal-title" style="margin:0;font-size:1.1rem;color:var(--text-primary);">Sundarbans House &middot; Email Design System Standards</h4>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="standards-close-btn">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="standards-content-scroll">
+        <p style="margin-bottom:1rem;">All templates in this studio adhere strictly to the <strong>AGENTS.md Master Specification</strong> developed exclusively for Sundarbans House, IIT Madras BS Degree.</p>
+
+        <h4 style="color:var(--accent-gold);margin-top:1.5rem;margin-bottom:0.5rem;">Core Design Directives</h4>
+        <ul style="color:var(--text-secondary);padding-left:1.4rem;margin-bottom:1.5rem;line-height:1.7;">
+          <li><strong>Branding</strong>: Always use "Sundarbans House", "IIT Madras BS Degree", and motto "Learn &middot; Grow &middot; Lead".</li>
+          <li><strong>No OS Emojis</strong>: Emojis render inconsistently across Windows, iOS, and Android. Use crisp vector assets or bullet points.</li>
+          <li><strong>No Em Dashes</strong>: Never use em dashes. Use middots (&middot;) or hyphens instead.</li>
+          <li><strong>Touch Targets</strong>: Minimum 44x44px for all CTA buttons and links.</li>
+          <li><strong>Contrast</strong>: Minimum 4.5:1 ratio for body copy against backgrounds.</li>
+          <li><strong>Outlook Centering</strong>: Never use flexbox. Use nested <code>&lt;table align="center"&gt;</code> with <code>margin:0 auto</code>.</li>
+        </ul>
+
+        <h4 style="color:var(--accent-gold);margin-top:1.5rem;margin-bottom:0.5rem;">Semantic Token Roles</h4>
+        <table class="standards-table">
+          <thead>
+            <tr><th>Semantic Token</th><th>Purpose in Architecture</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--email-bg</code></td><td>Outer email body wrapper background</td></tr>
+            <tr><td><code>--surface</code></td><td>Main email container background</td></tr>
+            <tr><td><code>--surface-overlay</code></td><td>Bento cards, inner highlight boxes, badge backgrounds</td></tr>
+            <tr><td><code>--text-primary</code></td><td>Main titles, headings, and paragraph body text</td></tr>
+            <tr><td><code>--text-muted</code></td><td>Date lines, captions, subtitles, secondary metadata</td></tr>
+            <tr><td><code>--accent</code></td><td>Sundarbans gold highlight, border lines, icons, CTA background</td></tr>
+            <tr><td><code>--border-subtle</code></td><td>Dividers, card borders, signature top border</td></tr>
+          </tbody>
+        </table>
+
+        <div class="standards-callout">
+          <strong style="color:var(--text-primary);display:block;margin-bottom:0.3rem;">Header Architecture Patterns</strong>
+          <span style="color:var(--text-secondary);font-size:0.85rem;">
+            &bull; <strong>Pattern A (Default)</strong>: Official Sundarbans House Letterhead with gold bottom rule &amp; term metadata.<br>
+            &bull; <strong>Pattern B (Inter-House Exception)</strong>: Inter-House Overlapping Avatar Cluster used for joint collaborative events.<br>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       9. SITE FOOTER
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="brand-wrapper">
+            <div class="brand-logo-box">
+              <img src="https://lh3.googleusercontent.com/d/1PmhEx2nZ1Xmrea9if3gOvraX63ti2RWi" alt="Sundarbans Crest" class="brand-logo-img">
+            </div>
+            <div class="brand-info">
+              <span class="brand-title">Sundarbans Email Studio</span>
+              <span class="brand-subtitle">IIT Madras BS Degree</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Curated HTML email architecture, component design standards, and responsive previews for the official communications of Sundarbans House.
+          </p>
+          <span class="footer-motto-tag">Learn &middot; Grow &middot; Lead</span>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Studio Home</a></li>
+            <li><a href="#featured">Featured Flagships</a></li>
+            <li><a href="#categories">Explore Categories</a></li>
+            <li><a href="#catalog">Template Archive</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Standards & Code</h5>
+          <ul class="footer-links-list">
+            <li><a href="#design-standards" data-open-standards>AGENTS.md Design Rules</a></li>
+            <li><a href="https://github.com/lucifer046/sundarbans_email_template" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+            <li><a href="https://github.com/lucifer046/sundarbans_email_template/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repo Documentation</a></li>
+            <li><a href="https://study.iitm.ac.in/" target="_blank" rel="noopener noreferrer">IIT Madras BS Degree</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026&ndash;2027 Sundarbans House &middot; IIT Madras BS Degree. Maintained by the Executive Team.</span>
+        <span>Divya Prakash &middot; Secretary, Sundarbans House</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Modules (Data fallback + Modules) -->
+  <script src="email-studio/js/templates-data.js"></script>
+  <script src="email-studio/js/search.js"></script>
+  <script src="email-studio/js/preview.js"></script>
+  <script src="email-studio/js/app.js"></script>
+</body>
+</html>
