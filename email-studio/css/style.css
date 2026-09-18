@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Sundarbans Email Studio · Design System Tokens & Base Styles
+   Aesthetic: Solid Matte Obsidian & Sundarbans Gold — Zero Blur, Zero Glass
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ── SOLID Surface Tiers (5-level matte obsidian progression) ── */
+  --bg-canvas:            #07090A;   /* Outermost page canvas */
+  --bg-surface:           #0E1316;   /* Primary container bg */
+  --bg-surface-elevated:  #141C21;   /* Raised panels, toolbar bg */
+  --bg-surface-card:      #161E24;   /* Cards, bento items */
+  --bg-surface-hover:     #1C2730;   /* Interactive hover state */
+  --bg-deep:              #050709;   /* Deepest sink (code area, modal canvas) */
+
+  /* ── Borders & Dividers (SOLID opaque only — no rgba) ── */
+  --border-subtle:        #1F2B33;   /* Faintest structural divider */
+  --border-medium:        #253340;   /* Standard card/section border */
+  --border-strong:        #2F4050;   /* Emphasized borders, toolbars */
+  --border-accent:        #4A3820;   /* Gold-tinted section border */
+  --border-gold:          #6B4F1A;   /* Active / focus gold border */
+
+  /* ── Typography Colors ── */
+  --text-primary:         #EEF1F3;   /* Main headings & body text */
+  --text-secondary:       #A8B8C4;   /* Supporting body copy */
+  --text-muted:           #6B8090;   /* Captions, metadata, labels */
+  --text-subtle:          #425060;   /* Placeholder, disabled */
+
+  /* ── Sundarbans House Signature Brand Accent: Warm Gold ── */
+  --accent-gold:          #F3AE45;
+  --accent-gold-hover:    #F8BE63;
+  --accent-gold-dark:     #C98827;
+  --accent-gold-dim:      #7A5620;   /* Solid dim gold (replaces rgba subtles) */
+  --accent-gold-surface:  #1F1508;   /* Solid deep-gold tinted surface */
+  --accent-gold-border:   #4A3218;   /* Solid gold-tinted border */
+
+  /* ── Semantic Solid Overlay Colors (replaces rgba-based variants) ── */
+  --surface-inset:        #0A0D10;   /* Inset backgrounds (inputs, code) */
+  --surface-overlay-1:    #111820;   /* Pill counts, tag chips */
+  --surface-overlay-2:    #0D1418;   /* Dark card-bottom strips */
+
+  /* ── Typography Stacks ── */
+  --font-editorial: 'Playfair Display', Georgia, serif;
+  --font-sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+
+  /* ── Shadows (deep black, zero blur glow) ── */
+  --shadow-sm:  0 2px 8px #000000;
+  --shadow-md:  0 6px 20px #000000;
+  --shadow-lg:  0 16px 44px #000000;
+
+  /* ── Radii ── */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── Layout ── */
+  --max-width-site: 1320px;
+  --header-height:  72px;
+}
+
+/* Base Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-gold-border) var(--bg-canvas);
+}
+
+/* Custom Scrollbars · Solid Dark */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-gold-border) var(--bg-canvas);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold-border);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-canvas);
+  min-height: 36px;
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Solid page structure — NO radial gradient blobs, NO backdrop blur pseudo */
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+h4 { font-size: 1.25rem; font-family: var(--font-sans); font-weight: 600; }
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-gold-hover);
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--max-width-site);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+/* Utility Badges & Chips */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.badge-gold {
+  background: var(--accent-gold-surface);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-border);
+}
+
+.badge-forest {
+  background: #0F1F17;
+  color: #72D4A0;
+  border-color: #1E3D2C;
+}
+
+.badge-muted {
+  background: var(--surface-overlay-1);
+  color: var(--text-muted);
+  border-color: var(--border-subtle);
+}
+
+.badge-cyber {
+  background: #170F2A;
+  color: #C084FC;
+  border-color: #2D1A4A;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  user-select: none;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: #0A0C0E;
+  font-weight: 700;
+  border-color: var(--accent-gold);
+  box-shadow: 0 2px 0 var(--accent-gold-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-gold-hover);
+  color: #000;
+  border-color: var(--accent-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--accent-gold-dark);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-gold);
+  color: var(--accent-gold);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+.btn-ghost:hover {
+  background-color: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  min-height: 36px;
+}
+
+/* Icon Helpers (Clean SVG wrappers) */
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: inline-block;
+  vertical-align: middle;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-sm {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.icon-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+}

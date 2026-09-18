@@ -212,27 +212,17 @@ Every generated HTML email MUST contain the following responsive CSS stylesheet 
 </tr>
 ```
 
-### Pattern B: SPECIAL EXCEPTION — 8 Houses Inter-House Event Header
-Used **ONLY** when the user explicitly requests a joint inter-house collaborative event email involving all 8 houses (e.g. *Chai, Baarish aur Baatcheet*):
+### Pattern B: SPECIAL EXCEPTION &middot; Inter-House Header
+Used **ONLY** when explicitly requested for joint inter-house collaborative events:
 
 ```html
-<!-- TOP 8 HOUSES LOGO HEADER BAR (EXPLICIT INTER-HOUSE EVENTS ONLY) -->
+<!-- TOP INTER-HOUSE LOGO HEADER BAR (EXPLICIT INTER-HOUSE EVENTS ONLY) -->
 <tr>
     <td style="background-color:#17291c;background:linear-gradient(135deg, #132317 0%, #1c3322 50%, #25402d 100%);padding:20px 16px 18px;border-bottom:2px solid #c59b53;">
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
-                <td align="center" style="padding-bottom:14px;">
-                    <p style="margin:0 0 3px;font-family:'Inter','Segoe UI',sans-serif !important;font-size:9.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c59b53;">
-                        8 HOUSES COLLECTIVE &middot; PRESENTS
-                    </p>
-                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif !important;font-size:13.5px;font-weight:600;letter-spacing:0.5px;color:#e8f2ea;">
-                        Chai, Baarish aur Baatcheet &middot; Season 2
-                    </p>
-                </td>
-            </tr>
-            <tr>
                 <td align="center">
-                    <!-- OVERLAPPING 8 HOUSES AVATAR CLUSTER (Thin 1px border) -->
+                    <!-- OVERLAPPING HOUSES AVATAR CLUSTER (Thin 1px border) -->
                     <table border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
                         <tr>
                             <td align="center" valign="middle">

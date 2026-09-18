@@ -1,0 +1,230 @@
+/* ==========================================================================
+   Sundarbans Email Studio · Smooth, Calm & Editorial Animations
+   Paced, gentle transitions using smooth cubic-bezier curves (no aggressive pops)
+   ========================================================================== */
+
+:root {
+  /* Gentle, luxurious easing curves */
+  --ease-gentle: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   1. Keyframe Definitions (Soft Fades, Zero Scale Pop)
+   -------------------------------------------------------------------------- */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* heroAuraPulse removed — aura was a glassmorphic blur blob, now using solid surface */
+
+/* Calm, gradual card entrance — solid fade up, zero scale pop */
+@keyframes cardGentleFade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Hero Staggered Entrance Animations (Slow & Graceful)
+   -------------------------------------------------------------------------- */
+
+.hero-tag {
+  animation: heroFadeUp 0.8s var(--ease-smooth) 0.05s both;
+}
+
+.hero-title {
+  animation: heroFadeUp 0.9s var(--ease-smooth) 0.15s both;
+}
+
+.hero-subtitle {
+  animation: heroFadeUp 0.9s var(--ease-smooth) 0.25s both;
+}
+
+.hero-cta-group {
+  animation: heroFadeUp 0.9s var(--ease-smooth) 0.35s both;
+}
+
+.stats-grid {
+  animation: heroFadeUp 1s var(--ease-smooth) 0.45s both;
+}
+
+/* --------------------------------------------------------------------------
+   3. Card Animations & Hover States (Subtle, Slow, No Popping)
+   -------------------------------------------------------------------------- */
+.template-card {
+  animation: cardGentleFade 0.65s var(--ease-smooth) backwards;
+  transition: 
+    transform 0.4s var(--ease-smooth),
+    box-shadow 0.4s var(--ease-smooth),
+    border-color 0.35s ease,
+    background-color 0.35s ease;
+}
+
+/* Gentle, subtle elevation on hover — clean solid shadow */
+.template-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-accent);
+  border-left-color: var(--accent-gold);
+  box-shadow: 0 12px 28px -8px var(--bg-deep);
+}
+
+.featured-card {
+  transition: 
+    transform 0.4s var(--ease-smooth),
+    box-shadow 0.4s var(--ease-smooth),
+    border-color 0.35s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-accent);
+  border-left-color: var(--accent-gold);
+  box-shadow: 0 14px 28px -6px var(--bg-deep);
+}
+
+.category-bento-card {
+  transition: 
+    transform 0.35s var(--ease-smooth),
+    box-shadow 0.35s var(--ease-smooth),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.category-bento-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-accent);
+  border-top-color: var(--accent-gold);
+  box-shadow: 0 8px 20px -4px var(--bg-deep);
+}
+
+/* --------------------------------------------------------------------------
+   4. Smooth Button & Pill Interactions (Gentle & Tactile, No Jerky Scale)
+   -------------------------------------------------------------------------- */
+.btn {
+  transform: translate3d(0, 0, 0);
+  transition: 
+    transform 0.35s var(--ease-smooth),
+    box-shadow 0.35s var(--ease-smooth),
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0.5px);
+  opacity: 0.92;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(243, 174, 69, 0.35);
+}
+
+.filter-pill {
+  transition: 
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.filter-pill:hover {
+  transform: none;
+}
+
+.filter-pill:active {
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   5. Modal & Popup Transitions (Slow, Smooth, Elegant Fade-in)
+   -------------------------------------------------------------------------- */
+.studio-modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+    opacity 0.5s var(--ease-smooth),
+    visibility 0.5s var(--ease-smooth);
+  will-change: opacity;
+}
+
+.studio-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal container gently slides up 14px with pure opacity fade · ZERO scale popup */
+.studio-modal-container,
+.code-modal-container,
+.standards-modal-container {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition: 
+    transform 0.55s var(--ease-smooth),
+    opacity 0.5s var(--ease-smooth);
+  will-change: transform, opacity;
+}
+
+.studio-modal-backdrop.open .studio-modal-container,
+.studio-modal-backdrop.open .code-modal-container,
+.studio-modal-backdrop.open .standards-modal-container {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Device Viewport Frame Fluid Resize */
+.viewport-device-frame {
+  transition: 
+    width 0.5s var(--ease-smooth),
+    box-shadow 0.4s ease;
+  will-change: width;
+}
+
+.studio-iframe {
+  transition: opacity 0.35s ease;
+  will-change: opacity;
+}
+
+.studio-iframe.loading {
+  opacity: 0;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   7. Navigation Header Transitions
+   -------------------------------------------------------------------------- */
+.site-header {
+  transition: 
+    background-color 0.4s var(--ease-smooth),
+    border-color 0.4s var(--ease-smooth),
+    box-shadow 0.4s var(--ease-smooth);
+}
+
+.nav-link::after {
+  transition: transform 0.3s var(--ease-smooth), opacity 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}

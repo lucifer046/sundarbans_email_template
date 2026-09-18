@@ -19,6 +19,8 @@ build/
 *.log
 *.tmp
 scratch/
+__pycache__/
+*.pyc
 
 # Environment & Credentials
 .env
