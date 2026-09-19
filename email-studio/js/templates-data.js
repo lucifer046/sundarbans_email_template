@@ -9,9 +9,9 @@ window.SUNDARBANS_STUDIO_DATA = {
     "institution": "IIT Madras BS Degree",
     "motto": "Learn · Grow · Lead",
     "tagline": "Every message deserves a thoughtful design.",
-    "total_templates": 129,
+    "total_templates": 130,
     "total_categories": 11,
-    "featured_count": 12
+    "featured_count": 13
   },
   "categories": [
     {
@@ -75,7 +75,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "name": "Academic Sessions",
       "icon": "book-open",
       "description": "Cybersecurity track, exam revisions, and skill-building bootcamps",
-      "count": 7
+      "count": 8
     },
     {
       "slug": "team-onboarding",
@@ -106,13 +106,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "certificate",
+        "achievement",
         "certificates",
         "merit",
         "manthan-e-alfaaz: certificate of active participation",
-        "award",
-        "certificate",
         "certificate of active participation",
-        "achievement"
+        "award"
       ],
       "featured": false
     },
@@ -129,13 +129,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "certificate",
+        "achievement",
+        "manthan-e-alfaaz: the inter-house poetry competition",
         "certificates",
         "merit",
         "competition announcement",
-        "award",
-        "certificate",
-        "achievement",
-        "manthan-e-alfaaz: the inter-house poetry competition"
+        "award"
       ],
       "featured": false
     },
@@ -152,13 +152,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "winner certificate",
+        "certificate",
+        "achievement",
         "certificates",
         "merit",
         "award",
-        "certificate",
-        "winner certificate",
-        "manthan-e-alfaaz: winner certificate",
-        "achievement"
+        "manthan-e-alfaaz: winner certificate"
       ],
       "featured": true
     },
@@ -175,13 +175,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "certificate",
+        "achievement",
         "certificates",
         "python-mania bootcamp certificates",
         "merit",
         "award",
-        "certificate",
-        "python mania certificate",
-        "achievement"
+        "python mania certificate"
       ],
       "featured": false
     },
@@ -198,13 +198,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "certificates",
+        "certificate",
+        "certificate drive",
         "achievement",
+        "certificates",
         "merit",
         "system_override: hall_of_fame",
-        "award",
-        "certificate",
-        "certificate drive"
+        "award"
       ],
       "featured": false
     },
@@ -221,17 +221,17 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "certificates",
-        "merit",
-        "award",
-        "linux",
-        "ubuntu quiz certificates",
         "certificate",
-        "workshop",
-        "ubuntu",
+        "achievement",
+        "certificates",
+        "linux",
         "os",
+        "merit",
+        "workshop",
         "desktop",
-        "achievement"
+        "ubuntu quiz certificates",
+        "award",
+        "ubuntu"
       ],
       "featured": false
     },
@@ -248,8 +248,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "3 am thoughts",
-        "events"
+        "events",
+        "3 am thoughts"
       ],
       "featured": true
     },
@@ -266,11 +266,30 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "andaz apna apna - admit one",
+        "andaz apna apna",
         "events",
-        "andaz apna apna"
+        "andaz apna apna - admit one"
       ],
       "featured": false
+    },
+    {
+      "id": "chai-baarish-season2",
+      "title": "Announcing Chai, Baarish aur Baatcheet · Season 2 Meetup Series",
+      "category": "events",
+      "subcategory": null,
+      "description": "The rain is here, the chai is ready, and the conversations are about to begin. Chai, Baarish aur Baatcheet Season 2 | 19th & 20th Septemb...",
+      "file": "../events/chai-baarish-season2.html",
+      "raw_path": "events/chai-baarish-season2.html",
+      "filesize_bytes": 43903,
+      "filesize_formatted": "42.9 KB",
+      "header_pattern": "Pattern B (8 Houses Collective)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "announcing chai, baarish aur baatcheet · season 2 meetup series",
+        "events",
+        "chai baarish season2"
+      ],
+      "featured": true
     },
     {
       "id": "artsphere-competition",
@@ -304,30 +323,11 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "book of the week: godaan by munshi premchand",
         "events",
+        "book of the week: godaan by munshi premchand",
         "godaan book reading session"
       ],
       "featured": false
-    },
-    {
-      "id": "chai-baarish-season2",
-      "title": "Chai, Baarish aur Baatcheet - Season 2",
-      "category": "events",
-      "subcategory": null,
-      "description": "The rain is here, the chai is ready, and the conversations are about to begin. Chai, Baarish aur Baatcheet Season 2 | 19th & 20th Septemb...",
-      "file": "../events/chai-baarish-season2.html",
-      "raw_path": "events/chai-baarish-season2.html",
-      "filesize_bytes": 43317,
-      "filesize_formatted": "42.3 KB",
-      "header_pattern": "Pattern B (8 Houses Collective)",
-      "theme": "Dark Theme",
-      "keywords": [
-        "chai baarish season2",
-        "chai, baarish aur baatcheet - season 2",
-        "events"
-      ],
-      "featured": true
     },
     {
       "id": "dance-workshop",
@@ -342,9 +342,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "dance workshop",
+        "events",
         "dance workshop - sundarbans cultural community",
-        "events"
+        "dance workshop"
       ],
       "featured": false
     },
@@ -379,8 +379,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "among us night",
         "events",
+        "among us night",
         "emergency meeting: among us night starts tonight!"
       ],
       "featured": false
@@ -398,9 +398,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "echoes of legends - the final open mic | sundarbans cultural c...",
         "events",
-        "echoes of legends open mic"
+        "echoes of legends open mic",
+        "echoes of legends - the final open mic | sundarbans cultural c..."
       ],
       "featured": false
     },
@@ -417,9 +417,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
-        "hear from the winners | sih 2025 with team ashtoj",
         "sih winners session",
-        "events"
+        "events",
+        "hear from the winners | sih 2025 with team ashtoj"
       ],
       "featured": false
     },
@@ -436,9 +436,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "patna meetup gir",
         "iitm bs meetup 2026 - patna",
-        "events"
+        "events",
+        "patna meetup gir"
       ],
       "featured": false
     },
@@ -474,8 +474,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "dance workshop reminder",
         "events",
+        "dance workshop reminder",
         "live now: dance workshop - sundarbans cultural community"
       ],
       "featured": false
@@ -493,9 +493,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "events",
         "house meetup announcement",
-        "meetup announcement - sundarbans house",
-        "events"
+        "meetup announcement - sundarbans house"
       ],
       "featured": false
     },
@@ -513,8 +513,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "events",
-        "open mic night cultural",
-        "open mic night - sundarbans cultural community"
+        "open mic night - sundarbans cultural community",
+        "open mic night cultural"
       ],
       "featured": false
     },
@@ -531,9 +531,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "open mic night bonds",
+        "open mic night: bonds that shape us",
         "events",
-        "open mic night: bonds that shape us"
+        "open mic night bonds"
       ],
       "featured": false
     },
@@ -550,9 +550,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "reading sessions update: starting at 9:30 pm",
+        "events",
         "vasant panchami reading update",
-        "events"
+        "reading sessions update: starting at 9:30 pm"
       ],
       "featured": false
     },
@@ -569,9 +569,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "reading sessions: vasant panchami launch",
+        "vasant panchami launch",
         "events",
-        "vasant panchami launch"
+        "reading sessions: vasant panchami launch"
       ],
       "featured": true
     },
@@ -589,8 +589,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Light Theme",
       "keywords": [
         "reminder | sih 2025 winners session with team ashtoj",
-        "sih winners session reminder",
-        "events"
+        "events",
+        "sih winners session reminder"
       ],
       "featured": false
     },
@@ -607,14 +607,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "reminder: the ultimate cyber security quiz",
-        "linux",
-        "cybersecurity",
         "events",
-        "tech",
         "security",
+        "cyber quiz reminder",
+        "tech",
+        "linux",
+        "reminder: the ultimate cyber security quiz",
         "terminal",
-        "cyber quiz reminder"
+        "cybersecurity"
       ],
       "featured": false
     },
@@ -631,8 +631,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "reverse pandora box",
         "events",
+        "reverse pandora box",
         "reverse pandora box · open mic × cultural team orientation"
       ],
       "featured": false
@@ -650,8 +650,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "shiv-shakti: the eternal union",
         "events",
+        "shiv-shakti: the eternal union",
         "shiv shakti reveal"
       ],
       "featured": false
@@ -669,8 +669,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "skribbl night - sundarbans e-sports",
         "events",
+        "skribbl night - sundarbans e-sports",
         "skribbl night"
       ],
       "featured": false
@@ -688,9 +688,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "sportify rashtriya khel mahotsav 2026",
+        "sportify khel mahotsav",
         "events",
-        "sportify khel mahotsav"
+        "sportify rashtriya khel mahotsav 2026"
       ],
       "featured": false
     },
@@ -726,8 +726,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "sundarbans panchayat",
-        "events"
+        "events",
+        "sundarbans panchayat"
       ],
       "featured": false
     },
@@ -744,9 +744,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "chess showdown",
         "the chess showdown - sundarbans e-sports",
-        "events"
+        "events",
+        "chess showdown"
       ],
       "featured": true
     },
@@ -763,9 +763,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "the delta diaries · vol. 1 | sundarbans annual chronicle",
+        "delta diaries launch",
         "events",
-        "delta diaries launch"
+        "the delta diaries · vol. 1 | sundarbans annual chronicle"
       ],
       "featured": false
     },
@@ -782,9 +782,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "welcome freshers",
         "events",
-        "the jungle awaits"
+        "the jungle awaits",
+        "welcome freshers"
       ],
       "featured": false
     },
@@ -801,14 +801,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "cyber quiz",
-        "linux",
-        "cybersecurity",
-        "the ultimate cyber security quiz",
         "events",
-        "tech",
+        "the ultimate cyber security quiz",
         "security",
-        "terminal"
+        "tech",
+        "linux",
+        "cyber quiz",
+        "terminal",
+        "cybersecurity"
       ],
       "featured": false
     },
@@ -825,14 +825,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
-        "linux",
-        "events",
-        "workshop",
-        "ubuntu",
         "ubuntu mastery quiz",
+        "events",
+        "linux",
         "os",
+        "ubuntu mastery quiz v2",
+        "workshop",
         "desktop",
-        "ubuntu mastery quiz v2"
+        "ubuntu"
       ],
       "featured": false
     },
@@ -849,13 +849,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
-        "linux",
-        "events",
-        "workshop",
-        "ubuntu",
         "ubuntu mastery quiz",
+        "events",
+        "linux",
         "os",
-        "desktop"
+        "workshop",
+        "desktop",
+        "ubuntu"
       ],
       "featured": false
     },
@@ -891,9 +891,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "unleash your inner storyteller: the literature workshop",
         "events",
-        "literature workshop"
+        "literature workshop",
+        "unleash your inner storyteller: the literature workshop"
       ],
       "featured": false
     },
@@ -910,9 +910,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "ipl auction reminder",
         "urgent reminder | ipl auction showdown qualifier",
-        "events"
+        "events",
+        "ipl auction reminder"
       ],
       "featured": false
     },
@@ -948,9 +948,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "birthday wishes mannu yadav",
+        "birthday wishes - secretary mannu yadav sir",
         "general",
-        "birthday wishes - secretary mannu yadav sir"
+        "birthday wishes mannu yadav"
       ],
       "featured": false
     },
@@ -967,14 +967,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "cybersecurity immersion roadmap",
-        "general",
-        "linux",
-        "cybersecurity",
-        "tech",
         "security",
+        "tech",
+        "linux",
+        "cyber security immersion: the roadmap",
+        "general",
         "terminal",
-        "cyber security immersion: the roadmap"
+        "cybersecurity",
+        "cybersecurity immersion roadmap"
       ],
       "featured": false
     },
@@ -1009,9 +1009,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
+        "dsa club announcement",
         "general",
-        "introducing the dsa club | sundarbans house council",
-        "dsa club announcement"
+        "introducing the dsa club | sundarbans house council"
       ],
       "featured": false
     },
@@ -1028,9 +1028,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "general",
         "join sundarbans whatsapp communities",
-        "wsp join"
+        "wsp join",
+        "general"
       ],
       "featured": false
     },
@@ -1047,9 +1047,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "general",
+        "feedback form",
         "sundarbans feedback",
-        "feedback form"
+        "general"
       ],
       "featured": false
     },
@@ -1067,8 +1067,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "freshers",
-        "general",
-        "welcome to sundarbans house | freshers 2026"
+        "welcome to sundarbans house | freshers 2026",
+        "general"
       ],
       "featured": false
     },
@@ -1085,13 +1085,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "general",
+        "certificate",
+        "you did it! claim your web trapped certificate",
+        "achievement",
         "merit",
         "web trapped certificate request",
-        "award",
-        "certificate",
-        "achievement",
-        "you did it! claim your web trapped certificate"
+        "general",
+        "award"
       ],
       "featured": false
     },
@@ -1108,15 +1108,15 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "general house council recruitment · sundarbans house (chennai ...",
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "ghc-recruitment",
         "lead",
+        "recruitment",
         "ghc recruitment chennai",
         "team",
-        "general house council recruitment · sundarbans house (chennai ..."
+        "core",
+        "ghc-recruitment",
+        "onboarding"
       ],
       "featured": false
     },
@@ -1133,15 +1133,15 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "general house council recruitment · sundarbans house (delhi re...",
         "ghc recruitment delhi",
-        "ghc-recruitment",
         "lead",
-        "team"
+        "head",
+        "recruitment",
+        "core",
+        "team",
+        "ghc-recruitment",
+        "onboarding",
+        "general house council recruitment · sundarbans house (delhi re..."
       ],
       "featured": false
     },
@@ -1159,14 +1159,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "general house council recruitment · sundarbans house (kolkata ...",
-        "ghc recruitment kolkata",
-        "ghc-recruitment",
         "lead",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "ghc-recruitment",
+        "onboarding",
+        "ghc recruitment kolkata",
+        "general house council recruitment · sundarbans house (kolkata ..."
       ],
       "featured": false
     },
@@ -1184,14 +1184,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "calling all musicians | paradox unwind '26 band recruitment",
-        "paradox unwind band recruitment",
-        "invitations",
         "lead",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "calling all musicians | paradox unwind '26 band recruitment",
+        "onboarding",
+        "invitations",
+        "paradox unwind band recruitment"
       ],
       "featured": false
     },
@@ -1209,14 +1209,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Light Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "communities recruitment",
-        "communities recruitment - sundarbans house council",
-        "invitations",
         "lead",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
+        "invitations",
+        "communities recruitment",
+        "communities recruitment - sundarbans house council"
       ],
       "featured": false
     },
@@ -1234,14 +1234,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "core team recruitment - sundarbans house council",
-        "recruitment",
-        "invitations",
-        "core team recruitment",
         "lead",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
+        "core team recruitment - sundarbans house council",
+        "invitations",
+        "core team recruitment"
       ],
       "featured": false
     },
@@ -1259,14 +1259,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
+        "lead",
         "core team recruitment 2026 | sundarbans house",
         "recruitment",
-        "invitations",
-        "lead",
         "core team recruitment 2026",
-        "team"
+        "core",
+        "team",
+        "onboarding",
+        "invitations"
       ],
       "featured": false
     },
@@ -1283,9 +1283,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "invitations",
         "letter of appreciation - dark web training",
-        "dark web speaker thankyou",
-        "invitations"
+        "dark web speaker thankyou"
       ],
       "featured": false
     },
@@ -1303,8 +1303,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "manthan-e-alfaaz: welcome esteemed judge",
-        "judge welcome",
-        "invitations"
+        "invitations",
+        "judge welcome"
       ],
       "featured": false
     },
@@ -1321,9 +1321,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "mission accomplished: web trapped",
+        "invitations",
         "web trapped speaker thankyou",
-        "invitations"
+        "mission accomplished: web trapped"
       ],
       "featured": false
     },
@@ -1340,9 +1340,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "invitations",
         "official invitation · unfiltered episode 1 | sundarbans house",
-        "unfiltered episode 1 invitation",
-        "invitations"
+        "unfiltered episode 1 invitation"
       ],
       "featured": false
     },
@@ -1359,13 +1359,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "mindfulness",
-        "invitations",
-        "well-being",
-        "mental health",
-        "official invitation · well-being session | sundarbans house",
         "well being invitation light",
-        "wellness"
+        "official invitation · well-being session | sundarbans house",
+        "mental health",
+        "well-being",
+        "wellness",
+        "invitations",
+        "mindfulness"
       ],
       "featured": false
     },
@@ -1382,13 +1382,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "mindfulness",
-        "well being session invitation",
-        "invitations",
-        "well-being",
-        "mental health",
         "official invitation · well-being session | sundarbans house",
-        "wellness"
+        "mental health",
+        "well-being",
+        "well being session invitation",
+        "wellness",
+        "invitations",
+        "mindfulness"
       ],
       "featured": false
     },
@@ -1405,13 +1405,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Cosmic / Glow",
       "keywords": [
-        "mindfulness",
         "well being v1 cosmic calm",
-        "invitations",
-        "well-being",
-        "mental health",
         "official invitation · well-being session | sundarbans house",
-        "wellness"
+        "mental health",
+        "well-being",
+        "wellness",
+        "invitations",
+        "mindfulness"
       ],
       "featured": true
     },
@@ -1428,13 +1428,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Ember / Warm",
       "keywords": [
-        "mindfulness",
-        "invitations",
-        "well-being",
-        "mental health",
         "official invitation · well-being session | sundarbans house",
+        "mental health",
+        "well-being",
+        "wellness",
+        "invitations",
         "well being v2 ember glow",
-        "wellness"
+        "mindfulness"
       ],
       "featured": false
     },
@@ -1451,13 +1451,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Aurora / Emerald",
       "keywords": [
-        "mindfulness",
-        "well being v3 aurora nights",
-        "invitations",
-        "well-being",
-        "mental health",
         "official invitation · well-being session | sundarbans house",
-        "wellness"
+        "mental health",
+        "well-being",
+        "wellness",
+        "invitations",
+        "mindfulness",
+        "well being v3 aurora nights"
       ],
       "featured": false
     },
@@ -1475,8 +1475,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "official invitation: web trapped",
-        "web trapped speaker invitation",
-        "invitations"
+        "invitations",
+        "web trapped speaker invitation"
       ],
       "featured": false
     },
@@ -1494,13 +1494,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "invitations",
-        "regional coordinator recruitment",
         "lead",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "regional coordinator recruitment",
+        "onboarding",
+        "invitations"
       ],
       "featured": false
     },
@@ -1537,14 +1537,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "webadmin recruitment 2026–27 · sundarbans",
-        "invitations",
         "lead",
+        "recruitment",
+        "webadmin recruitment",
+        "core",
         "team",
-        "webadmin recruitment"
+        "onboarding",
+        "invitations",
+        "webadmin recruitment 2026–27 · sundarbans"
       ],
       "featured": false
     },
@@ -1562,14 +1562,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "recruitment",
-        "invitations",
-        "team",
         "[sundarbans] applications open: regional coordinator (por) – b...",
         "lead",
-        "rc recruitment"
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
+        "rc recruitment",
+        "invitations"
       ],
       "featured": false
     },
@@ -1586,11 +1586,11 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "freshers",
-        "orientation",
-        "delhi region orientation · sundarbans house",
         "meetup",
         "campus",
+        "freshers",
+        "delhi region orientation · sundarbans house",
+        "orientation",
         "sundarbans_delhi_orientation"
       ],
       "featured": false
@@ -1608,11 +1608,11 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "orientation",
         "meetup",
-        "doubts clearing session",
         "campus",
-        "freshers"
+        "doubts clearing session",
+        "freshers",
+        "orientation"
       ],
       "featured": false
     },
@@ -1629,12 +1629,12 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "orientation",
         "meetup",
         "campus",
         "freshers",
-        "house orientation 2026 · sundarbans",
-        "house orientation dark"
+        "orientation",
+        "house orientation dark",
+        "house orientation 2026 · sundarbans"
       ],
       "featured": true
     },
@@ -1651,12 +1651,12 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "sundarbans_kolkata_orientation",
-        "orientation",
-        "kolkata region orientation · sundarbans house",
         "meetup",
         "campus",
-        "freshers"
+        "freshers",
+        "orientation",
+        "kolkata region orientation · sundarbans house",
+        "sundarbans_kolkata_orientation"
       ],
       "featured": false
     },
@@ -1673,12 +1673,12 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "orientation",
         "meetup",
         "campus",
-        "freshers",
+        "mumbai region freshers orientation · sundarbans house",
         "sundarbans_mumbai_orientation",
-        "mumbai region freshers orientation · sundarbans house"
+        "freshers",
+        "orientation"
       ],
       "featured": false
     },
@@ -1695,12 +1695,12 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
-        "reminder: sundarbans house orientation & chit-chat with house ...",
-        "orientation",
         "meetup",
         "campus",
         "freshers",
-        "house orientation reminder"
+        "orientation",
+        "house orientation reminder",
+        "reminder: sundarbans house orientation & chit-chat with house ..."
       ],
       "featured": false
     },
@@ -1717,12 +1717,12 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
-        "orientation",
-        "main orientation",
         "meetup",
         "campus",
         "sundarbans house orientation",
-        "freshers"
+        "main orientation",
+        "freshers",
+        "orientation"
       ],
       "featured": false
     },
@@ -1739,12 +1739,12 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
-        "sundarbans house orientation & chit-chat with house leaders",
-        "orientation",
         "meetup",
         "campus",
         "freshers",
-        "house orientation"
+        "orientation",
+        "house orientation",
+        "sundarbans house orientation & chit-chat with house leaders"
       ],
       "featured": false
     },
@@ -1761,8 +1761,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "alhamda iqbal sadiq",
         "participation",
+        "alhamda iqbal sadiq",
         "manthan-e-alfaaz: certificate of active participation"
       ],
       "featured": false
@@ -1799,9 +1799,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "manthan-e-alfaaz: certificate of active participation",
         "dilip pawar",
-        "participation"
+        "participation",
+        "manthan-e-alfaaz: certificate of active participation"
       ],
       "featured": false
     },
@@ -1819,8 +1819,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "disha singh",
-        "manthan-e-alfaaz: certificate of active participation",
-        "participation"
+        "participation",
+        "manthan-e-alfaaz: certificate of active participation"
       ],
       "featured": false
     },
@@ -1837,9 +1837,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "manthan-e-alfaaz: certificate of active participation",
         "ishu raj",
-        "participation"
+        "participation",
+        "manthan-e-alfaaz: certificate of active participation"
       ],
       "featured": false
     },
@@ -1856,9 +1856,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "manthan-e-alfaaz: certificate of active participation",
         "ishwaryah p",
-        "participation"
+        "participation",
+        "manthan-e-alfaaz: certificate of active participation"
       ],
       "featured": false
     },
@@ -1894,14 +1894,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
-        "01 slamoria announcement",
         "creative",
         "poetry",
+        "slamoria",
+        "01 slamoria announcement",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "competition",
+        "literature"
       ],
       "featured": true
     },
@@ -1918,14 +1918,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "gir house",
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "gir house",
+        "competition",
+        "literature"
       ],
       "featured": false
     },
@@ -1942,14 +1942,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "kanha house",
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
         "creative",
         "poetry",
+        "slamoria",
+        "kanha house",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "competition",
+        "literature"
       ],
       "featured": false
     },
@@ -1966,14 +1966,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
         "creative",
         "poetry",
-        "nallamalla house",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "literature",
+        "competition",
+        "nallamalla house"
       ],
       "featured": false
     },
@@ -1990,14 +1990,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "namdapha house",
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "namdapha house",
+        "competition",
+        "literature"
       ],
       "featured": false
     },
@@ -2014,14 +2014,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
+        "pichavaram house",
         "creative",
         "poetry",
-        "poetry-competition",
         "slamoria",
-        "pichavaram house"
+        "poetry-competition",
+        "manthan-e-alfaaz: round 1 slamoria",
+        "competition",
+        "literature"
       ],
       "featured": false
     },
@@ -2038,14 +2038,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "saranda house",
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "competition",
+        "literature",
+        "saranda house"
       ],
       "featured": false
     },
@@ -2062,14 +2062,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
-        "sundarbans house",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "competition",
+        "literature",
+        "sundarbans house"
       ],
       "featured": false
     },
@@ -2086,14 +2086,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 1 slamoria",
-        "01 announcement",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 1 slamoria",
+        "competition",
+        "literature",
+        "01 announcement"
       ],
       "featured": false
     },
@@ -2111,13 +2111,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "manthan-e-alfaaz: round 2 congratulations & theme reveal",
-        "literature",
-        "competition",
         "creative",
         "poetry",
-        "02 theme reveal",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "competition",
+        "literature",
+        "02 theme reveal"
       ],
       "featured": false
     },
@@ -2134,14 +2134,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: round 3 congratulations & theme reveal",
         "creative",
         "poetry",
-        "02 theme reveal",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "manthan-e-alfaaz: round 3 congratulations & theme reveal",
+        "competition",
+        "literature",
+        "02 theme reveal"
       ],
       "featured": false
     },
@@ -2158,14 +2158,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "poetry",
-        "literature",
-        "competition",
-        "01 announcement",
         "creative",
         "manthan-e-alfaaz: round 3 general announcement",
+        "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "competition",
+        "literature",
+        "01 announcement"
       ],
       "featured": false
     },
@@ -2182,14 +2182,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: the winners",
         "creative",
         "poetry",
-        "poetry-competition",
         "slamoria",
-        "01 winners announcement"
+        "poetry-competition",
+        "competition",
+        "01 winners announcement",
+        "literature",
+        "manthan-e-alfaaz: the winners"
       ],
       "featured": false
     },
@@ -2206,14 +2206,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "gourav kumar ghosh",
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: winner certificate",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "competition",
+        "literature",
+        "gourav kumar ghosh",
+        "manthan-e-alfaaz: winner certificate"
       ],
       "featured": false
     },
@@ -2230,14 +2230,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: winner certificate",
         "mercy keziah dorothy",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "competition",
+        "literature",
+        "manthan-e-alfaaz: winner certificate"
       ],
       "featured": false
     },
@@ -2254,14 +2254,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "misha agrawal",
-        "literature",
-        "competition",
-        "manthan-e-alfaaz: winner certificate",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "misha agrawal",
+        "competition",
+        "literature",
+        "manthan-e-alfaaz: winner certificate"
       ],
       "featured": false
     },
@@ -2278,16 +2278,42 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "literature",
-        "competition",
-        "suryansh mishra",
-        "manthan-e-alfaaz: winner certificate",
         "creative",
         "poetry",
+        "slamoria",
         "poetry-competition",
-        "slamoria"
+        "suryansh mishra",
+        "competition",
+        "literature",
+        "manthan-e-alfaaz: winner certificate"
       ],
       "featured": false
+    },
+    {
+      "id": "course-guidance-session",
+      "title": "IIT Madras BS Degree · Course Guidance Session | Sundarbans House",
+      "category": "sessions",
+      "subcategory": null,
+      "description": "Confused about your next course, diploma, or degree journey? Sundarbans House presents the Course Guidance Session on Sunday, 20th Septem...",
+      "file": "../sessions/course-guidance-session.html",
+      "raw_path": "sessions/course-guidance-session.html",
+      "filesize_bytes": 41332,
+      "filesize_formatted": "40.4 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "degree",
+        "academics",
+        "diploma",
+        "iit madras bs degree · course guidance session | sundarbans house",
+        "foundation",
+        "course guidance",
+        "course guidance session",
+        "courses",
+        "sessions",
+        "planning"
+      ],
+      "featured": true
     },
     {
       "id": "maths-2-end-term-revision-reminder",
@@ -2302,8 +2328,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "maths 2 end term revision reminder",
         "live now: maths ii end-term revision session | sundarbans house",
+        "maths 2 end term revision reminder",
         "sessions"
       ],
       "featured": false
@@ -2321,9 +2347,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "sessions",
+        "maths ii end-term revision session | sundarbans house",
         "maths 2 end term revision",
-        "maths ii end-term revision session | sundarbans house"
+        "sessions"
       ],
       "featured": false
     },
@@ -2340,14 +2366,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "01 cyber fundamentals",
-        "sessions",
-        "session 01: cyber fundamentals // today",
-        "linux",
-        "cybersecurity",
-        "tech",
         "security",
-        "terminal"
+        "terminal",
+        "tech",
+        "linux",
+        "session 01: cyber fundamentals // today",
+        "sessions",
+        "cybersecurity",
+        "01 cyber fundamentals"
       ],
       "featured": true
     },
@@ -2365,13 +2391,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "session 02: cybersecurity teams // today",
-        "sessions",
-        "02 cybersecurity teams",
-        "linux",
-        "cybersecurity",
-        "tech",
         "security",
-        "terminal"
+        "terminal",
+        "tech",
+        "linux",
+        "sessions",
+        "cybersecurity",
+        "02 cybersecurity teams"
       ],
       "featured": false
     },
@@ -2389,8 +2415,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "sessions",
-        "03 reconnaissance",
-        "session 03: reconnaissance // today"
+        "session 03: reconnaissance // today",
+        "03 reconnaissance"
       ],
       "featured": false
     },
@@ -2408,8 +2434,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "sessions",
-        "04 network scanning",
-        "session 04: network scanning // today"
+        "session 04: network scanning // today",
+        "04 network scanning"
       ],
       "featured": false
     },
@@ -2426,8 +2452,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "session 05: digital sovereignty // republic day",
         "sessions",
+        "session 05: digital sovereignty // republic day",
         "05 digital sovereignty"
       ],
       "featured": false
@@ -2446,14 +2472,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "congratulations | culturals co-head · sundarbans house",
-        "core",
-        "team-onboarding",
+        "lead",
         "recruitment",
         "graphics head",
-        "lead",
-        "team"
+        "core",
+        "team",
+        "onboarding",
+        "team-onboarding",
+        "congratulations | culturals co-head · sundarbans house"
       ],
       "featured": false
     },
@@ -2471,14 +2497,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Light Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
-        "congratulations | culturals head - sundarbans house",
         "lead",
+        "culturals head",
+        "recruitment",
+        "core",
         "team",
-        "culturals head"
+        "onboarding",
+        "congratulations | culturals head - sundarbans house",
+        "team-onboarding"
       ],
       "featured": false
     },
@@ -2495,15 +2521,15 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "technical cohead",
-        "onboarding",
-        "core",
         "head",
-        "team-onboarding",
-        "recruitment",
-        "team",
         "lead",
-        "congratulations | technical community co-heads · sundarbans house"
+        "recruitment",
+        "congratulations | technical community co-heads · sundarbans house",
+        "core",
+        "team",
+        "onboarding",
+        "technical cohead",
+        "team-onboarding"
       ],
       "featured": false
     },
@@ -2520,14 +2546,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "congratulations | technical community core team · sundarbans h...",
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
         "lead",
+        "congratulations | technical community core team · sundarbans h...",
+        "recruitment",
+        "core",
         "team",
+        "onboarding",
+        "team-onboarding",
         "technical core team"
       ],
       "featured": false
@@ -2545,20 +2571,20 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Cyberpunk / Special",
       "keywords": [
-        "congratulations | webops team · sundarbans house",
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
-        "webops team cyberpunk",
-        "linux",
-        "cybersecurity",
-        "tech",
-        "security",
-        "terminal",
         "lead",
-        "team"
+        "recruitment",
+        "security",
+        "core",
+        "tech",
+        "linux",
+        "team",
+        "onboarding",
+        "team-onboarding",
+        "congratulations | webops team · sundarbans house",
+        "terminal",
+        "cybersecurity",
+        "webops team cyberpunk"
       ],
       "featured": true
     },
@@ -2575,15 +2601,15 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
-        "congratulations | webops team · sundarbans house",
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
         "lead",
-        "webops team",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
+        "team-onboarding",
+        "congratulations | webops team · sundarbans house",
+        "webops team"
       ],
       "featured": false
     },
@@ -2601,14 +2627,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "por appointment: regional coordinator | sundarbans house council",
-        "team-onboarding",
-        "recruitment",
-        "rc onboarding",
         "lead",
-        "team"
+        "por appointment: regional coordinator | sundarbans house council",
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
+        "team-onboarding",
+        "rc onboarding"
       ],
       "featured": false
     },
@@ -2626,14 +2652,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
-        "rc interview results - sundarbans house",
         "lead",
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
         "rc_results_email",
-        "team"
+        "team-onboarding",
+        "rc interview results - sundarbans house"
       ],
       "featured": false
     },
@@ -2651,14 +2677,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
-        "esports community cohead",
-        "roster announcement | esports community co-heads · sundarbans ...",
         "lead",
-        "team"
+        "recruitment",
+        "core",
+        "team",
+        "esports community cohead",
+        "onboarding",
+        "team-onboarding",
+        "roster announcement | esports community co-heads · sundarbans ..."
       ],
       "featured": false
     },
@@ -2676,14 +2702,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
-        "selection results: technical community core team (2026–27) | s...",
-        "team",
         "lead",
-        "technical team results"
+        "recruitment",
+        "core",
+        "team",
+        "onboarding",
+        "technical team results",
+        "team-onboarding",
+        "selection results: technical community core team (2026–27) | s..."
       ],
       "featured": false
     },
@@ -2701,14 +2727,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
-        "recruitment",
-        "welcome & core team onboarding: technical community (2026–27) ...",
         "lead",
+        "recruitment",
+        "core",
         "team",
-        "technical team onboarding"
+        "welcome & core team onboarding: technical community (2026–27) ...",
+        "technical team onboarding",
+        "onboarding",
+        "team-onboarding"
       ],
       "featured": false
     },
@@ -2726,14 +2752,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "theme": "Dark Theme",
       "keywords": [
         "head",
-        "onboarding",
-        "core",
-        "team-onboarding",
+        "lead",
         "recruitment",
-        "welcome to the core team | sundarbans house council",
+        "core",
         "core team onboarding",
+        "welcome to the core team | sundarbans house council",
         "team",
-        "lead"
+        "onboarding",
+        "team-onboarding"
       ],
       "featured": true
     },
@@ -2750,14 +2776,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "workshop beyond the terminal",
+        "ubuntu-session",
         "linux",
-        "beyond the terminal",
-        "workshop",
-        "ubuntu",
+        "workshop beyond the terminal",
         "os",
+        "workshop",
+        "beyond the terminal",
         "desktop",
-        "ubuntu-session"
+        "ubuntu"
       ],
       "featured": true
     },
@@ -2774,14 +2800,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "linux",
-        "day 01: foundation",
-        "workshop",
-        "ubuntu",
-        "01 foundation basics and install",
-        "os",
         "ubuntu-session",
-        "desktop"
+        "linux",
+        "os",
+        "workshop",
+        "desktop",
+        "ubuntu",
+        "day 01: foundation",
+        "01 foundation basics and install"
       ],
       "featured": false
     },
@@ -2798,14 +2824,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "ubuntu-session",
         "linux",
-        "02 customize your desktop",
-        "workshop",
-        "ubuntu",
-        "day 02: customization",
         "os",
+        "workshop",
         "desktop",
-        "ubuntu-session"
+        "02 customize your desktop",
+        "day 02: customization",
+        "ubuntu"
       ],
       "featured": false
     },
@@ -2822,13 +2848,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "03 app ecosystem",
-        "linux",
-        "workshop",
-        "ubuntu",
-        "os",
-        "desktop",
         "ubuntu-session",
+        "linux",
+        "os",
+        "workshop",
+        "03 app ecosystem",
+        "desktop",
+        "ubuntu",
         "day 03: app ecosystem"
       ],
       "featured": false
@@ -2846,14 +2872,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "linux",
-        "workshop",
-        "ubuntu",
-        "04 productivity suite",
-        "os",
-        "day 04: productivity suite",
         "ubuntu-session",
-        "desktop"
+        "day 04: productivity suite",
+        "linux",
+        "os",
+        "workshop",
+        "desktop",
+        "04 productivity suite",
+        "ubuntu"
       ],
       "featured": false
     },
@@ -2870,14 +2896,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "05 power user tools",
-        "linux",
-        "workshop",
-        "ubuntu",
-        "os",
-        "desktop",
         "ubuntu-session",
-        "day 05: power user tools"
+        "linux",
+        "os",
+        "day 05: power user tools",
+        "workshop",
+        "desktop",
+        "ubuntu",
+        "05 power user tools"
       ],
       "featured": false
     },
@@ -2894,14 +2920,14 @@ window.SUNDARBANS_STUDIO_DATA = {
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
-        "day 06: system maintenance",
+        "ubuntu-session",
         "linux",
-        "06 system maintenance",
-        "workshop",
-        "ubuntu",
         "os",
+        "workshop",
+        "day 06: system maintenance",
         "desktop",
-        "ubuntu-session"
+        "ubuntu",
+        "06 system maintenance"
       ],
       "featured": false
     }

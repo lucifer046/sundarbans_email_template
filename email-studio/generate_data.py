@@ -145,10 +145,13 @@ def extract_metadata(file_path, repo_root):
         keywords.update(["certificate", "award", "achievement", "merit"])
     if "well-being" in rel_path:
         keywords.update(["mental health", "wellness", "well-being", "mindfulness"])
+    if "guidance" in rel_path or "course" in rel_path:
+        keywords.update(["course guidance", "degree", "diploma", "foundation", "courses", "academics", "planning"])
 
     # Curate flagship/featured templates
     featured_paths = [
         "events/chai-baarish-season2.html",
+        "sessions/course-guidance-session.html",
         "team-onboarding/webops-team-cyberpunk.html",
         "invitations/well-being-v1-cosmic-calm.html",
         "events/vasant-panchami-launch.html",
@@ -188,8 +191,8 @@ def main():
 
     for f in sorted(html_files):
         rel = os.path.relpath(f, repo_root).replace('\\', '/')
-        # Skip internal folders, tests, or email-studio itself
-        if rel.startswith(('.git', 'scratch', 'email-studio')) or 'centering-test' in rel:
+        # Skip internal folders, tests, email-studio itself, or root index.html
+        if rel.startswith(('.git', 'scratch', 'email-studio')) or 'centering-test' in rel or rel == 'index.html':
             continue
         
         meta = extract_metadata(f, repo_root)
