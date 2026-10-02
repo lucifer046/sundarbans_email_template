@@ -147,6 +147,8 @@ def extract_metadata(file_path, repo_root):
         keywords.update(["mental health", "wellness", "well-being", "mindfulness"])
     if "guidance" in rel_path or "course" in rel_path:
         keywords.update(["course guidance", "degree", "diploma", "foundation", "courses", "academics", "planning"])
+    if "statistics" in rel_path or "stats" in rel_path or "tamil" in rel_path:
+        keywords.update(["statistics", "stats", "tamil", "academics", "session", "baskaran nadar", "math"])
 
     # Curate flagship/featured templates
     featured_paths = [
@@ -178,7 +180,7 @@ def extract_metadata(file_path, repo_root):
         "filesize_formatted": f"{len(content) / 1024:.1f} KB",
         "header_pattern": header_pattern,
         "theme": theme_detected,
-        "keywords": list(keywords),
+        "keywords": sorted(list(keywords)),
         "featured": is_featured
     }
 
