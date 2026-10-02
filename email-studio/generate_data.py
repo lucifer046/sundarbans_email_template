@@ -149,6 +149,14 @@ def extract_metadata(file_path, repo_root):
         keywords.update(["course guidance", "degree", "diploma", "foundation", "courses", "academics", "planning"])
     if "statistics" in rel_path or "stats" in rel_path or "tamil" in rel_path:
         keywords.update(["statistics", "stats", "tamil", "academics", "session", "baskaran nadar", "math"])
+    if "saavan" in rel_path:
+        keywords.update(["saavan", "inter-house", "fest", "competition", "trophy", "sports", "cultural"])
+    if "bgmi" in rel_path or "gaming" in rel_path:
+        keywords.update(["bgmi", "battlegrounds", "gaming", "esports", "tournament"])
+    if "champion" in rel_path or "quiz" in rel_path:
+        keywords.update(["quiz", "trivia", "kbc", "kaun banega champion", "competition"])
+    if "music" in rel_path or "judge" in rel_path:
+        keywords.update(["music", "judge", "invitation", "jury", "evaluation", "cultural"])
 
     # Curate flagship/featured templates
     featured_paths = [

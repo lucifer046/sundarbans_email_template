@@ -5,7 +5,7 @@
     "institution": "IIT Madras BS Degree",
     "motto": "Learn · Grow · Lead",
     "tagline": "Every message deserves a thoughtful design.",
-    "total_templates": 132,
+    "total_templates": 137,
     "total_categories": 11,
     "featured_count": 13
   },
@@ -22,7 +22,7 @@
       "name": "Events & Gatherings",
       "icon": "calendar",
       "description": "House competitions, cultural nights, open mics, and meetups",
-      "count": 37
+      "count": 40
     },
     {
       "slug": "general",
@@ -43,7 +43,7 @@
       "name": "Invitations & Drives",
       "icon": "envelope",
       "description": "Guest speakers, wellness sessions, and recruitment invites",
-      "count": 18
+      "count": 19
     },
     {
       "slug": "orientation",
@@ -71,7 +71,7 @@
       "name": "Academic Sessions",
       "icon": "book-open",
       "description": "Cybersecurity track, exam revisions, and skill-building bootcamps",
-      "count": 9
+      "count": 10
     },
     {
       "slug": "team-onboarding",
@@ -221,10 +221,15 @@
         "award",
         "certificate",
         "certificates",
+        "competition",
         "desktop",
+        "kaun banega champion",
+        "kbc",
         "linux",
         "merit",
         "os",
+        "quiz",
+        "trivia",
         "ubuntu",
         "ubuntu quiz certificates",
         "workshop"
@@ -405,17 +410,24 @@
       "title": "Have You Participated in All the Technical Events? · Saavan 20...",
       "category": "events",
       "subcategory": null,
-      "description": "Have you participated in all the technical events? Network, certificates, internships, prizes, and exposure. Register now for Saavan Tech...",
+      "description": "Registrations for Saavan 2026 technical events are officially live. Explore all events and register today.",
       "file": "../events/saavan-technical-events.html",
       "raw_path": "events/saavan-technical-events.html",
-      "filesize_bytes": 16802,
-      "filesize_formatted": "16.4 KB",
+      "filesize_bytes": 15844,
+      "filesize_formatted": "15.5 KB",
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
+        "competition",
+        "cultural",
         "events",
+        "fest",
         "have you participated in all the technical events? · saavan 20...",
-        "saavan technical events"
+        "inter-house",
+        "saavan",
+        "saavan technical events",
+        "sports",
+        "trophy"
       ],
       "featured": false
     },
@@ -473,6 +485,36 @@
         "events",
         "invitation: love in all its truth | sundarbans cultural community",
         "love in all its truth"
+      ],
+      "featured": false
+    },
+    {
+      "id": "saavan-kaun-banega-champion",
+      "title": "Kaun Banega Champion · Saavan 2026 · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Saavan 2026 quiz, trivia, and strategy competitions are live. Register for Sports Trivia Showdown 2.0, Traitors, IPL Auction Showdown, an...",
+      "file": "../events/saavan-kaun-banega-champion.html",
+      "raw_path": "events/saavan-kaun-banega-champion.html",
+      "filesize_bytes": 32378,
+      "filesize_formatted": "31.6 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "competition",
+        "cultural",
+        "events",
+        "fest",
+        "inter-house",
+        "kaun banega champion",
+        "kaun banega champion · saavan 2026 · sundarbans house",
+        "kbc",
+        "quiz",
+        "saavan",
+        "saavan kaun banega champion",
+        "sports",
+        "trivia",
+        "trophy"
       ],
       "featured": false
     },
@@ -622,14 +664,19 @@
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "competition",
         "cyber quiz reminder",
         "cybersecurity",
         "events",
+        "kaun banega champion",
+        "kbc",
         "linux",
+        "quiz",
         "reminder: the ultimate cyber security quiz",
         "security",
         "tech",
-        "terminal"
+        "terminal",
+        "trivia"
       ],
       "featured": false
     },
@@ -747,6 +794,63 @@
       "featured": false
     },
     {
+      "id": "saavan-final-push",
+      "title": "Sundarbans, let’s bring the trophy home! · Saavan 2026",
+      "category": "events",
+      "subcategory": null,
+      "description": "We are already leading the race in Saavan and just a few registrations away from the top spot. Now is the time to make it happen. Let’s b...",
+      "file": "../events/saavan-final-push.html",
+      "raw_path": "events/saavan-final-push.html",
+      "filesize_bytes": 25658,
+      "filesize_formatted": "25.1 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Light Theme",
+      "keywords": [
+        "competition",
+        "cultural",
+        "events",
+        "fest",
+        "inter-house",
+        "saavan",
+        "saavan final push",
+        "sports",
+        "sundarbans, let’s bring the trophy home! · saavan 2026",
+        "trophy"
+      ],
+      "featured": false
+    },
+    {
+      "id": "saavan-bgmi",
+      "title": "The Battleground: BGMI · Saavan 2026 · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Saavan 2026 sports event registrations are live. Assemble your squad for The Battleground BGMI.",
+      "file": "../events/saavan-bgmi.html",
+      "raw_path": "events/saavan-bgmi.html",
+      "filesize_bytes": 15892,
+      "filesize_formatted": "15.5 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "battlegrounds",
+        "bgmi",
+        "competition",
+        "cultural",
+        "esports",
+        "events",
+        "fest",
+        "gaming",
+        "inter-house",
+        "saavan",
+        "saavan bgmi",
+        "sports",
+        "the battleground: bgmi · saavan 2026 · sundarbans house",
+        "tournament",
+        "trophy"
+      ],
+      "featured": false
+    },
+    {
       "id": "chess-showdown",
       "title": "The Chess Showdown - Sundarbans E-Sports",
       "category": "events",
@@ -816,14 +920,19 @@
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "competition",
         "cyber quiz",
         "cybersecurity",
         "events",
+        "kaun banega champion",
+        "kbc",
         "linux",
+        "quiz",
         "security",
         "tech",
         "terminal",
-        "the ultimate cyber security quiz"
+        "the ultimate cyber security quiz",
+        "trivia"
       ],
       "featured": false
     },
@@ -840,10 +949,15 @@
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
+        "competition",
         "desktop",
         "events",
+        "kaun banega champion",
+        "kbc",
         "linux",
         "os",
+        "quiz",
+        "trivia",
         "ubuntu",
         "ubuntu mastery quiz",
         "ubuntu mastery quiz v2",
@@ -864,10 +978,15 @@
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
+        "competition",
         "desktop",
         "events",
+        "kaun banega champion",
+        "kbc",
         "linux",
         "os",
+        "quiz",
+        "trivia",
         "ubuntu",
         "ubuntu mastery quiz",
         "workshop"
@@ -1317,9 +1436,15 @@
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
+        "cultural",
+        "evaluation",
+        "invitation",
         "invitations",
+        "judge",
         "judge welcome",
-        "manthan-e-alfaaz: welcome esteemed judge"
+        "jury",
+        "manthan-e-alfaaz: welcome esteemed judge",
+        "music"
       ],
       "featured": false
     },
@@ -1339,6 +1464,31 @@
         "invitations",
         "mission accomplished: web trapped",
         "web trapped speaker thankyou"
+      ],
+      "featured": false
+    },
+    {
+      "id": "music-competition-judge-invitation",
+      "title": "Official Invitation · Music Competition Judge | Sundarbans House",
+      "category": "invitations",
+      "subcategory": null,
+      "description": "Official Invitation from Sundarbans House, IIT Madras BS Degree · Invitation to Judge the Music Competition.",
+      "file": "../invitations/music-competition-judge-invitation.html",
+      "raw_path": "invitations/music-competition-judge-invitation.html",
+      "filesize_bytes": 20746,
+      "filesize_formatted": "20.3 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "cultural",
+        "evaluation",
+        "invitation",
+        "invitations",
+        "judge",
+        "jury",
+        "music",
+        "music competition judge invitation",
+        "official invitation · music competition judge | sundarbans house"
       ],
       "featured": false
     },
@@ -2305,32 +2455,6 @@
       "featured": false
     },
     {
-      "id": "course-guidance-session",
-      "title": "IIT Madras BS Degree · Course Guidance Session | Sundarbans House",
-      "category": "sessions",
-      "subcategory": null,
-      "description": "Confused about your next course, diploma, or degree journey? Sundarbans House presents the Course Guidance Session on Sunday, 20th Septem...",
-      "file": "../sessions/course-guidance-session.html",
-      "raw_path": "sessions/course-guidance-session.html",
-      "filesize_bytes": 41332,
-      "filesize_formatted": "40.4 KB",
-      "header_pattern": "Pattern A (Sundarbans Letterhead)",
-      "theme": "Dark Theme",
-      "keywords": [
-        "academics",
-        "course guidance",
-        "course guidance session",
-        "courses",
-        "degree",
-        "diploma",
-        "foundation",
-        "iit madras bs degree · course guidance session | sundarbans house",
-        "planning",
-        "sessions"
-      ],
-      "featured": true
-    },
-    {
       "id": "maths-2-end-term-revision-reminder",
       "title": "LIVE NOW: Maths II End-Term Revision Session | Sundarbans House",
       "category": "sessions",
@@ -2500,6 +2624,58 @@
       "featured": false
     },
     {
+      "id": "course-guidance-live-now",
+      "title": "[LIVE NOW] IIT Madras BS Degree · Course Guidance Session | Su...",
+      "category": "sessions",
+      "subcategory": null,
+      "description": "WE ARE LIVE NOW! Course Guidance Session is broadcasting live. Join fast on Google Meet or YouTube Live for Foundation, Diploma & Degree ...",
+      "file": "../sessions/course-guidance-live-now.html",
+      "raw_path": "sessions/course-guidance-live-now.html",
+      "filesize_bytes": 29043,
+      "filesize_formatted": "28.4 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "[live now] iit madras bs degree · course guidance session | su...",
+        "academics",
+        "course guidance",
+        "course guidance live now",
+        "courses",
+        "degree",
+        "diploma",
+        "foundation",
+        "planning",
+        "sessions"
+      ],
+      "featured": false
+    },
+    {
+      "id": "course-guidance-session",
+      "title": "[REMINDER] IIT Madras BS Degree · Course Guidance Session Toni...",
+      "category": "sessions",
+      "subcategory": null,
+      "description": "[Reminder] Course Guidance Session is happening TODAY at 7:30 PM IST. Join live on Google Meet or YouTube Live. Schedule: Foundation (7:3...",
+      "file": "../sessions/course-guidance-session.html",
+      "raw_path": "sessions/course-guidance-session.html",
+      "filesize_bytes": 41380,
+      "filesize_formatted": "40.4 KB",
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "[reminder] iit madras bs degree · course guidance session toni...",
+        "academics",
+        "course guidance",
+        "course guidance session",
+        "courses",
+        "degree",
+        "diploma",
+        "foundation",
+        "planning",
+        "sessions"
+      ],
+      "featured": true
+    },
+    {
       "id": "graphics-head",
       "title": "Congratulations | Culturals Co-head · Sundarbans House",
       "category": "team-onboarding",
@@ -2662,8 +2838,8 @@
       "description": "You have been appointed as a Regional Coordinator (Lower House Council) for Sundarbans House, IITM BS. Here are your responsibilities, re...",
       "file": "../team-onboarding/rc-onboarding.html",
       "raw_path": "team-onboarding/rc-onboarding.html",
-      "filesize_bytes": 38655,
-      "filesize_formatted": "37.7 KB",
+      "filesize_bytes": 38910,
+      "filesize_formatted": "38.0 KB",
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
