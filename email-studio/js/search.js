@@ -8,7 +8,7 @@ class TemplateSearchEngine {
     this.templates = templates;
     this.activeCategory = 'all';
     this.searchQuery = '';
-    this.sortBy = 'featured';
+    this.sortBy = 'date-desc';
     this.themeFilter = 'all';
   }
 
@@ -25,7 +25,7 @@ class TemplateSearchEngine {
   }
 
   setSort(sortBy) {
-    this.sortBy = sortBy || 'featured';
+    this.sortBy = sortBy || 'date-desc';
   }
 
   setTheme(theme) {
@@ -70,9 +70,23 @@ class TemplateSearchEngine {
 
     // Sorting
     results.sort((a, b) => {
-      if (this.sortBy === 'featured') {
+      if (this.sortBy === 'date-desc') {
+        const dateCmp = (b.date || '').localeCompare(a.date || '');
+        if (dateCmp !== 0) return dateCmp;
+        const tsCmp = (b.timestamp || 0) - (a.timestamp || 0);
+        if (tsCmp !== 0) return tsCmp;
+        return a.title.localeCompare(b.title);
+      } else if (this.sortBy === 'date-asc') {
+        const dateCmp = (a.date || '').localeCompare(b.date || '');
+        if (dateCmp !== 0) return dateCmp;
+        const tsCmp = (a.timestamp || 0) - (b.timestamp || 0);
+        if (tsCmp !== 0) return tsCmp;
+        return a.title.localeCompare(b.title);
+      } else if (this.sortBy === 'featured') {
         if (a.featured && !b.featured) return -1;
         if (!a.featured && b.featured) return 1;
+        const dateCmp = (b.date || '').localeCompare(a.date || '');
+        if (dateCmp !== 0) return dateCmp;
         return a.title.localeCompare(b.title);
       } else if (this.sortBy === 'title-asc') {
         return a.title.localeCompare(b.title);
@@ -81,6 +95,8 @@ class TemplateSearchEngine {
       } else if (this.sortBy === 'category') {
         const catCompare = a.category.localeCompare(b.category);
         if (catCompare !== 0) return catCompare;
+        const dateCmp = (b.date || '').localeCompare(a.date || '');
+        if (dateCmp !== 0) return dateCmp;
         return a.title.localeCompare(b.title);
       } else if (this.sortBy === 'filesize') {
         return (b.filesize_bytes || 0) - (a.filesize_bytes || 0);

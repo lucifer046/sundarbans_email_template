@@ -39,7 +39,6 @@ class EmailStudioApp {
 
     // 4. Render Interface Components
     this.renderDynamicMetrics();
-    this.renderFeaturedShowcase();
     this.renderCategoryBento();
     this.renderFilterPills();
     this.renderTemplateGrid();
@@ -243,8 +242,11 @@ class EmailStudioApp {
       return `
         <article class="template-card ${isFeatured}" data-id="${t.id}" style="animation-delay: ${delay}s;">
           <div class="card-top-strip">
-            <span class="badge ${t.featured ? 'badge-gold' : 'badge-forest'}">${this.escapeHtml(t.category)}</span>
-            <span class="badge badge-muted">${this.escapeHtml(t.theme)}</span>
+            <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+              <span class="badge ${t.featured ? 'badge-gold' : 'badge-forest'}">${this.escapeHtml(t.category)}</span>
+              <span class="badge badge-muted">${this.escapeHtml(t.theme)}</span>
+            </div>
+            ${t.date_formatted ? `<span class="badge badge-muted card-date-badge" style="font-size:0.7rem;font-weight:600;letter-spacing:0.02em;color:var(--text-muted);">${this.escapeHtml(t.date_formatted)}</span>` : ''}
           </div>
           <div class="card-main-content">
             <h3 class="card-heading" title="${this.escapeHtml(t.title)}">${this.escapeHtml(t.title)}</h3>
@@ -446,17 +448,17 @@ class EmailStudioApp {
       this.searchInput.value = '';
       this.searchClearBtn?.classList.remove('visible');
     }
-    if (this.sortSelect) this.sortSelect.value = 'featured';
+    if (this.sortSelect) this.sortSelect.value = 'date-desc';
 
     // Reset custom dropdown state
     if (this.customDropdownLabel) {
-      this.customDropdownLabel.textContent = 'Featured First';
+      this.customDropdownLabel.textContent = 'Newest First';
     }
     if (this.customDropdownMenu) {
       this.customDropdownMenu.querySelectorAll('.custom-dropdown-option').forEach(opt => {
-        const isFeatured = opt.getAttribute('data-value') === 'featured';
-        opt.classList.toggle('selected', isFeatured);
-        opt.setAttribute('aria-selected', isFeatured ? 'true' : 'false');
+        const isDefault = opt.getAttribute('data-value') === 'date-desc';
+        opt.classList.toggle('selected', isDefault);
+        opt.setAttribute('aria-selected', isDefault ? 'true' : 'false');
       });
     }
     this.customDropdown?.classList.remove('open');
@@ -464,7 +466,7 @@ class EmailStudioApp {
 
     this.searchEngine.setSearchQuery('');
     this.searchEngine.setCategory('all');
-    this.searchEngine.setSort('featured');
+    this.searchEngine.setSort('date-desc');
     this.searchEngine.setTheme('all');
 
     this.renderFilterPills();

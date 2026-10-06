@@ -11,6 +11,15 @@ import glob
 import re
 import json
 import html
+import subprocess
+import datetime
+
+MONTHS = {
+    'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
+    'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12,
+    'january': 1, 'february': 2, 'march': 3, 'april': 4, 'june': 6,
+    'july': 7, 'august': 8, 'september': 9, 'october': 10, 'november': 11, 'december': 12
+}
 
 # Strict AGENTS.md rule: strip all OS emojis and icons
 EMOJI_PATTERN = re.compile(
@@ -41,7 +50,47 @@ def clean_text(text):
     clean = re.sub(r'\s+', ' ', clean).strip()
     return clean
 
-def extract_metadata(file_path, repo_root):
+
+def extract_date_info(file_path, rel_path, content, file_commit_dates):
+    """
+    Extracts chronological date (YYYY-MM-DD), formatted display date (DD Mon YYYY),
+    and epoch timestamp for sorting.
+    """
+    header_chunk = content[:3000]
+    m_head = re.search(r'(?:Date|Term[^<\n]*\|\s*Date)\s*(?:&middot;|·|:|-)\s*(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})', header_chunk, re.I)
+    if m_head:
+        d, m, y = m_head.group(1), m_head.group(2).lower()[:3], m_head.group(3)
+        if m in MONTHS:
+            iso = f"{y}-{MONTHS[m]:02d}-{int(d):02d}"
+            fmt = f"{int(d):02d} {m.capitalize()} {y}"
+            mtime = os.path.getmtime(file_path)
+            return iso, fmt, int(mtime)
+
+    m_labeled = re.search(r'(?:Appointment\s*Date|Event\s*Date|Session\s*Date|Date\s*[:·&middot;-])\s*([0-9]{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+([0-9]{4})', content, re.I)
+    if m_labeled:
+        d, m, y = m_labeled.group(1), m_labeled.group(2).lower()[:3], m_labeled.group(3)
+        if m in MONTHS:
+            iso = f"{y}-{MONTHS[m]:02d}-{int(d):02d}"
+            fmt = f"{int(d):02d} {m.capitalize()} {y}"
+            mtime = os.path.getmtime(file_path)
+            return iso, fmt, int(mtime)
+
+    if rel_path in file_commit_dates:
+        git_iso = file_commit_dates[rel_path]
+        try:
+            dt = datetime.datetime.strptime(git_iso, "%Y-%m-%d")
+            mtime = os.path.getmtime(file_path)
+            return git_iso, dt.strftime("%d %b %Y"), int(mtime)
+        except Exception:
+            pass
+
+    mtime = os.path.getmtime(file_path)
+    dt_m = datetime.datetime.fromtimestamp(mtime)
+    return dt_m.strftime("%Y-%m-%d"), dt_m.strftime("%d %b %Y"), int(mtime)
+
+def extract_metadata(file_path, repo_root, file_commit_dates=None):
+    if file_commit_dates is None:
+        file_commit_dates = {}
     rel_path = os.path.relpath(file_path, repo_root).replace('\\', '/')
     parts = rel_path.split('/')
     category = parts[0]
@@ -176,6 +225,8 @@ def extract_metadata(file_path, repo_root):
     ]
     is_featured = rel_path in featured_paths
 
+    date_iso, date_fmt, timestamp = extract_date_info(file_path, rel_path, content, file_commit_dates)
+
     return {
         "id": base_id,
         "title": display_title,
@@ -186,6 +237,9 @@ def extract_metadata(file_path, repo_root):
         "raw_path": rel_path,
         "filesize_bytes": len(content),
         "filesize_formatted": f"{len(content) / 1024:.1f} KB",
+        "date": date_iso,
+        "date_formatted": date_fmt,
+        "timestamp": timestamp,
         "header_pattern": header_pattern,
         "theme": theme_detected,
         "keywords": sorted(list(keywords)),
@@ -196,6 +250,28 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(script_dir)
     
+    # Batch fetch git commit dates for fast and accurate commit tracking
+    file_commit_dates = {}
+    try:
+        out = subprocess.check_output(
+            ["git", "log", "--name-only", "--format=COMMIT_DATE:%cd", "--date=short"],
+            cwd=repo_root,
+            text=True
+        )
+        current_date = None
+        for line in out.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            if line.startswith("COMMIT_DATE:"):
+                current_date = line.split(":", 1)[1].strip()
+            else:
+                fpath = line.replace("\\", "/")
+                if fpath not in file_commit_dates and current_date:
+                    file_commit_dates[fpath] = current_date
+    except Exception as e:
+        print(f"Warning: could not fetch git commit dates: {e}")
+
     html_files = glob.glob(os.path.join(repo_root, '**', '*.html'), recursive=True)
     templates = []
 
@@ -205,11 +281,11 @@ def main():
         if rel.startswith(('.git', 'scratch', 'email-studio')) or 'centering-test' in rel or rel == 'index.html':
             continue
         
-        meta = extract_metadata(f, repo_root)
+        meta = extract_metadata(f, repo_root, file_commit_dates)
         templates.append(meta)
 
-    # Sort templates by category, then by title
-    templates.sort(key=lambda t: (t['category'], t['title']))
+    # Sort templates by date descending (newest first), with timestamp and title as tie-breakers
+    templates.sort(key=lambda t: (t.get('date', ''), t.get('timestamp', 0), t.get('title', '')), reverse=True)
 
     # Prepare categories summary
     categories_dict = {}
