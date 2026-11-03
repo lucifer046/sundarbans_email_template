@@ -1,364 +1,283 @@
 /**
- * preview.js · Multi-Device Interactive Preview & Code Inspector
- * Manages isolated iframe rendering, viewport switching, and code actions
+ * preview.js · Sundarbans Email Studio
+ * Full-screen preview: device widths, source view, prev/next, copy and download.
  */
 
-class StudioPreviewController {
-  constructor() {
-    this.currentTemplate = null;
-    this.currentHtmlContent = null;
-    this.activeDevice = 'desktop'; // 'desktop' | 'tablet' | 'mobile'
+const DEVICE_LABELS = { desktop: '720 px', tablet: '560 px · breakpoint', mobile: '375 px' };
 
-    // DOM Elements
-    this.modalBackdrop = document.getElementById('studio-modal');
-    this.modalTitle = document.getElementById('studio-modal-title');
-    this.modalCategory = document.getElementById('studio-modal-category');
-    this.modalPath = document.getElementById('studio-modal-path');
-    this.deviceFrame = document.getElementById('viewport-device-frame');
-    this.widthIndicator = document.getElementById('frame-width-indicator');
-    this.iframe = document.getElementById('studio-iframe');
-    this.metaSize = document.getElementById('studio-meta-size');
-    this.metaPattern = document.getElementById('studio-meta-pattern');
+class StudioPreview {
+  constructor(app) {
+    this.app = app;
+    this.isOpen = false;
+    this.list = [];
+    this.index = 0;
+    this.current = null;
+    this.html = null;
+    this.view = 'preview';
 
-    // Code Modal Elements
-    this.codeModal = document.getElementById('code-modal');
-    this.codeTitle = document.getElementById('code-modal-title');
-    this.codeContainer = document.getElementById('code-view-container');
+    this.el = document.getElementById('studio');
+    this.stage = document.getElementById('stage');
+    this.device = document.getElementById('device');
+    this.frame = document.getElementById('studio-frame');
+    this.codeView = document.getElementById('code-view');
+    this.codeContent = document.getElementById('code-content');
 
-    // Guidelines Modal Elements
-    this.standardsModal = document.getElementById('standards-modal');
-
-    this.initEventListeners();
+    this.bind();
   }
 
-  initEventListeners() {
-    // Device viewport toggles
-    document.querySelectorAll('[data-device]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const device = btn.getAttribute('data-device');
-        this.setDeviceViewport(device);
-      });
+  bind() {
+    const on = (id, fn) => document.getElementById(id).addEventListener('click', fn);
+    on('studio-close', () => this.close());
+    on('studio-prev', () => this.step(-1));
+    on('studio-next', () => this.step(1));
+    on('studio-copy', () => this.copy());
+    on('studio-download', () => this.download());
+    on('studio-open', () => window.open(this.current.raw_path, '_blank', 'noopener'));
+    on('studio-link', () => this.copyLink());
+    on('studio-info-toggle', () => this.toggleInspector());
+
+    document.getElementById('device-switch').addEventListener('click', e => {
+      const btn = e.target.closest('[data-device]');
+      if (btn) this.setDevice(btn.dataset.device);
+    });
+    document.getElementById('view-switch').addEventListener('click', e => {
+      const btn = e.target.closest('[data-view]');
+      if (btn) this.setView(btn.dataset.view);
     });
 
-    // Close preview modal
-    document.getElementById('studio-close-btn')?.addEventListener('click', () => this.closePreview());
-    this.modalBackdrop?.addEventListener('click', (e) => {
-      if (e.target === this.modalBackdrop) this.closePreview();
+    this.frame.addEventListener('load', () => {
+      if (!this.frame.src || this.frame.src === 'about:blank') return;
+      this.styleFrame();
+      this.stage.classList.remove('loading');
     });
 
-    // Action buttons inside preview modal
-    document.getElementById('studio-copy-btn')?.addEventListener('click', () => this.copyCurrentHtml());
-    document.getElementById('studio-code-btn')?.addEventListener('click', () => this.viewCurrentSource());
-    document.getElementById('studio-download-btn')?.addEventListener('click', () => this.downloadCurrentHtml());
-    document.getElementById('studio-tab-btn')?.addEventListener('click', () => this.openInNewTab());
-
-    // Code modal close
-    document.getElementById('code-close-btn')?.addEventListener('click', () => this.closeCodeModal());
-    document.getElementById('code-copy-btn')?.addEventListener('click', () => this.copyCurrentHtml());
-    this.codeModal?.addEventListener('click', (e) => {
-      if (e.target === this.codeModal) this.closeCodeModal();
-    });
-
-    // Guidelines modal close
-    document.getElementById('standards-close-btn')?.addEventListener('click', () => this.closeStandardsModal());
-    this.standardsModal?.addEventListener('click', (e) => {
-      if (e.target === this.standardsModal) this.closeStandardsModal();
-    });
-
-    // Global keyboard listener
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        if (this.codeModal?.classList.contains('open')) {
-          this.closeCodeModal();
-        } else if (this.standardsModal?.classList.contains('open')) {
-          this.closeStandardsModal();
-        } else if (this.modalBackdrop?.classList.contains('open')) {
-          this.closePreview();
-        }
-      }
-    });
-  }
-
-  getTemplateUrl(template) {
-    if (!template) return '';
-    const isStudioDir = window.location.pathname.includes('/email-studio');
-    if (isStudioDir) {
-      return template.file;
-    }
-    return template.raw_path || template.file.replace(/^\.\.\//, '');
-  }
-
-  openPreview(template) {
-    if (!template) return;
-    this.currentTemplate = template;
-    this.currentHtmlContent = null;
-
-    // Update Header Metadata
-    if (this.modalTitle) this.modalTitle.textContent = template.title;
-    if (this.modalCategory) this.modalCategory.textContent = template.category;
-    if (this.modalPath) this.modalPath.textContent = template.raw_path;
-    if (this.metaSize) this.metaSize.textContent = template.filesize_formatted;
-    if (this.metaPattern) this.metaPattern.textContent = template.header_pattern;
-
-    // Reset device to desktop
-    this.setDeviceViewport('desktop');
-
-    const templateUrl = this.getTemplateUrl(template);
-
-    // Load template file in isolated iframe with custom botanical scrollbar
-    if (this.iframe) {
-      this.iframe.classList.add('loading');
-      
-      const onIframeReady = () => {
-        this.injectIframeScrollbar();
-        setTimeout(() => {
-          this.injectIframeScrollbar();
-          this.iframe.classList.remove('loading');
-        }, 60);
+    window.addEventListener('keydown', e => {
+      if (!this.isOpen || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (!document.getElementById('standards').hidden) return;
+      const keys = {
+        Escape: () => this.close(),
+        ArrowLeft: () => this.step(-1),
+        ArrowRight: () => this.step(1),
+        '1': () => this.setDevice('desktop'),
+        '2': () => this.setDevice('tablet'),
+        '3': () => this.setDevice('mobile'),
+        c: () => this.copy(),
+        C: () => this.copy()
       };
-
-      this.iframe.onload = onIframeReady;
-      // Clear first to trigger clean render
-      this.iframe.removeAttribute('srcdoc');
-      this.iframe.src = 'about:blank';
-      setTimeout(() => {
-        this.iframe.src = templateUrl;
-      }, 40);
-    }
-
-    // Pre-fetch raw HTML: enables zero-flicker styled srcdoc & clean copy/view actions
-    this.fetchAndApplyTemplateHtml(templateUrl);
-
-    // Open Modal
-    this.modalBackdrop?.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  closePreview() {
-    this.modalBackdrop?.classList.remove('open');
-    document.body.style.overflow = '';
-    if (this.iframe) {
-      this.iframe.removeAttribute('srcdoc');
-      this.iframe.src = 'about:blank';
-    }
-  }
-
-  setDeviceViewport(device) {
-    this.activeDevice = device;
-    if (!this.deviceFrame) return;
-
-    this.deviceFrame.classList.remove('desktop', 'tablet', 'mobile');
-    this.deviceFrame.classList.add(device);
-
-    document.querySelectorAll('[data-device]').forEach(btn => {
-      btn.classList.toggle('active', btn.getAttribute('data-device') === device);
+      if (keys[e.key]) {
+        e.preventDefault();
+        keys[e.key]();
+      }
     });
+  }
 
-    if (this.widthIndicator) {
-      const dimensions = {
-        desktop: '720px (Desktop)',
-        tablet: '560px (@media Breakpoint)',
-        mobile: '375px (Mobile Phone)'
-      };
-      this.widthIndicator.textContent = dimensions[device] || device;
+  open(template, list, { fromRoute = false } = {}) {
+    this.list = (list && list.length ? list : [template]);
+    this.index = Math.max(0, this.list.findIndex(t => t.raw_path === template.raw_path));
+    if (this.list[this.index]?.raw_path !== template.raw_path) {
+      this.list = [template];
+      this.index = 0;
+    }
+
+    if (!this.isOpen) {
+      this.el.hidden = false;
+      this.isOpen = true;
+      document.body.classList.add('locked');
+      this.lastFocus = document.activeElement;
+      document.getElementById('studio-close').focus({ preventScroll: true });
+    }
+    this.load(template);
+    if (!fromRoute) this.pushRoute(template.id);
+  }
+
+  close({ fromRoute = false } = {}) {
+    if (!this.isOpen) return;
+    this.isOpen = false;
+    this.el.hidden = true;
+    this.frame.src = 'about:blank';
+    document.body.classList.remove('locked');
+    this.lastFocus?.focus?.({ preventScroll: true });
+    if (!fromRoute) this.pushRoute(null);
+  }
+
+  step(delta) {
+    if (this.list.length < 2) return;
+    this.index = (this.index + delta + this.list.length) % this.list.length;
+    const t = this.list[this.index];
+    this.load(t);
+    this.pushRoute(t.id, true);
+  }
+
+  load(t) {
+    this.current = t;
+    this.html = null;
+    const set = (id, v) => { document.getElementById(id).textContent = v || '-'; };
+    set('studio-cat', this.app.categoryName(t.category));
+    set('studio-title', this.app.shortTitle(t.title));
+    set('meta-path', t.raw_path);
+    set('meta-date', t.date_formatted);
+    set('meta-size', t.filesize_formatted);
+    set('meta-header', t.header_pattern);
+    set('meta-theme', t.theme);
+    set('meta-desc', t.description);
+    set('studio-pos', this.list.length > 1 ? `${this.index + 1} / ${this.list.length}` : '');
+    document.getElementById('studio-prev').disabled = this.list.length < 2;
+    document.getElementById('studio-next').disabled = this.list.length < 2;
+
+    this.stage.classList.add('loading');
+    this.frame.src = t.raw_path;
+    if (this.view === 'code') this.renderCode();
+  }
+
+  // Thin gold scrollbar inside the preview, matching the studio
+  styleFrame() {
+    try {
+      const doc = this.frame.contentDocument;
+      if (!doc || doc.getElementById('studio-scroll')) return;
+      const style = doc.createElement('style');
+      style.id = 'studio-scroll';
+      style.textContent = `
+        html{scrollbar-width:thin;scrollbar-color:rgba(243,174,69,.5) transparent}
+        ::-webkit-scrollbar{width:8px;height:8px}
+        ::-webkit-scrollbar-thumb{background:rgba(243,174,69,.45);border-radius:9px;border:2px solid transparent;background-clip:padding-box}
+        ::-webkit-scrollbar-track{background:transparent}`;
+      (doc.head || doc.documentElement).appendChild(style);
+      // Links inside emails should never navigate the preview itself
+      doc.querySelectorAll('a[href]').forEach(a => { a.target = '_blank'; a.rel = 'noopener noreferrer'; });
+    } catch (e) { /* file:// keeps the frame cross-origin */ }
+  }
+
+  setDevice(device) {
+    this.device.className = `device ${device}`;
+    document.querySelectorAll('#device-switch [data-device]').forEach(b => {
+      b.classList.toggle('active', b.dataset.device === device);
+      b.setAttribute('aria-checked', b.dataset.device === device);
+    });
+    document.getElementById('device-width').textContent = DEVICE_LABELS[device];
+    if (this.view === 'code') this.setView('preview');
+  }
+
+  setView(view) {
+    this.view = view;
+    document.querySelectorAll('#view-switch [data-view]').forEach(b => {
+      b.classList.toggle('active', b.dataset.view === view);
+      b.setAttribute('aria-checked', b.dataset.view === view);
+    });
+    this.codeView.hidden = view !== 'code';
+    this.device.style.visibility = view === 'code' ? 'hidden' : '';
+    if (view === 'code') this.renderCode();
+  }
+
+  toggleInspector() {
+    const narrow = window.matchMedia('(max-width: 980px)').matches;
+    const cls = narrow ? 'show-inspector' : 'no-inspector';
+    const nowHidden = narrow ? !this.el.classList.toggle(cls) : this.el.classList.toggle(cls);
+    document.getElementById('studio-info-toggle').setAttribute('aria-pressed', String(!nowHidden));
+  }
+
+  async getHtml() {
+    if (this.html) return this.html;
+    try {
+      const res = await fetch(this.current.raw_path);
+      if (res.ok) return (this.html = await res.text());
+    } catch (e) { /* fall through to the frame */ }
+    try {
+      const clone = this.frame.contentDocument.documentElement.cloneNode(true);
+      clone.querySelector('#studio-scroll')?.remove();
+      return (this.html = '<!DOCTYPE html>\n' + clone.outerHTML);
+    } catch (e) {
+      return '';
     }
   }
 
-  async fetchAndApplyTemplateHtml(fileUrl) {
-    try {
-      const res = await fetch(fileUrl);
-      if (res.ok) {
-        const rawHtml = await res.text();
-        this.currentHtmlContent = rawHtml;
+  async renderCode() {
+    const forPath = this.current.raw_path;
+    this.codeContent.innerHTML = '<span class="ln">Loading…</span>';
+    const html = await this.getHtml();
+    if (forPath !== this.current.raw_path) return;
+    this.codeContent.innerHTML = html ? this.highlight(html) : '<span class="ln">Source is only available when the studio is served over http.</span>';
+    this.codeView.scrollTop = 0;
+  }
 
-        // Populate srcdoc with pre-injected custom scrollbar for immediate rendering
-        if (this.iframe) {
-          const styledHtml = this.injectScrollbarIntoHtmlString(rawHtml);
-          this.iframe.srcdoc = styledHtml;
-          setTimeout(() => {
-            this.iframe.classList.remove('loading');
-          }, 80);
+  // Small line-by-line HTML highlighter: comments, tag names, attributes and strings.
+  // Works per line so every span closes on the line it opens, even for multi-line tags.
+  highlight(src) {
+    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const markup = s => s
+      .replace(/([\w:-]+)=("[^"]*"|'[^']*')/g, '<span class="tok-attr">$1</span>=<span class="tok-str">$2</span>')
+      .replace(/(&lt;\/?)([a-zA-Z][\w:-]*)/g, '<span class="tok-tag">$1$2</span>')
+      .replace(/(\/?&gt;)/g, '<span class="tok-tag">$1</span>');
+    let inComment = false;
+
+    return src.split(/\r?\n/).map(raw => {
+      let line = esc(raw);
+      let out = '';
+      while (line) {
+        if (inComment) {
+          const end = line.indexOf('--&gt;');
+          if (end === -1) { out += `<span class="tok-com">${line}</span>`; line = ''; break; }
+          out += `<span class="tok-com">${line.slice(0, end + 6)}</span>`;
+          line = line.slice(end + 6);
+          inComment = false;
+        } else {
+          const start = line.indexOf('&lt;!--');
+          if (start === -1) { out += markup(line); line = ''; break; }
+          out += markup(line.slice(0, start));
+          line = line.slice(start);
+          inComment = true;
         }
       }
-    } catch (e) {
-      console.warn('Could not prefetch raw HTML via fetch, fallback to iframe src:', e);
-    }
+      return `<span class="ln">${out || ' '}</span>`;
+    }).join('');
   }
 
-  injectScrollbarIntoHtmlString(htmlString) {
-    const scrollStyle = this.getCustomScrollbarCss();
-    const styleTag = `\n<style id="sundarbans-custom-scroll">\n${scrollStyle}\n</style>\n`;
-    if (htmlString.includes('</head>')) {
-      return htmlString.replace('</head>', `${styleTag}</head>`);
-    } else if (htmlString.includes('<body')) {
-      return htmlString.replace('<body', `<head>${styleTag}</head><body`);
-    }
-    return styleTag + htmlString;
-  }
-
-  injectIframeScrollbar() {
-    try {
-      const doc = this.iframe?.contentDocument || this.iframe?.contentWindow?.document;
-      if (!doc) return;
-
-      const styleId = 'sundarbans-custom-scroll';
-      let style = doc.getElementById(styleId);
-      if (!style) {
-        style = doc.createElement('style');
-        style.id = styleId;
-        (doc.head || doc.body || doc.documentElement).appendChild(style);
-      }
-      style.textContent = this.getCustomScrollbarCss();
-    } catch (err) {
-      // Handled via srcdoc injection
-    }
-  }
-
-  getCustomScrollbarCss() {
-    return `
-      /* Sundarbans Studio Custom Preview Scrollbar · Minimal Dark Botanical */
-      html, body {
-        scrollbar-width: thin !important;
-        scrollbar-color: rgba(243, 174, 69, 0.45) #121815 !important;
-      }
-
-      ::-webkit-scrollbar {
-        width: 8px !important;
-        height: 8px !important;
-        background-color: #121815 !important;
-      }
-
-      ::-webkit-scrollbar-button {
-        display: none !important;
-        width: 0 !important;
-        height: 0 !important;
-      }
-
-      ::-webkit-scrollbar-track,
-      ::-webkit-scrollbar-track-piece {
-        background: #121815 !important;
-        border-radius: 0 !important;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: rgba(243, 174, 69, 0.38) !important;
-        border-radius: 9999px !important;
-        border: 2px solid #121815 !important;
-        min-height: 40px !important;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(243, 174, 69, 0.85) !important;
-      }
-
-      ::-webkit-scrollbar-thumb:active {
-        background: #F3AE45 !important;
-      }
-
-      ::-webkit-scrollbar-corner {
-        background: #121815 !important;
-      }
-    `;
-  }
-
-  async getHtmlContent() {
-    if (this.currentHtmlContent) return this.currentHtmlContent;
-    try {
-      const fileUrl = this.getTemplateUrl(this.currentTemplate);
-      if (fileUrl) {
-        const res = await fetch(fileUrl);
-        if (res.ok) {
-          this.currentHtmlContent = await res.text();
-          return this.currentHtmlContent;
-        }
-      }
-      if (this.iframe?.contentDocument?.documentElement) {
-        const clone = this.iframe.contentDocument.documentElement.cloneNode(true);
-        clone.querySelector('#sundarbans-custom-scroll')?.remove();
-        return '<!DOCTYPE html>\n' + clone.outerHTML;
-      }
-    } catch (e) {
-      console.error('Failed to retrieve HTML content:', e);
-    }
-    return '';
-  }
-
-  async copyCurrentHtml() {
-    const html = await this.getHtmlContent();
-    if (!html) {
-      window.app?.showToast('Unable to copy HTML content', 'error');
-      return;
-    }
-
+  async copy() {
+    const html = await this.getHtml();
+    if (!html) return this.app.toast('Copy needs the studio served over http');
     try {
       await navigator.clipboard.writeText(html);
-      window.app?.showToast('HTML template copied to clipboard!');
-    } catch (err) {
-      // Fallback copy
-      const ta = document.createElement('textarea');
-      ta.value = html;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
+    } catch (e) {
+      const ta = Object.assign(document.createElement('textarea'), { value: html });
+      ta.style.cssText = 'position:fixed;opacity:0';
       document.body.appendChild(ta);
       ta.select();
       document.execCommand('copy');
-      document.body.removeChild(ta);
-      window.app?.showToast('HTML template copied to clipboard!');
+      ta.remove();
     }
+    this.app.toast('HTML copied to clipboard');
   }
 
-  async viewCurrentSource() {
-    const html = await this.getHtmlContent();
-    if (!html) {
-      window.app?.showToast('Could not load source code', 'error');
-      return;
-    }
-
-    if (this.codeTitle) {
-      this.codeTitle.textContent = `${this.currentTemplate.title} · HTML Source`;
-    }
-
-    if (this.codeContainer) {
-      this.codeContainer.textContent = html;
-    }
-
-    this.codeModal?.classList.add('open');
-  }
-
-  closeCodeModal() {
-    this.codeModal?.classList.remove('open');
-  }
-
-  openStandardsModal() {
-    this.standardsModal?.classList.add('open');
-  }
-
-  closeStandardsModal() {
-    this.standardsModal?.classList.remove('open');
-  }
-
-  async downloadCurrentHtml() {
-    const html = await this.getHtmlContent();
-    if (!html || !this.currentTemplate) return;
-
-    const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${this.currentTemplate.id || 'email-template'}.html`;
+  async download() {
+    const html = await this.getHtml();
+    if (!html) return this.app.toast('Download needs the studio served over http');
+    const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
+    const a = Object.assign(document.createElement('a'), { href: url, download: `${this.current.id}.html` });
     document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
+    a.remove();
     URL.revokeObjectURL(url);
-    window.app?.showToast(`Downloaded ${this.currentTemplate.id}.html`);
+    this.app.toast(`Saved ${this.current.id}.html`);
   }
 
-  openInNewTab() {
-    const fileUrl = this.getTemplateUrl(this.currentTemplate);
-    if (fileUrl) {
-      window.open(fileUrl, '_blank');
+  async copyLink() {
+    const url = new URL(window.location.href);
+    url.searchParams.set('preview', this.current.id);
+    try {
+      await navigator.clipboard.writeText(url.toString());
+      this.app.toast('Link copied');
+    } catch (e) {
+      this.app.toast(url.toString());
     }
+  }
+
+  pushRoute(id, replace = false) {
+    const url = new URL(window.location.href);
+    if (id) url.searchParams.set('preview', id);
+    else url.searchParams.delete('preview');
+    url.searchParams.delete('id');
+    const method = replace || (id && new URLSearchParams(window.location.search).has('preview')) ? 'replaceState' : 'pushState';
+    history[method](null, '', url);
   }
 }
 
-window.StudioPreviewController = StudioPreviewController;
+window.StudioPreview = StudioPreview;

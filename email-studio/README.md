@@ -1,105 +1,57 @@
 # Sundarbans Email Studio
 
-> **Official Digital Archive & Responsive Preview Studio**  
-> Curated HTML email templates for **Sundarbans House**, **IIT Madras BS Degree**.  
-> Motto: *Learn &middot; Grow &middot; Lead*
+The preview website for every HTML email sent by **Sundarbans House**, IIT Madras BS Degree. Plain HTML, CSS and JavaScript with no build step.
 
----
+## What it does
 
-##  Overview
+- **Live thumbnails.** Each card renders the real email, scaled down. Hover a card to pan through it.
+- **Design library.** Patterns C to G from `AGENTS.md` section 12, shown up front as starting points for new emails.
+- **Search and filters.** Search titles, filenames and keywords. Filter by collection and by email theme (dark, light, special). Sort by date, title or size.
+- **Preview studio.** Full-screen view with Desktop (720px), Breakpoint (560px) and Mobile (375px phone frame) widths, a highlighted HTML source view, previous/next navigation, copy HTML, download, open raw, and shareable `?preview=<id>` links.
+- **Light and dark interface.** Toggle in the top bar. The choice is remembered per browser.
 
-**Sundarbans Email Studio** is a standalone, zero-dependency, frontend-only digital design gallery and template explorer hosted inside the repository under `/email-studio/`. It provides an editorial browsing experience and responsive multi-device preview environment for all 129+ production HTML email templates used across house events, team onboarding, poetry competitions, academic sessions, and freshers orientations.
+Keyboard: `/` search, `←` `→` previous/next, `1` `2` `3` screen width, `C` copy HTML, `Esc` close.
 
-### Key Capabilities
-
-- **Dark Botanical Editorial Aesthetic**: Deep gunmetal and forest charcoal backgrounds, warm Sundarbans gold accents (`#F3AE45`), and refined typography (*Playfair Display* & *Inter*).
-- **Real-Time Client-Side Search**: Instant tokenized search across titles, descriptions, categories, filenames, and keywords.
-- **11 Structured Categories**: Quick filtering across *Events*, *Invitations*, *Poetry Competition*, *Team Onboarding*, *Orientation*, *Sessions*, *Ubuntu Mastery*, *Certificates*, *Participation*, *GHC Recruitment*, and *General Communications*.
-- **Interactive Multi-Device Studio**: Live isolated `<iframe>` rendering with device viewports:
-  - **Desktop** (720px standard email bounded frame)
-  - **Tablet** (560px · tests the `@media screen and (max-width: 560px)` breakpoint from `AGENTS.md`)
-  - **Mobile** (375px phone screen)
-- **Developer Actions**: Direct 1-click HTML clipboard copying, raw source code inspection modal, file downloads, and opening in separate tabs.
-- **Zero External Bundles**: 100% vanilla HTML5, CSS3, and modern ES6 JavaScript. Compatible with offline browsing, `file://` protocol, and static GitHub Pages hosting.
-
----
-
-##  Directory Structure
+## Files
 
 ```text
+index.html                  # Studio page (repository root)
 email-studio/
-├── index.html               # Main single-page application & gallery
-├── generate_data.py         # Automated metadata re-indexing script
 ├── css/
-│   ├── style.css            # Design tokens, typography, reset, buttons
-│   ├── components.css       # Nav, hero, bento cards, studio modal, toasts
-│   └── responsive.css       # Tablet, mobile, touch optimization, reduced-motion
+│   ├── style.css           # Tokens (dark + light), reset, buttons, segmented controls
+│   ├── components.css      # Top bar, hero, library, archive grid, cards, drawer, toasts
+│   ├── studio.css          # Full-screen preview, device frames, source view, inspector
+│   └── responsive.css      # Laptop, tablet and phone breakpoints
 ├── js/
-│   ├── app.js               # Application orchestration & dynamic stats
-│   ├── search.js            # Client-side multi-field search & sort engine
-│   ├── preview.js           # Iframe preview controller & device viewports
-│   └── templates-data.js    # Pre-indexed metadata fallback for file:// and offline
-├── data/
-│   └── templates.json       # JSON database of all 129 templates
-└── README.md                # Studio documentation
+│   ├── app.js              # Data loading, rendering, filters, theme, routing
+│   ├── preview.js          # Preview studio
+│   ├── search.js           # Search, filter and sort engine
+│   └── templates-data.js   # Generated copy of the index for file:// use
+├── data/templates.json     # Generated template index
+├── generate_data.py        # Rebuilds the index
+└── index.html              # Redirects to the root studio page
 ```
 
----
+## Run it locally
 
-##  How to Run Locally
-
-### Option A: Direct Browser File (Zero Setup)
-Double-click `email-studio/index.html` or open it in any modern browser (`Chrome`, `Firefox`, `Edge`, `Safari`). The studio automatically falls back to `js/templates-data.js` so it works seamlessly without needing a web server.
-
-### Option B: Local Static Server (Recommended)
-You can launch a local web server from the repository root:
+Thumbnails, copy and source view need a local server (browsers block reading files over `file://`):
 
 ```bash
-# Using Python
 python -m http.server 3000
-
-# Using Node (npx)
-npx serve .
 ```
 
-Then visit:
-[http://localhost:3000/email-studio/](http://localhost:3000/email-studio/)
+Then open <http://localhost:3000/>.
 
----
+## Adding a template
 
-##  How to Add New Email Templates
+1. Copy the closest layout from `design-library/` (or an existing email) into the right category folder, with a lowercase hyphenated filename.
+2. Follow `AGENTS.md`.
+3. Rebuild the index from the repository root:
 
-1. Create or place your new HTML email file in the appropriate category folder (e.g., `events/my-new-event.html`).
-2. Adhere strictly to the [`AGENTS.md`](file:///c:/Users/praka/OneDrive/Documents/Email%20template%20-%20Sundarbans/AGENTS.md) design standards:
-   - Use **Pattern A** (Official Letterhead) or **Pattern B** (8 Houses Inter-House Header).
-   - Use the transparent Sundarbans logo asset (`https://lh3.googleusercontent.com/d/1PmhEx2nZ1Xmrea9if3gOvraX63ti2RWi`).
-   - Minimum 44x44px touch targets on buttons.
-   - Contrast ratio minimum 4.5:1.
-   - No OS emojis in body copy (use vector icons or bullet points).
-   - No em dashes (`·`). Use middots (`·`).
-3. Run the metadata generator from the repository root:
-   ```bash
-   python email-studio/generate_data.py
-   ```
-4. Done! Both `email-studio/data/templates.json` and `email-studio/js/templates-data.js` will automatically index your new template.
+```bash
+python email-studio/generate_data.py
+```
 
----
+The generator reads the title, description, date, header pattern and theme from each file. Light or dark is judged from the background colour of the main `.container` table. Design library files are recognised by their `PATTERN X · NAME (...)` comment.
 
-##  Deploying to GitHub Pages
-
-Because the website uses relative paths throughout, it can be deployed directly to GitHub Pages:
-
-1. In your GitHub repository (`https://github.com/lucifer046/sundarbans_email_template`), navigate to **Settings** &rarr; **Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Choose the `main` branch and `/ (root)` folder, then click **Save**.
-4. Once deployed, the studio is accessible at:  
-   `https://lucifer046.github.io/sundarbans_email_template/email-studio/`
-
-*(Optional: If you want the studio to be the repository homepage directly at `https://lucifer046.github.io/sundarbans_email_template/`, you can add a redirect `index.html` at the repository root pointing to `email-studio/`).*
-
----
-
-##  Standards & Compliance
-
-Maintained by **Divya Prakash** (Secretary &middot; Sundarbans House) and the Sundarbans Executive Team.  
-Single Source of Truth: [`AGENTS.md`](file:///c:/Users/praka/OneDrive/Documents/Email%20template%20-%20Sundarbans/AGENTS.md).
+To show a new pattern in the "Design library" section, add it to `DESIGN_LIBRARY` at the top of `js/app.js`.

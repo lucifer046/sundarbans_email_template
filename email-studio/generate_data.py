@@ -88,6 +88,20 @@ def extract_date_info(file_path, rel_path, content, file_commit_dates):
     dt_m = datetime.datetime.fromtimestamp(mtime)
     return dt_m.strftime("%Y-%m-%d"), dt_m.strftime("%d %b %Y"), int(mtime)
 
+def container_is_light(content):
+    """Judge light vs dark from the main container's background colour."""
+    body = content[content.lower().find('<body'):] if '<body' in content.lower() else content
+    tag_m = re.search(r'''<table[^>]*class=["'][^"']*container[^"']*["'][^>]*>''', body, re.IGNORECASE)
+    scope = tag_m.group(0) if tag_m else body[:6000]
+    color_m = re.search(r'''(?:bgcolor=["']|background(?:-color)?\s*:\s*)#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b''', scope)
+    if not color_m:
+        return False
+    hexv = color_m.group(1)
+    if len(hexv) == 3:
+        hexv = ''.join(c * 2 for c in hexv)
+    r, g, b = (int(hexv[i:i + 2], 16) for i in (0, 2, 4))
+    return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 > 0.55
+
 def extract_metadata(file_path, repo_root, file_commit_dates=None):
     if file_commit_dates is None:
         file_commit_dates = {}
@@ -163,12 +177,12 @@ def extract_metadata(file_path, repo_root, file_commit_dates=None):
         header_pattern = "Pattern B (8 Houses Collective)"
     elif "letterhead" not in content.lower() and "motto" not in content.lower():
         header_pattern = "Custom / Campaign"
+    library_m = re.search(r'PATTERN ([C-Z]) · ([A-Z ]+?) \(', content)
+    if library_m:
+        header_pattern = f"Pattern {library_m.group(1)} ({library_m.group(2).title()})"
 
     # Detect theme / mood
-    theme_detected = "Dark Theme"
-    if 'bgcolor="#ffffff"' in content.lower() or 'background-color:#ffffff' in content.lower() or 'background-color: #ffffff' in content.lower():
-        if content.lower().count('#ffffff') > 3 and content.lower().count('#0') < 2:
-            theme_detected = "Light Theme"
+    theme_detected = "Light Theme" if container_is_light(content) else "Dark Theme"
     if "cyberpunk" in rel_path.lower():
         theme_detected = "Cyberpunk / Special"
     elif "cosmic" in rel_path.lower():
@@ -278,7 +292,7 @@ def main():
     for f in sorted(html_files):
         rel = os.path.relpath(f, repo_root).replace('\\', '/')
         # Skip internal folders, tests, email-studio itself, or root index.html
-        if rel.startswith(('.git', 'scratch', 'email-studio')) or 'centering-test' in rel or rel == 'index.html':
+        if rel.startswith(('.git', '.agents', '.claude', 'scratch', 'email-studio', 'uiux-designer', 'skills')) or 'centering-test' in rel or rel == 'index.html':
             continue
         
         meta = extract_metadata(f, repo_root, file_commit_dates)
@@ -300,7 +314,8 @@ def main():
         "certificates": {"name": "Certificates", "icon": "award", "desc": "Participant recognition, winner certifications, and drive mailers"},
         "participation": {"name": "Participation Callouts", "icon": "user-check", "desc": "Personalized participation notices and engagement highlights"},
         "ghc-recruitment": {"name": "GHC Recruitment", "icon": "briefcase", "desc": "Regional web and design recruitment drives (Chennai, Delhi, Kolkata)"},
-        "general": {"name": "General Communications", "icon": "bell", "desc": "Roadmaps, club announcements, and house administrative updates"}
+        "general": {"name": "General Communications", "icon": "bell", "desc": "Roadmaps, club announcements, and house administrative updates"},
+        "design-library": {"name": "Design Library", "icon": "layers", "desc": "Reference layouts (Patterns C to G) for starting new emails"}
     }
 
     for t in templates:
