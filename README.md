@@ -28,6 +28,9 @@ Email template - Sundarbans/
 ├── participation/              # Event participation reminders & callouts
 ├── ghc-recruitment/            # Web development & core team recruitment
 ├── general/                    # General house announcements & updates
+├── design-library/             # Reference layouts for Patterns C to G
+├── index.html                  # Email Studio: browse and preview every template
+├── email-studio/               # Studio CSS, JS and the generated template index
 ├── scratch/                    # Temporary scripts, helper tools, and draft code
 └── uiux-designer/              # UI/UX design intelligence skill assets & search tools
 ```
@@ -46,9 +49,16 @@ The [`AGENTS.md`](file:///c:/Users/praka/OneDrive/Documents/Email%20template%20-
 
 ### Instructions for Developers & Designers
 1. **Review Standards First**: Before creating a new email template, read [`AGENTS.md`](file:///c:/Users/praka/OneDrive/Documents/Email%20template%20-%20Sundarbans/AGENTS.md) to check color tokens, header layouts, and footer signature patterns.
-2. **Select the Header Pattern**:
+2. **Pick a Design Pattern** (full guide in `AGENTS.md` section 12):
    - **Pattern A (Default)**: Official Sundarbans House Letterhead for standard house emails.
    - **Pattern B (Exception)**: 8 Houses Collective Header for joint inter-house events like *Chai, Baarish aur Baatcheet*.
+   - **Pattern C · Midnight Editorial**: dark, poster-led launches for cultural nights and big events.
+   - **Pattern D · Paper Notice**: light, formal notices, results and appointment letters.
+   - **Pattern E · Admit Pass**: ticket-style invitations with RSVP and a door code.
+   - **Pattern F · House Digest**: newsletters and monthly roundups.
+   - **Pattern G · Live Alert**: short "starting soon" reminders with one button.
+
+   Copy the matching file from `design-library/` and replace the content.
 3. **Logo Centering**: Never use CSS Flexbox on logos or table headers. Use nested `<table>` blocks with `align="center"` and `valign="middle"`.
 4. **Google Drive Asset Protection**: Always include `referrerpolicy="no-referrer"`, `data-ogsc=""`, and `class="darkreader-ignore"` on all Google Drive image tags (`lh3.googleusercontent.com/d/...`).
 
