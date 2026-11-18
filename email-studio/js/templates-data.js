@@ -9,18 +9,11 @@ window.SUNDARBANS_STUDIO_DATA = {
     "institution": "IIT Madras BS Degree",
     "motto": "Learn · Grow · Lead",
     "tagline": "Every message deserves a thoughtful design.",
-    "total_templates": 156,
-    "total_categories": 12,
+    "total_templates": 158,
+    "total_categories": 13,
     "featured_count": 13
   },
   "categories": [
-    {
-      "slug": "invitations",
-      "name": "Invitations & Drives",
-      "icon": "envelope",
-      "description": "Guest speakers, wellness sessions, and recruitment invites",
-      "count": 21
-    },
     {
       "slug": "sessions",
       "name": "Academic Sessions",
@@ -29,18 +22,32 @@ window.SUNDARBANS_STUDIO_DATA = {
       "count": 13
     },
     {
-      "slug": "design-library",
-      "name": "Design Library",
-      "icon": "layers",
-      "description": "Reference layouts (Patterns C to G) for starting new emails",
-      "count": 5
-    },
-    {
       "slug": "events",
       "name": "Events & Gatherings",
       "icon": "calendar",
       "description": "House competitions, cultural nights, open mics, and meetups",
-      "count": 47
+      "count": 49
+    },
+    {
+      "slug": "invitations",
+      "name": "Invitations & Drives",
+      "icon": "envelope",
+      "description": "Guest speakers, wellness sessions, and recruitment invites",
+      "count": 21
+    },
+    {
+      "slug": "Signatures",
+      "name": "Signatures",
+      "icon": "folder",
+      "description": "Signatures emails",
+      "count": 1
+    },
+    {
+      "slug": "design-library",
+      "name": "Design Library",
+      "icon": "layers",
+      "description": "Reference layouts (Patterns C to G) for starting new emails",
+      "count": 4
     },
     {
       "slug": "general",
@@ -101,28 +108,6 @@ window.SUNDARBANS_STUDIO_DATA = {
   ],
   "templates": [
     {
-      "id": "professor-kim-out-of-syllabus-invitation",
-      "title": "Official Invitation · Out of Syllabus with Professor Kim | IIT...",
-      "category": "invitations",
-      "subcategory": null,
-      "description": "Official invitation from Sundarbans House, IIT Madras BS Degree: We are delighted to formally invite Professor Kim to Out of Syllabus on ...",
-      "file": "../invitations/professor-kim-out-of-syllabus-invitation.html",
-      "raw_path": "invitations/professor-kim-out-of-syllabus-invitation.html",
-      "filesize_bytes": 19293,
-      "filesize_formatted": "18.8 KB",
-      "date": "2026-11-17",
-      "date_formatted": "17 Nov 2026",
-      "timestamp": 1794938130,
-      "header_pattern": "Custom / Campaign",
-      "theme": "Light Theme",
-      "keywords": [
-        "invitations",
-        "official invitation · out of syllabus with professor kim | iit...",
-        "professor kim out of syllabus invitation"
-      ],
-      "featured": false
-    },
-    {
       "id": "quiz-1-revision-reminder",
       "title": "Reminder: Quiz 1 Revision Tonight · Maths 1 & MAD 1 | Open to ...",
       "category": "sessions",
@@ -132,9 +117,9 @@ window.SUNDARBANS_STUDIO_DATA = {
       "raw_path": "sessions/quiz-1-revision-reminder.html",
       "filesize_bytes": 44967,
       "filesize_formatted": "43.9 KB",
-      "date": "2026-11-13",
-      "date_formatted": "13 Nov 2026",
-      "timestamp": 1794514683,
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -159,15 +144,103 @@ window.SUNDARBANS_STUDIO_DATA = {
       "raw_path": "sessions/three-subject-revision-launch.html",
       "filesize_bytes": 46054,
       "filesize_formatted": "45.0 KB",
-      "date": "2026-11-13",
-      "date_formatted": "13 Nov 2026",
-      "timestamp": 1794514245,
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
         "quiz 1 revision sessions · maths 1 & mad 1 | open to all iitm ...",
         "sessions",
         "three subject revision launch"
+      ],
+      "featured": false
+    },
+    {
+      "id": "skribbl-night-mumbai",
+      "title": "Skribbl Night · Mumbai Region · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Sundarbans House · Skribbl Night with Mumbai Region tonight at 8:00 PM IST. No drawing skills needed, join the lobby and play.",
+      "file": "../events/skribbl-night-mumbai.html",
+      "raw_path": "events/skribbl-night-mumbai.html",
+      "filesize_bytes": 22835,
+      "filesize_formatted": "22.3 KB",
+      "date": "2026-11-18",
+      "date_formatted": "18 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Light Theme",
+      "keywords": [
+        "events",
+        "skribbl night mumbai",
+        "skribbl night · mumbai region · sundarbans house"
+      ],
+      "featured": false
+    },
+    {
+      "id": "diwali-wishes",
+      "title": "Shubh Diwali · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Sundarbans House · Somewhere tonight a laptop is closing, and we are happy about it. Shubh Diwali.",
+      "file": "../events/diwali-wishes.html",
+      "raw_path": "events/diwali-wishes.html",
+      "filesize_bytes": 24495,
+      "filesize_formatted": "23.9 KB",
+      "date": "2026-11-18",
+      "date_formatted": "18 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "diwali wishes",
+        "events",
+        "shubh diwali · sundarbans house"
+      ],
+      "featured": false
+    },
+    {
+      "id": "out-of-syllabus-professor-kim",
+      "title": "Out of Syllabus with Professor Kim · Sundarbans House, IIT Mad...",
+      "category": "invitations",
+      "subcategory": null,
+      "description": "Sundarbans House formally invites Professor Kim to Out of Syllabus · IIT Madras BS Degree community conversation.",
+      "file": "../invitations/out-of-syllabus-professor-kim.html",
+      "raw_path": "invitations/out-of-syllabus-professor-kim.html",
+      "filesize_bytes": 27908,
+      "filesize_formatted": "27.3 KB",
+      "date": "2026-11-18",
+      "date_formatted": "18 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Light Theme",
+      "keywords": [
+        "invitations",
+        "out of syllabus professor kim",
+        "out of syllabus with professor kim · sundarbans house, iit mad..."
+      ],
+      "featured": false
+    },
+    {
+      "id": "signature",
+      "title": "Email Signature",
+      "category": "Signatures",
+      "subcategory": null,
+      "description": "HTML email template for Signatures - Email Signature.",
+      "file": "../Signatures/signature.html",
+      "raw_path": "Signatures/signature.html",
+      "filesize_bytes": 5864,
+      "filesize_formatted": "5.7 KB",
+      "date": "2026-11-18",
+      "date_formatted": "18 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Dark Theme",
+      "keywords": [
+        "Signatures",
+        "email signature",
+        "signature"
       ],
       "featured": false
     },
@@ -183,7 +256,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.9 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern F (House Digest)",
       "theme": "Light Theme",
       "keywords": [
@@ -205,35 +278,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.3 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern G (Live Alert)",
       "theme": "Dark Theme",
       "keywords": [
         "design-library",
         "live alert",
         "starting in 15 minutes · statistics ii revision · sundarbans h..."
-      ],
-      "featured": false
-    },
-    {
-      "id": "paper-notice",
-      "title": "Regional Coordinators for 2026–27 · Notice · Sundarbans House",
-      "category": "design-library",
-      "subcategory": null,
-      "description": "Sundarbans House · Regional Coordinator selection results for 2026–27 and what happens next.",
-      "file": "../design-library/paper-notice.html",
-      "raw_path": "design-library/paper-notice.html",
-      "filesize_bytes": 22424,
-      "filesize_formatted": "21.9 KB",
-      "date": "2026-11-03",
-      "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
-      "header_pattern": "Pattern D (Paper Notice)",
-      "theme": "Light Theme",
-      "keywords": [
-        "design-library",
-        "paper notice",
-        "regional coordinators for 2026–27 · notice · sundarbans house"
       ],
       "featured": false
     },
@@ -249,7 +300,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "51.3 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -277,7 +328,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "46.0 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -299,7 +350,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "23.3 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern C (Midnight Editorial)",
       "theme": "Dark Theme",
       "keywords": [
@@ -321,7 +372,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "23.0 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern E (Admit Pass)",
       "theme": "Light Theme",
       "keywords": [
@@ -343,7 +394,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "34.5 KB",
       "date": "2026-11-03",
       "date_formatted": "03 Nov 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -371,7 +422,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "31.8 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -393,7 +444,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "42.5 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -415,7 +466,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "40.2 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -437,7 +488,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "34.7 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -459,7 +510,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "38.2 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -487,7 +538,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.3 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -515,7 +566,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.3 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -543,7 +594,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.3 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -571,7 +622,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "42.9 KB",
       "date": "2026-10-24",
       "date_formatted": "24 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -593,7 +644,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "30.4 KB",
       "date": "2026-10-07",
       "date_formatted": "07 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -615,7 +666,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-10-07",
       "date_formatted": "07 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -637,7 +688,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "33.0 KB",
       "date": "2026-10-07",
       "date_formatted": "07 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -666,7 +717,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "31.5 KB",
       "date": "2026-10-07",
       "date_formatted": "07 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -688,7 +739,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "44.3 KB",
       "date": "2026-10-07",
       "date_formatted": "07 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -717,7 +768,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.9 KB",
       "date": "2026-10-07",
       "date_formatted": "07 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -745,7 +796,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "40.4 KB",
       "date": "2026-10-02",
       "date_formatted": "02 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -774,7 +825,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "28.4 KB",
       "date": "2026-10-02",
       "date_formatted": "02 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -803,7 +854,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "15.5 KB",
       "date": "2026-10-02",
       "date_formatted": "02 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -837,7 +888,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "25.1 KB",
       "date": "2026-10-02",
       "date_formatted": "02 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -866,7 +917,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "31.6 KB",
       "date": "2026-10-02",
       "date_formatted": "02 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -899,7 +950,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "15.5 KB",
       "date": "2026-10-02",
       "date_formatted": "02 Oct 2026",
-      "timestamp": 1794339558,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -928,7 +979,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "42.9 KB",
       "date": "2026-09-19",
       "date_formatted": "19 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern B (8 Houses Collective)",
       "theme": "Light Theme",
       "keywords": [
@@ -950,7 +1001,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "6.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -976,7 +1027,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "32.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -1004,7 +1055,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "13.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1026,7 +1077,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -1054,7 +1105,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "30.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1082,7 +1133,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "9.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1104,7 +1155,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "22.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1126,7 +1177,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.8 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1148,7 +1199,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "99.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1170,7 +1221,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1205,7 +1256,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "22.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1237,7 +1288,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "18.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1268,7 +1319,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "23.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1300,7 +1351,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1322,7 +1373,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1344,7 +1395,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.8 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1366,7 +1417,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1387,7 +1438,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "38.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -1412,7 +1463,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1437,7 +1488,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1459,7 +1510,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1481,7 +1532,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1503,7 +1554,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "10.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1525,7 +1576,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1547,7 +1598,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "17.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1569,7 +1620,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1591,7 +1642,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "22.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1613,7 +1664,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1640,7 +1691,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1667,7 +1718,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "29.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -1695,7 +1746,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "16.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1721,7 +1772,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -1749,7 +1800,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "38.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -1771,7 +1822,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "19.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1803,7 +1854,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "37.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -1828,7 +1879,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "31.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -1850,7 +1901,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1872,7 +1923,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1894,7 +1945,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "17.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -1922,7 +1973,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1948,7 +1999,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1970,7 +2021,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -1992,7 +2043,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "13.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2014,7 +2065,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "18.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -2040,7 +2091,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2066,7 +2117,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "18.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Cosmic / Glow",
       "keywords": [
@@ -2092,7 +2143,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "18.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Ember / Warm",
       "keywords": [
@@ -2118,7 +2169,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Aurora / Emerald",
       "keywords": [
@@ -2144,7 +2195,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "32.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2166,7 +2217,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2191,7 +2242,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2213,7 +2264,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "9.8 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2235,7 +2286,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "36.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -2257,7 +2308,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "23.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2283,7 +2334,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2310,7 +2361,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2337,7 +2388,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2364,7 +2415,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2391,7 +2442,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "29.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2419,7 +2470,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2446,7 +2497,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "30.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2472,7 +2523,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "35.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2499,7 +2550,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "41.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2526,7 +2577,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "35.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2553,7 +2604,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2580,7 +2631,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2607,7 +2658,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2634,7 +2685,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2661,7 +2712,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2688,7 +2739,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2715,7 +2766,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2742,7 +2793,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2769,7 +2820,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "33.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2796,7 +2847,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "28.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2822,7 +2873,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2844,7 +2895,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2866,7 +2917,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2888,7 +2939,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2910,7 +2961,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2932,7 +2983,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2954,7 +3005,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "26.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2976,7 +3027,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "13.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -2998,7 +3049,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "27.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -3020,7 +3071,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "14.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3042,7 +3093,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3067,7 +3118,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "52.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3089,7 +3140,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "33.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -3111,7 +3162,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "20.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3132,7 +3183,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "9.3 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3154,7 +3205,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "7.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3176,7 +3227,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "22.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3201,7 +3252,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "31.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -3223,7 +3274,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "36.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3251,7 +3302,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "36.4 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3279,7 +3330,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "36.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3307,7 +3358,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "22.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3329,7 +3380,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3351,7 +3402,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "19.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3375,7 +3426,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "15.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3400,7 +3451,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "10.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3427,7 +3478,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "13.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3454,7 +3505,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3481,7 +3532,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3508,7 +3559,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3535,7 +3586,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "10.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3562,7 +3613,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "18.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3583,7 +3634,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "15.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3605,7 +3656,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "23.8 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3632,7 +3683,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "45.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -3660,7 +3711,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "25.9 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Cyberpunk / Special",
       "keywords": [
@@ -3693,7 +3744,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "25.2 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -3721,7 +3772,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "25.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -3749,7 +3800,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "25.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Dark Theme",
       "keywords": [
@@ -3777,7 +3828,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "25.8 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -3805,7 +3856,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "24.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -3833,7 +3884,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "17.0 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -3861,7 +3912,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "41.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3889,7 +3940,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "11.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3911,7 +3962,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "8.7 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3933,7 +3984,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
@@ -3960,7 +4011,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "33.5 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
       "keywords": [
@@ -3982,7 +4033,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "12.6 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Light Theme",
       "keywords": [
@@ -4004,7 +4055,7 @@ window.SUNDARBANS_STUDIO_DATA = {
       "filesize_formatted": "18.1 KB",
       "date": "2026-09-18",
       "date_formatted": "18 Sep 2026",
-      "timestamp": 1790876542,
+      "timestamp": 1795032378,
       "header_pattern": "Custom / Campaign",
       "theme": "Dark Theme",
       "keywords": [
