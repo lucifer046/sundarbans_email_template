@@ -9,24 +9,38 @@ window.SUNDARBANS_STUDIO_DATA = {
     "institution": "IIT Madras BS Degree",
     "motto": "Learn · Grow · Lead",
     "tagline": "Every message deserves a thoughtful design.",
-    "total_templates": 153,
-    "total_categories": 12,
+    "total_templates": 156,
+    "total_categories": 13,
     "featured_count": 13
   },
   "categories": [
     {
-      "slug": "design-library",
-      "name": "Design Library",
-      "icon": "layers",
-      "description": "Reference layouts (Patterns C to G) for starting new emails",
-      "count": 5
+      "slug": "Signatures",
+      "name": "Signatures",
+      "icon": "folder",
+      "description": "Signatures emails",
+      "count": 1
+    },
+    {
+      "slug": "invitations",
+      "name": "Invitations & Drives",
+      "icon": "envelope",
+      "description": "Guest speakers, wellness sessions, and recruitment invites",
+      "count": 21
     },
     {
       "slug": "events",
       "name": "Events & Gatherings",
       "icon": "calendar",
       "description": "House competitions, cultural nights, open mics, and meetups",
-      "count": 47
+      "count": 49
+    },
+    {
+      "slug": "design-library",
+      "name": "Design Library",
+      "icon": "layers",
+      "description": "Reference layouts (Patterns C to G) for starting new emails",
+      "count": 4
     },
     {
       "slug": "general",
@@ -41,13 +55,6 @@ window.SUNDARBANS_STUDIO_DATA = {
       "icon": "users",
       "description": "POR appointments, executive councils, and core team handbooks",
       "count": 13
-    },
-    {
-      "slug": "invitations",
-      "name": "Invitations & Drives",
-      "icon": "envelope",
-      "description": "Guest speakers, wellness sessions, and recruitment invites",
-      "count": 20
     },
     {
       "slug": "sessions",
@@ -101,6 +108,94 @@ window.SUNDARBANS_STUDIO_DATA = {
   ],
   "templates": [
     {
+      "id": "signature",
+      "title": "Email Signature",
+      "category": "Signatures",
+      "subcategory": null,
+      "description": "HTML email template for Signatures - Email Signature.",
+      "file": "../Signatures/signature.html",
+      "raw_path": "Signatures/signature.html",
+      "filesize_bytes": 5864,
+      "filesize_formatted": "5.7 KB",
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795031073,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Dark Theme",
+      "keywords": [
+        "Signatures",
+        "email signature",
+        "signature"
+      ],
+      "featured": false
+    },
+    {
+      "id": "out-of-syllabus-professor-kim",
+      "title": "Out of Syllabus with Professor Kim · Sundarbans House, IIT Mad...",
+      "category": "invitations",
+      "subcategory": null,
+      "description": "Sundarbans House formally invites Professor Kim to Out of Syllabus · IIT Madras BS Degree community conversation.",
+      "file": "../invitations/out-of-syllabus-professor-kim.html",
+      "raw_path": "invitations/out-of-syllabus-professor-kim.html",
+      "filesize_bytes": 27908,
+      "filesize_formatted": "27.3 KB",
+      "date": "2026-11-18",
+      "date_formatted": "18 Nov 2026",
+      "timestamp": 1794944499,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Light Theme",
+      "keywords": [
+        "invitations",
+        "out of syllabus professor kim",
+        "out of syllabus with professor kim · sundarbans house, iit mad..."
+      ],
+      "featured": false
+    },
+    {
+      "id": "diwali-wishes",
+      "title": "Shubh Diwali · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Sundarbans House · Somewhere tonight a laptop is closing, and we are happy about it. Shubh Diwali.",
+      "file": "../events/diwali-wishes.html",
+      "raw_path": "events/diwali-wishes.html",
+      "filesize_bytes": 24495,
+      "filesize_formatted": "23.9 KB",
+      "date": "2026-11-07",
+      "date_formatted": "07 Nov 2026",
+      "timestamp": 1794071411,
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "diwali wishes",
+        "events",
+        "shubh diwali · sundarbans house"
+      ],
+      "featured": false
+    },
+    {
+      "id": "skribbl-night-mumbai",
+      "title": "Skribbl Night · Mumbai Region · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Sundarbans House · Skribbl Night with Mumbai Region tonight at 8:00 PM IST. No drawing skills needed, join the lobby and play.",
+      "file": "../events/skribbl-night-mumbai.html",
+      "raw_path": "events/skribbl-night-mumbai.html",
+      "filesize_bytes": 22835,
+      "filesize_formatted": "22.3 KB",
+      "date": "2026-11-03",
+      "date_formatted": "03 Nov 2026",
+      "timestamp": 1793703410,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Light Theme",
+      "keywords": [
+        "events",
+        "skribbl night mumbai",
+        "skribbl night · mumbai region · sundarbans house"
+      ],
+      "featured": false
+    },
+    {
       "id": "house-digest",
       "title": "The Sundarbans Digest · No. 07 · November 2026",
       "category": "design-library",
@@ -141,28 +236,6 @@ window.SUNDARBANS_STUDIO_DATA = {
         "design-library",
         "live alert",
         "starting in 15 minutes · statistics ii revision · sundarbans h..."
-      ],
-      "featured": false
-    },
-    {
-      "id": "paper-notice",
-      "title": "Regional Coordinators for 2026–27 · Notice · Sundarbans House",
-      "category": "design-library",
-      "subcategory": null,
-      "description": "Sundarbans House · Regional Coordinator selection results for 2026–27 and what happens next.",
-      "file": "../design-library/paper-notice.html",
-      "raw_path": "design-library/paper-notice.html",
-      "filesize_bytes": 22424,
-      "filesize_formatted": "21.9 KB",
-      "date": "2026-11-03",
-      "date_formatted": "03 Nov 2026",
-      "timestamp": 1793701161,
-      "header_pattern": "Pattern D (Paper Notice)",
-      "theme": "Light Theme",
-      "keywords": [
-        "design-library",
-        "paper notice",
-        "regional coordinators for 2026–27 · notice · sundarbans house"
       ],
       "featured": false
     },
@@ -211,6 +284,62 @@ window.SUNDARBANS_STUDIO_DATA = {
       "featured": false
     },
     {
+      "id": "rc-recruitment",
+      "title": "Regional Coordinator Recruitment · Bengaluru Region | Sundarba...",
+      "category": "invitations",
+      "subcategory": null,
+      "description": "Lead students across Karnataka and Kerala. Official nomination call for Regional Coordinator (POR), Lower House Council · Sundarbans Hous...",
+      "file": "../invitations/rc-recruitment.html",
+      "raw_path": "invitations/rc-recruitment.html",
+      "filesize_bytes": 52582,
+      "filesize_formatted": "51.3 KB",
+      "date": "2026-11-03",
+      "date_formatted": "03 Nov 2026",
+      "timestamp": 1793078877,
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Light Theme",
+      "keywords": [
+        "core",
+        "head",
+        "invitations",
+        "lead",
+        "onboarding",
+        "rc recruitment",
+        "recruitment",
+        "regional coordinator recruitment · bengaluru region | sundarba...",
+        "team"
+      ],
+      "featured": false
+    },
+    {
+      "id": "core-team-recruitment",
+      "title": "Core Team Recruitment · Sundarbans House",
+      "category": "invitations",
+      "subcategory": null,
+      "description": "Sundarbans House Core Team recruitment is open for Graphic Design, Public Relations (PR), and Outreach. Apply by 30 October 2026.",
+      "file": "../invitations/core-team-recruitment.html",
+      "raw_path": "invitations/core-team-recruitment.html",
+      "filesize_bytes": 35345,
+      "filesize_formatted": "34.5 KB",
+      "date": "2026-11-03",
+      "date_formatted": "03 Nov 2026",
+      "timestamp": 1793078264,
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Light Theme",
+      "keywords": [
+        "core",
+        "core team recruitment",
+        "core team recruitment · sundarbans house",
+        "head",
+        "invitations",
+        "lead",
+        "onboarding",
+        "recruitment",
+        "team"
+      ],
+      "featured": false
+    },
+    {
       "id": "rang-ras-rhythm",
       "title": "Rang Ras Rhythm (RRR) · Sundarbans House Cultural Community",
       "category": "events",
@@ -220,8 +349,8 @@ window.SUNDARBANS_STUDIO_DATA = {
       "raw_path": "events/rang-ras-rhythm.html",
       "filesize_bytes": 47147,
       "filesize_formatted": "46.0 KB",
-      "date": "2026-10-26",
-      "date_formatted": "26 Oct 2026",
+      "date": "2026-11-03",
+      "date_formatted": "03 Nov 2026",
       "timestamp": 1792989275,
       "header_pattern": "Pattern A (Sundarbans Letterhead)",
       "theme": "Light Theme",
@@ -810,62 +939,6 @@ window.SUNDARBANS_STUDIO_DATA = {
         "events"
       ],
       "featured": true
-    },
-    {
-      "id": "rc-recruitment",
-      "title": "Regional Coordinator Recruitment · Bengaluru Region | Sundarba...",
-      "category": "invitations",
-      "subcategory": null,
-      "description": "Lead students across Karnataka and Kerala. Official nomination call for Regional Coordinator (POR), Lower House Council · Sundarbans Hous...",
-      "file": "../invitations/rc-recruitment.html",
-      "raw_path": "invitations/rc-recruitment.html",
-      "filesize_bytes": 52582,
-      "filesize_formatted": "51.3 KB",
-      "date": "2026-09-18",
-      "date_formatted": "18 Sep 2026",
-      "timestamp": 1793078877,
-      "header_pattern": "Pattern A (Sundarbans Letterhead)",
-      "theme": "Light Theme",
-      "keywords": [
-        "core",
-        "head",
-        "invitations",
-        "lead",
-        "onboarding",
-        "rc recruitment",
-        "recruitment",
-        "regional coordinator recruitment · bengaluru region | sundarba...",
-        "team"
-      ],
-      "featured": false
-    },
-    {
-      "id": "core-team-recruitment",
-      "title": "Core Team Recruitment · Sundarbans House",
-      "category": "invitations",
-      "subcategory": null,
-      "description": "Sundarbans House Core Team recruitment is open for Graphic Design, Public Relations (PR), and Outreach. Apply by 30 October 2026.",
-      "file": "../invitations/core-team-recruitment.html",
-      "raw_path": "invitations/core-team-recruitment.html",
-      "filesize_bytes": 35345,
-      "filesize_formatted": "34.5 KB",
-      "date": "2026-09-18",
-      "date_formatted": "18 Sep 2026",
-      "timestamp": 1793078264,
-      "header_pattern": "Pattern A (Sundarbans Letterhead)",
-      "theme": "Light Theme",
-      "keywords": [
-        "core",
-        "core team recruitment",
-        "core team recruitment · sundarbans house",
-        "head",
-        "invitations",
-        "lead",
-        "onboarding",
-        "recruitment",
-        "team"
-      ],
-      "featured": false
     },
     {
       "id": "technical-team-onboarding",

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email Signature</title>
+<!-- Gmail strips <style> from saved signatures, so the layout below is already safe inline (fluid, wraps long text).
+     This block only adds the stacked phone layout in clients that keep it (Apple Mail, iOS Mail, Outlook mobile). -->
+<style type="text/css">
+  body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  img { border:0; -ms-interpolation-mode:bicubic; }
+  @media screen and (max-width:520px) {
+    .sig-table { width:100% !important; max-width:100% !important; }
+    .sig-left, .sig-right { display:block !important; width:100% !important; box-sizing:border-box !important; text-align:center !important; }
+    .sig-left { padding:6px 0 12px 0 !important; }
+    .sig-right { padding:12px 0 6px 0 !important; border-top:2px solid #3b2a14 !important; }
+    .sig-div { display:none !important; width:0 !important; }
+    .sig-right table { margin-left:auto !important; margin-right:auto !important; text-align:left !important; }
+    .sig-hello { text-align:center !important; }
+    .sig-social { margin:0 auto !important; }
+    .sig-mail { word-break:normal !important; font-size:12px !important; }
+    .sig-right div, .sig-right td { font-size:13px !important; }
+  }
+</style>
+</head>
+<body>
+<table class="sig-table" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:100%;">
+  <tr>
+    <td colspan="3" class="sig-hello" style="padding:0 0 6px 0;">
+      <!-- Best: replace this with an image of the script text for an exact look (Gmail ignores custom fonts) -->
+      <span style="font-family:'Brush Script MT','Segoe Script','Lucida Handwriting',cursive;font-size:14px;color:#000000;font-style:italic;">Kind regards,</span>
+    </td>
+  </tr>
+  <tr>
+    <!-- Left column: logo + social icons -->
+    <td class="sig-left" valign="middle" align="center" style="padding:5px 11px 5px 5px;width:82px;">
+      <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;margin:0 auto 10px auto;"><tr><td align="center" valign="middle" bgcolor="#000000" style="width:66px;height:66px;background-color:#000000;border-radius:10px;"><img src="https://lh3.googleusercontent.com/d/1PmhEx2nZ1Xmrea9if3gOvraX63ti2RWi" alt="Sundarbans House Logo" width="66" height="66" style="display:block;border:0;margin:0 auto;"></td></tr></table>
+      <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;">
+        <tr>
+          <td style="padding:0 2px;"><a href="https://www.instagram.com/sundarbansiitm" target="_blank"><img src="https://img.icons8.com/material-rounded/60/111111/instagram-new.png" alt="Instagram" width="13" height="13" style="display:block;border:0;"></a></td>
+          <td style="padding:0 2px;"><a href="https://www.linkedin.com/company/sundarbans-iitm" target="_blank"><img src="https://img.icons8.com/material-rounded/60/111111/linkedin.png" alt="LinkedIn" width="13" height="13" style="display:block;border:0;"></a></td>
+          <td style="padding:0 2px;"><a href="https://sundarbans.iitmbs.org/#/" target="_blank"><img src="https://img.icons8.com/material-rounded/60/111111/globe.png" alt="Website" width="13" height="13" style="display:block;border:0;"></a></td>
+          <td style="padding:0 2px;"><a href="https://whatsapp.com/channel/0029Vb83wumAzNc2qMQOQX0b" target="_blank"><img src="https://img.icons8.com/material-rounded/60/111111/whatsapp.png" alt="WhatsApp" width="13" height="13" style="display:block;border:0;"></a></td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Vertical divider -->
+    <td class="sig-div" width="2" style="width:2px;background-color:#3b2a14;font-size:0;line-height:0;">&nbsp;</td>
+
+    <!-- Right column: details -->
+    <td class="sig-right" valign="middle" style="padding:5px 5px 5px 14px;">
+      <div style="font-size:13px;font-weight:bold;color:#3b2a14;line-height:15px;">Divya Prakash</div>
+      <div style="font-size:10px;color:#000000;line-height:14px;padding-top:2px;">Secretary &middot; <b style="color:#3b2a14;">Sundarbans House</b><br><span style="font-size:9px;color:#3b2a14;">IIT Madras BS Degree</span></div>
+
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:6px;max-width:100%;">
+        <tr>
+          <td width="16" valign="middle" style="padding:3px 6px 3px 0;"><img src="https://img.icons8.com/material-rounded/60/111111/phone.png" alt="Phone" width="10" height="10" style="display:block;border:0;"></td>
+          <td valign="middle" style="padding:3px 0;font-size:9px;color:#000000;"><a href="tel:+919935539521" style="color:#000000;text-decoration:none;">+91 9935539521</a></td>
+        </tr>
+        <tr>
+          <td width="16" valign="middle" style="padding:3px 6px 3px 0;"><img src="https://img.icons8.com/material-rounded/60/111111/mail.png" alt="Email" width="10" height="10" style="display:block;border:0;"></td>
+          <td valign="middle" style="padding:3px 0;font-size:9px;color:#000000;"><a class="sig-mail" href="mailto:sundarbans-sec@ds.study.iitm.ac.in" style="color:#000000;text-decoration:none;overflow-wrap:anywhere;">sundarbans-sec@ds.study.iitm.ac.in</a></td>
+        </tr>
+        <tr>
+          <td width="16" valign="middle" style="padding:3px 6px 3px 0;"><img src="https://img.icons8.com/material-rounded/60/111111/globe.png" alt="Website" width="10" height="10" style="display:block;border:0;"></td>
+          <td valign="middle" style="padding:3px 0;font-size:9px;color:#000000;"><a href="https://sundarbans.iitmbs.org/#/" style="color:#000000;text-decoration:none;">sundarbans.iitmbs.org</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
