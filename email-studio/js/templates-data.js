@@ -15,13 +15,6 @@ window.SUNDARBANS_STUDIO_DATA = {
   },
   "categories": [
     {
-      "slug": "sessions",
-      "name": "Academic Sessions",
-      "icon": "book-open",
-      "description": "Cybersecurity track, exam revisions, and skill-building bootcamps",
-      "count": 13
-    },
-    {
       "slug": "events",
       "name": "Events & Gatherings",
       "icon": "calendar",
@@ -41,6 +34,13 @@ window.SUNDARBANS_STUDIO_DATA = {
       "icon": "folder",
       "description": "Signatures emails",
       "count": 1
+    },
+    {
+      "slug": "sessions",
+      "name": "Academic Sessions",
+      "icon": "book-open",
+      "description": "Cybersecurity track, exam revisions, and skill-building bootcamps",
+      "count": 13
     },
     {
       "slug": "design-library",
@@ -108,6 +108,94 @@ window.SUNDARBANS_STUDIO_DATA = {
   ],
   "templates": [
     {
+      "id": "skribbl-night-mumbai",
+      "title": "Skribbl Night · Mumbai Region · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Sundarbans House · Skribbl Night with Mumbai Region tonight at 8:00 PM IST. No drawing skills needed, join the lobby and play.",
+      "file": "../events/skribbl-night-mumbai.html",
+      "raw_path": "events/skribbl-night-mumbai.html",
+      "filesize_bytes": 22835,
+      "filesize_formatted": "22.3 KB",
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Light Theme",
+      "keywords": [
+        "events",
+        "skribbl night mumbai",
+        "skribbl night · mumbai region · sundarbans house"
+      ],
+      "featured": false
+    },
+    {
+      "id": "diwali-wishes",
+      "title": "Shubh Diwali · Sundarbans House",
+      "category": "events",
+      "subcategory": null,
+      "description": "Sundarbans House · Somewhere tonight a laptop is closing, and we are happy about it. Shubh Diwali.",
+      "file": "../events/diwali-wishes.html",
+      "raw_path": "events/diwali-wishes.html",
+      "filesize_bytes": 24495,
+      "filesize_formatted": "23.9 KB",
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Pattern A (Sundarbans Letterhead)",
+      "theme": "Dark Theme",
+      "keywords": [
+        "diwali wishes",
+        "events",
+        "shubh diwali · sundarbans house"
+      ],
+      "featured": false
+    },
+    {
+      "id": "out-of-syllabus-professor-kim",
+      "title": "Out of Syllabus with Professor Kim · Sundarbans House, IIT Mad...",
+      "category": "invitations",
+      "subcategory": null,
+      "description": "Sundarbans House formally invites Professor Kim to Out of Syllabus · IIT Madras BS Degree community conversation.",
+      "file": "../invitations/out-of-syllabus-professor-kim.html",
+      "raw_path": "invitations/out-of-syllabus-professor-kim.html",
+      "filesize_bytes": 27908,
+      "filesize_formatted": "27.3 KB",
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Light Theme",
+      "keywords": [
+        "invitations",
+        "out of syllabus professor kim",
+        "out of syllabus with professor kim · sundarbans house, iit mad..."
+      ],
+      "featured": false
+    },
+    {
+      "id": "signature",
+      "title": "Email Signature",
+      "category": "Signatures",
+      "subcategory": null,
+      "description": "HTML email template for Signatures - Email Signature.",
+      "file": "../Signatures/signature.html",
+      "raw_path": "Signatures/signature.html",
+      "filesize_bytes": 5864,
+      "filesize_formatted": "5.7 KB",
+      "date": "2026-11-19",
+      "date_formatted": "19 Nov 2026",
+      "timestamp": 1795032403,
+      "header_pattern": "Custom / Campaign",
+      "theme": "Dark Theme",
+      "keywords": [
+        "Signatures",
+        "email signature",
+        "signature"
+      ],
+      "featured": false
+    },
+    {
       "id": "quiz-1-revision-reminder",
       "title": "Reminder: Quiz 1 Revision Tonight · Maths 1 & MAD 1 | Open to ...",
       "category": "sessions",
@@ -153,94 +241,6 @@ window.SUNDARBANS_STUDIO_DATA = {
         "quiz 1 revision sessions · maths 1 & mad 1 | open to all iitm ...",
         "sessions",
         "three subject revision launch"
-      ],
-      "featured": false
-    },
-    {
-      "id": "skribbl-night-mumbai",
-      "title": "Skribbl Night · Mumbai Region · Sundarbans House",
-      "category": "events",
-      "subcategory": null,
-      "description": "Sundarbans House · Skribbl Night with Mumbai Region tonight at 8:00 PM IST. No drawing skills needed, join the lobby and play.",
-      "file": "../events/skribbl-night-mumbai.html",
-      "raw_path": "events/skribbl-night-mumbai.html",
-      "filesize_bytes": 22835,
-      "filesize_formatted": "22.3 KB",
-      "date": "2026-11-18",
-      "date_formatted": "18 Nov 2026",
-      "timestamp": 1795032403,
-      "header_pattern": "Custom / Campaign",
-      "theme": "Light Theme",
-      "keywords": [
-        "events",
-        "skribbl night mumbai",
-        "skribbl night · mumbai region · sundarbans house"
-      ],
-      "featured": false
-    },
-    {
-      "id": "diwali-wishes",
-      "title": "Shubh Diwali · Sundarbans House",
-      "category": "events",
-      "subcategory": null,
-      "description": "Sundarbans House · Somewhere tonight a laptop is closing, and we are happy about it. Shubh Diwali.",
-      "file": "../events/diwali-wishes.html",
-      "raw_path": "events/diwali-wishes.html",
-      "filesize_bytes": 24495,
-      "filesize_formatted": "23.9 KB",
-      "date": "2026-11-18",
-      "date_formatted": "18 Nov 2026",
-      "timestamp": 1795032403,
-      "header_pattern": "Pattern A (Sundarbans Letterhead)",
-      "theme": "Dark Theme",
-      "keywords": [
-        "diwali wishes",
-        "events",
-        "shubh diwali · sundarbans house"
-      ],
-      "featured": false
-    },
-    {
-      "id": "out-of-syllabus-professor-kim",
-      "title": "Out of Syllabus with Professor Kim · Sundarbans House, IIT Mad...",
-      "category": "invitations",
-      "subcategory": null,
-      "description": "Sundarbans House formally invites Professor Kim to Out of Syllabus · IIT Madras BS Degree community conversation.",
-      "file": "../invitations/out-of-syllabus-professor-kim.html",
-      "raw_path": "invitations/out-of-syllabus-professor-kim.html",
-      "filesize_bytes": 27908,
-      "filesize_formatted": "27.3 KB",
-      "date": "2026-11-18",
-      "date_formatted": "18 Nov 2026",
-      "timestamp": 1795032403,
-      "header_pattern": "Custom / Campaign",
-      "theme": "Light Theme",
-      "keywords": [
-        "invitations",
-        "out of syllabus professor kim",
-        "out of syllabus with professor kim · sundarbans house, iit mad..."
-      ],
-      "featured": false
-    },
-    {
-      "id": "signature",
-      "title": "Email Signature",
-      "category": "Signatures",
-      "subcategory": null,
-      "description": "HTML email template for Signatures - Email Signature.",
-      "file": "../Signatures/signature.html",
-      "raw_path": "Signatures/signature.html",
-      "filesize_bytes": 5864,
-      "filesize_formatted": "5.7 KB",
-      "date": "2026-11-18",
-      "date_formatted": "18 Nov 2026",
-      "timestamp": 1795032403,
-      "header_pattern": "Custom / Campaign",
-      "theme": "Dark Theme",
-      "keywords": [
-        "Signatures",
-        "email signature",
-        "signature"
       ],
       "featured": false
     },
